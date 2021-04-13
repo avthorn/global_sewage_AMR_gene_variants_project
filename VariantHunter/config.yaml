@@ -1,7 +1,10 @@
 ## Input files ##
 # Path to reference fasta file. 
 ref_path: /home/databases/metagenomics/db/ResFinder_20200125/ResFinder
-refname: "ResFinder_20200125"
+
+
+#
+
 # Path to trimmed illumina paired end fastq sequences 
 seq_path: "input_files/fastq/"
 

@@ -8,49 +8,63 @@ SAMPLE_NAMES, = glob_wildcards(config["seq_path"] + "{sample_name}_R1.trim.fq.gz
 
 #rule all:
 #    input:
-#        expand("data/bam/{sample_name}.bam", sample_name=SAMPLE_NAMES)
+#        expand("intermediate_data/bam/{sample_name}.bam", sample_name=SAMPLE_NAMES)
 
 rule all:
     input:
-        "data/bam/DTU_2016_62_2_MG_DEU-27_1.bam"
+        "intermediate_data/bam/DTU_2016_62_2_MG_DEU-27_1.bam"
 
 
 
 
 #rule all:
 #    input:
-#        expand("data/bam_sorted/{sample_name}.sort.bam", sample_name=SAMPLE_NAMES)
+#        expand("intermediate_data/bam_sorted/{sample_name}.sort.bam", sample_name=SAMPLE_NAMES)
 
 rule prepare_ref:
     input:
         config["ref_path"]
     output:
-        "data/ref/ref.fasta",
-        "data/ref/ref.comp.b",
-        "data/ref/ref.fasta.fai",
-        "data/ref/ref.name",
-        "data/ref/ref_old_to_new_name_conversion_file.tsv",
-        temp("data/ref/ref.old_name")
+        fasta="intermediate_data/ref/ref.fasta",
+        "intermediate_data/ref/ref.comp.b",
+        "intermediate_data/ref/ref.fasta.fai",
+        "intermediate_data/ref/ref.name"
     shell:
         '''
-        cp {input} data/ref/ref.fasta;
-        grep -e ">" data/ref/ref.fasta | sed 's/>//g'  > data/ref/ref.old_name;
-        sed -i -e 's/(/_/g' -e 's/)/_/g' -e 's/|/_/g' -e 's/:/_/g' -e 's/+/_/g' -e 's/-/_/g'   data/ref/ref.fasta;
-
-        kma index -i data/ref/ref.fasta -o data/ref/ref;
-        paste data/ref/ref.old_name data/ref/ref.name > data/ref/ref_old_to_new_name_conversion_file.tsv;
-        samtools faidx data/ref/ref.fasta
+        cp {input} {output.fasta;
+        sed -i -e 's/(/_/g' -e 's/)/_/g' -e 's/|/_/g' -e 's/:/_/g' -e 's/+/_/g' -e 's/-/_/g' {output.fasta};
+        kma index -i {output.fasta} -o intermediate_data/ref/ref;
+        samtools faidx {output.fasta}
         '''
+
+rule make_gene_name_conversion_file:
+    input:
+        original_fasta=config["ref_path"],
+        new_names="intermediate_data/ref/ref.name"
+    output:
+        old_names=temp("temp_files/ref.old_name.txt"),
+        converstion_file="output/metadata/gene_name_conversion.tsv"
+    shell:
+        '''
+        grep -e ">" {input.original_fasta} | sed 's/>//g'  > {output.old_names};
+        paste {output.old_names} {input.new_names} > {output.converstion_file}
+        '''
+
+
+
+
+
+
 
 
 #rule make_gene_name_id_number_conversion_file:
 #    input:
-#        "data/ref/ref.name"
+#        "intermediate_data/ref/ref.name"
 #    output:
-#        "data/metadata/gene_name_id_number_conversion_file.tsv"
+#        "intermediate_data/metaintermediate_data/gene_name_id_number_conversion_file.tsv"
 #    run:
-#        variant_meta = open("data/metadata/gene_name_id_number_conversion_file.tsv", 'w')
-#        with open("data/ref/ref.name") as name_file:
+#        variant_meta = open("intermediate_data/metaintermediate_data/gene_name_id_number_conversion_file.tsv", 'w')
+#        with open("intermediate_data/ref/ref.name") as name_file:
 #            names = [row.strip() for row in name_file]
 #        for name in names:
 #            line = str(names.index(name)) + "\t" + name
@@ -63,15 +77,15 @@ rule prepare_ref:
 # Map samples to resfinder database, to create consensus fasta and other files
 rule kma:
     input:
-        ref="data/ref/ref.comp.b"
+        ref="intermediate_data/ref/ref.comp.b"
     output:
-        bam="data/bam/{sample_name}.bam",
-        res_file="data/kma_res/{sample_name}.res"
+        bam="intermediate_data/bam/{sample_name}.bam",
+        res_file="intermediate_data/kma_res/{sample_name}.res"
     params:
         S=config["seq_path"] + "{sample_name}_R1.singletons.fq.gz",
-        out_dir="data/kma_res/{sample_name}",
+        out_dir="intermediate_data/kma_res/{sample_name}",
         PE=config["seq_path"] + "{sample_name}_R*.trim.fq.gz",
-        ref="data/ref/ref"
+        ref="intermediate_data/ref/ref"
     shell:
         "kma -i {params.S} -ipe {params.PE} -o {params.out_dir} -t_db {params.ref} "
         " -1t1 -sam 2096 -ConClave 2 -cge -nc -nf | samtools view -bS > {output.bam}"
@@ -79,11 +93,11 @@ rule kma:
 
 rule samtools_sort_index_bam_and_coverage:
     input:
-        bam="data/bam/{sample_name}.bam"
+        bam="intermediate_data/bam/{sample_name}.bam"
     output:
-        sort="data/bam_sorted/{sample_name}.sort.bam",
-        bai="data/bam_sorted/{sample_name}.sort.bam.bai",
-        cov="data/coverage/{sample_name}.cov"
+        sort="intermediate_data/bam_sorted/{sample_name}.sort.bam",
+        bai="intermediate_data/bam_sorted/{sample_name}.sort.bam.bai",
+        cov="intermediate_data/coverage/{sample_name}.cov"
     params:
         min_BQ=config["minimum_base_Q"]        # Minimum base quality for a base to be considered by samtools coverage
     shell:
@@ -96,10 +110,10 @@ rule samtools_sort_index_bam_and_coverage:
 
 rule bcftools_mpileup_call:
     input:
-        bam="data/bam_sorted/{sample_name}.sort.bam",
-        ref="data/ref/ref.fasta"
+        bam="intermediate_data/bam_sorted/{sample_name}.sort.bam",
+        ref="intermediate_data/ref/ref.fasta"
     output:
-        "data/vcf/raw/{sample_name}.raw.vcf.gz"
+        "intermediate_data/vcf/raw/{sample_name}.raw.vcf.gz"
     params:
         max_dp="--max-depth 1000000",  # At a position, read maximally INT reads per input file.
         MQ="--min-MQ 10",  # Minimum mapping quality for an alignment to be used. 
@@ -114,11 +128,11 @@ rule bcftools_mpileup_call:
         
 rule bcftools_norm_vcf:
     input:
-        vcf_raw="data/vcf/raw/{sample_name}.raw.vcf.gz",
-        ref="data/ref/ref.fasta"
+        vcf_raw="intermediate_data/vcf/raw/{sample_name}.raw.vcf.gz",
+        ref="intermediate_data/ref/ref.fasta"
     output:
-        raw_index="data/vcf/raw/{sample_name}.raw.vcf.gz.csi",
-        norm_vcf="data/vcf/norm/{sample_name}.norm.vcf.gz"
+        raw_index="intermediate_data/vcf/raw/{sample_name}.raw.vcf.gz.csi",
+        norm_vcf="intermediate_data/vcf/norm/{sample_name}.norm.vcf.gz"
     shell:
         '''
         bcftools index -o {output.raw_index} {input.vcf_raw};
@@ -127,10 +141,10 @@ rule bcftools_norm_vcf:
         
 rule bcftools_filter_vcf:
     input:
-        vn="data/vcf/norm/{sample_name}.norm.vcf.gz"
+        vn="intermediate_data/vcf/norm/{sample_name}.norm.vcf.gz"
     output:
-        vf="data/vcf/filter_norm/{sample_name}.filter.norm.vcf.gz",
-        vf_index="data/vcf/filter_norm/{sample_name}.filter.norm.vcf.gz.csi"
+        vf="intermediate_data/vcf/filter_norm/{sample_name}.filter.norm.vcf.gz",
+        vf_index="intermediate_data/vcf/filter_norm/{sample_name}.filter.norm.vcf.gz.csi"
     params:
         min_AD=config["minimum_ALT_AD"],   # minimum ALT allele depth to be accepted.
         min_AF=config["minimum_ALT_AF"]    # minimum ALT allele freq to be accepted.
@@ -144,11 +158,11 @@ rule bcftools_filter_vcf:
         '''
 rule bcftools_consensus_raw:
     input:
-        vf="data/vcf/filter_norm/{sample_name}.filter.norm.vcf.gz",
-        vf_index="data/vcf/filter_norm/{sample_name}.filter.norm.vcf.gz.csi",
-        ref="data/ref/ref.fasta"
+        vf="intermediate_data/vcf/filter_norm/{sample_name}.filter.norm.vcf.gz",
+        vf_index="intermediate_data/vcf/filter_norm/{sample_name}.filter.norm.vcf.gz.csi",
+        ref="intermediate_data/ref/ref.fasta"
     output:
-        raw_consensus="data/sample_consensus/raw/{sample_name}.raw.fasta"
+        raw_consensus="intermediate_data/sample_consensus/raw/{sample_name}.raw.fasta"
     shell:
         '''
         bcftools consensus --absent N  -f {input.ref} {input.vf} > {output.raw_consensus}
@@ -159,11 +173,11 @@ rule bcftools_consensus_raw:
 # Extract the high coverage consensus sequenses
 rule consensus_high_cov:
     input:
-        r_c="data/sample_consensus/raw/{sample_name}.raw.fasta",
-        cov="data/coverage/{sample_name}.cov"
+        r_c="intermediate_data/sample_consensus/raw/{sample_name}.raw.fasta",
+        cov="intermediate_data/coverage/{sample_name}.cov"
     output:
-        hc_c="data/sample_consensus/high_cov/{sample_name}.hc.fasta",
-        hc_list="data/coverage/{sample_name}.hc_list"
+        hc_c="intermediate_data/sample_consensus/high_cov/{sample_name}.hc.fasta",
+        hc_list="intermediate_data/coverage/{sample_name}.hc_list"
     params:
         min_cov=config["min_template_cov"]    # minimum template coverage in percent to accept consensus
     shell:
@@ -175,9 +189,9 @@ rule consensus_high_cov:
 
 rule perl_sample_id_to_header_sample_fasta:
     input: 
-        "data/sample_consensus/high_cov/{sample_name}.hc.fasta"
+        "intermediate_data/sample_consensus/high_cov/{sample_name}.hc.fasta"
     output:
-        "data/sample_consensus/high_cov_id/{sample_name}.hc.id.fasta"
+        "intermediate_data/sample_consensus/high_cov_id/{sample_name}.hc.id.fasta"
     params:
          sample_id= lambda wildcards: wildcards.sample_name
   
@@ -193,24 +207,24 @@ rule perl_sample_id_to_header_sample_fasta:
 # cat all variant fastas together 
 rule cat_variant_fastas:
     input:
-        gene_fasta=expand("data/sample_consensus/high_cov_id/{sample_name}.hc.id.fasta", sample_name=SAMPLE_NAMES)
+        gene_fasta=expand("intermediate_data/sample_consensus/high_cov_id/{sample_name}.hc.id.fasta", sample_name=SAMPLE_NAMES)
 
     output:
-        "data/pre_cluster_data_prep/sample_consensus_sequenses.fasta"
+        "intermediate_data/pre_cluster_data_prep/sample_consensus_sequenses.fasta"
     shell:
         '''
-        cat data/sample_consensus/high_cov_id/*.hc.id.fasta   >   {output}
+        cat intermediate_data/sample_consensus/high_cov_id/*.hc.id.fasta   >   {output}
         '''
 
 # Find relavant ref genes
 rule cat_make_list_of_genes_found_in_samples:
     input:
-        expand("data/coverage/{sample_name}.hc_list", sample_name=SAMPLE_NAMES)
+        expand("intermediate_data/coverage/{sample_name}.hc_list", sample_name=SAMPLE_NAMES)
     output:
-        "data/pre_cluster_data_prep/gene_names_from_consensus_files.txt"
+        "intermediate_data/pre_cluster_data_prep/gene_names_from_consensus_files.txt"
     shell:
         '''
-        cat data/coverage/*.hc_list | sort -u > {output}  
+        cat intermediate_data/coverage/*.hc_list | sort -u > {output}  
         '''
 
 
@@ -218,10 +232,10 @@ rule cat_make_list_of_genes_found_in_samples:
 #reference fasta headers to identify that the sequence is a ref.
 rule seqkit_perl_make_fasta_of_ref_seqs_for_genes_in_samples:
     input:
-        ref="data/ref/ref.fasta",
-        list="data/pre_cluster_data_prep/gene_names_from_consensus_files.txt"    
+        ref="intermediate_data/ref/ref.fasta",
+        list="intermediate_data/pre_cluster_data_prep/gene_names_from_consensus_files.txt"    
     output:
-        "data/pre_cluster_data_prep/refs_for_genes_found_in_samples.fasta"
+        "intermediate_data/pre_cluster_data_prep/refs_for_genes_found_in_samples.fasta"
     shell:
         '''        
         seqkit grep -n -f {input.list} {input.ref} | perl -p -e 's/^>/>Ref+/g' > {output}
@@ -232,11 +246,11 @@ rule seqkit_perl_make_fasta_of_ref_seqs_for_genes_in_samples:
 
 rule cat_sample_and_ref:
     input:
-        gene_fasta= "data/pre_cluster_data_prep/sample_consensus_sequenses.fasta",
-        ref_fasta= "data/pre_cluster_data_prep/refs_for_genes_found_in_samples.fasta"
+        gene_fasta= "intermediate_data/pre_cluster_data_prep/sample_consensus_sequenses.fasta",
+        ref_fasta= "intermediate_data/pre_cluster_data_prep/refs_for_genes_found_in_samples.fasta"
 
     output:
-        "data/pre_cluster_data_prep/ref_plus_consensus_seq.fasta"
+        "intermediate_data/pre_cluster_data_prep/ref_plus_consensus_seq.fasta"
     shell:
         '''
         cat {input.gene_fasta} {input.ref_fasta}  >   {output}
@@ -245,36 +259,36 @@ rule cat_sample_and_ref:
 # Merge dublicate sequences so that all sequences are unique. Also merges the headers
 rule rm_dup:
     input:
-        "data/pre_cluster_data_prep/ref_plus_consensus_seq.fasta"
+        "intermediate_data/pre_cluster_data_prep/ref_plus_consensus_seq.fasta"
     output:
-        "data/pre_cluster_data_prep/ref_plus_consensus_seq_no_dub.fasta"
+        "intermediate_data/pre_cluster_data_prep/ref_plus_consensus_seq_no_dub.fasta"
     shell:
         "python3 scripts/DupRemover.py -i {input} -o {output}"
 
 # remove seqs with with a certain percentage of Ns and under a certain length
 rule seq_cleaner:
     input:
-        "data/pre_cluster_data_prep/ref_plus_consensus_seq_no_dub.fasta"
+        "intermediate_data/pre_cluster_data_prep/ref_plus_consensus_seq_no_dub.fasta"
     output:
-        "data/pre_cluster_data_prep/clear_ref_plus_consensus_seq_no_dub.fasta"
+        "intermediate_data/pre_cluster_data_prep/clear_ref_plus_consensus_seq_no_dub.fasta"
     params:
         l="0",  # minimum length of sequences
         p=config["percentage_unknown_nuc_allowed"]   # max percentage Ns allowed in sequenses
     shell:
-        "cd data/pre_cluster_data_prep;"
+        "cd intermediate_data/pre_cluster_data_prep;"
         "python3 ../../scripts/sequence_cleaner.py  ref_plus_consensus_seq_no_dub.fasta {params.l} {params.p}"
 
 
 rule python3_create_variant_ID_and_meta_file:
     input:
-        fasta="data/pre_cluster_data_prep/clear_ref_plus_consensus_seq_no_dub.fasta"
+        fasta="intermediate_data/pre_cluster_data_prep/clear_ref_plus_consensus_seq_no_dub.fasta"
     output:
-        fasta_id="data/pre_cluster_data_prep/clear_ref_plus_consensus_seq_no_dub_ID.fasta",
-        tsv="data/metadata/variant_metafile.tsv"
+        fasta_id="intermediate_data/pre_cluster_data_prep/clear_ref_plus_consensus_seq_no_dub_ID.fasta",
+        tsv="intermediate_data/metaintermediate_data/variant_metafile.tsv"
     run:
-        variant_meta = open("data/metadata/variant_metafile.tsv", 'w')
-        fasta_id_file = open("data/pre_cluster_data_prep/clear_ref_plus_consensus_seq_no_dub_ID.fasta",'w')
-        fasta_file = open("data/pre_cluster_data_prep/clear_ref_plus_consensus_seq_no_dub.fasta","r")
+        variant_meta = open("intermediate_data/metaintermediate_data/variant_metafile.tsv", 'w')
+        fasta_id_file = open("intermediate_data/pre_cluster_data_prep/clear_ref_plus_consensus_seq_no_dub_ID.fasta",'w')
+        fasta_file = open("intermediate_data/pre_cluster_data_prep/clear_ref_plus_consensus_seq_no_dub.fasta","r")
         variant_count = {}
         for line in fasta_file:
             if line.startswith(">"):
@@ -305,26 +319,26 @@ rule python3_create_variant_ID_and_meta_file:
 
 rule cd_hit:
     input:
-        "data/pre_cluster_data_prep/clear_ref_plus_consensus_seq_no_dub_ID.fasta"
+        "intermediate_data/pre_cluster_data_prep/clear_ref_plus_consensus_seq_no_dub_ID.fasta"
     output:
-        "data/cd-hit/genes.clstr",
-        "data/cd-hit/genes"
+        "intermediate_data/cd-hit/genes.clstr",
+        "intermediate_data/cd-hit/genes"
     params:
         i= config["cluster_identity_cd_hit"],
         w= config["cluster_wordsize_cd_hit"]
     shell:
         '''
-        cd-hit-est -i {input} -o data/cd-hit/genes -d 0 -c {params.i} -n {params.w} -d 0 -M 16000 -T 8 -s 0.3 -sc 1 -g 1 -mask N
+        cd-hit-est -i {input} -o intermediate_data/cd-hit/genes -d 0 -c {params.i} -n {params.w} -d 0 -M 16000 -T 8 -s 0.3 -sc 1 -g 1 -mask N
         '''
 
 rule make_cluster_fastas:
     input:
-        cluster="data/cd-hit/genes.clstr",
-        fasta="data/pre_cluster_data_prep/clear_ref_plus_consensus_seq_no_dub_ID.fasta"
+        cluster="intermediate_data/cd-hit/genes.clstr",
+        fasta="intermediate_data/pre_cluster_data_prep/clear_ref_plus_consensus_seq_no_dub_ID.fasta"
     output:
-        dynamic("data/cluster/fastas/{cluster_id}")
+        dynamic("intermediate_data/cluster/fastas/{cluster_id}")
     params:
-        outdir="data/cluster/fastas",
+        outdir="intermediate_data/cluster/fastas",
         min_cluster_size = config["minimum_cluster_size"]
     shell:
         '''
@@ -334,11 +348,11 @@ rule make_cluster_fastas:
 
 rule python3_seqkit_add_refs_to_clusters_that_lost_refs_in_clustering:
     input:
-        c_fasta_raw="data/cluster/fastas/{cluster_id}",
-        all_seq_fasta="data/pre_cluster_data_prep/clear_ref_plus_consensus_seq_no_dub_ID.fasta"
+        c_fasta_raw="intermediate_data/cluster/fastas/{cluster_id}",
+        all_seq_fasta="intermediate_data/pre_cluster_data_prep/clear_ref_plus_consensus_seq_no_dub_ID.fasta"
     output:
-        list="data/cluster/ref_add_list/{cluster_id}.ref_add.txt",
-        complete_c_fasta="data/cluster/fastas/{cluster_id}.fasta"
+        list="intermediate_data/cluster/ref_add_list/{cluster_id}.ref_add.txt",
+        complete_c_fasta="intermediate_data/cluster/fastas/{cluster_id}.fasta"
     run:
         fasta_in = open(input[0],"r")
         ref_set = set()
@@ -367,10 +381,10 @@ rule python3_seqkit_add_refs_to_clusters_that_lost_refs_in_clustering:
 # Perform multible alignment of cluster fastas
 rule mafft:
     input:
-        "data/cluster/fastas/{cluster_id}.fasta"
+        "intermediate_data/cluster/fastas/{cluster_id}.fasta"
     output:
-        ali_fasta="data/cluster/ali/fasta/{cluster_id}.fasta",
-        tab="data/cluster/ali/tab/{cluster_id}.tab"
+        ali_fasta="intermediate_data/cluster/ali/fasta/{cluster_id}.fasta",
+        tab="intermediate_data/cluster/ali/tab/{cluster_id}.tab"
     shell:
         "mafft --auto {input} > {output.fasta};"
         "seqkit fx2tab {output.ali_fasta} > {output.tab}"
@@ -379,9 +393,9 @@ rule mafft:
 
 rule tree:
     input:
-        "data/cluster/ali/fasta/{cluster_id}.fasta"
+        "intermediate_data/cluster/ali/fasta/{cluster_id}.fasta"
     output:
-        "data/tree/{cluster_id}.tree"
+        "output/tree/{cluster_id}.tree"
     params:
         tree_software=config["Tree_software"]
     run:
@@ -392,18 +406,18 @@ rule tree:
 
 rule nexus:
     input:
-        "data/cluster_ali/{cluster_id}.fasta"
+        "intermediate_data/cluster_ali/{cluster_id}.fasta"
     output:
-        "data/paup/{cluster_id}.ali_nexus"
+        "intermediate_data/paup/{cluster_id}.ali_nexus"
     shell:
         "seqret {input} {output} -osformat2=nexus"
 
 
 rule paup_block:
     input:
-        "data/paup/{cluster_id}.ali_nexus"
+        "intermediate_data/paup/{cluster_id}.ali_nexus"
     output:
-        "data/paup/{cluster_id}.paup_block"
+        "intermediate_data/paup/{cluster_id}.paup_block"
     shell:
         '''
         echo "Begin paup;" >> {output};
@@ -422,13 +436,13 @@ rule paup_block:
 
 rule paup:
     input:
-        paup_block="data/paup/{cluster_id}.paup_block",
-        alignment="data/paup/{cluster_id}.ali_nexus"
+        paup_block="intermediate_data/paup/{cluster_id}.paup_block",
+        alignment="intermediate_data/paup/{cluster_id}.ali_nexus"
     output:
-        dist="data/paup/{cluster_id}.dist.tsv"
+        dist="intermediate_data/paup/{cluster_id}.dist.tsv"
     shell:
         '''
-        cd data/paup;
+        cd intermediate_data/paup;
         paup {wildcards.cluster_id}.paup_block
         '''
 
