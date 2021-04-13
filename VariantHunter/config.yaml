@@ -1,0 +1,50 @@
+## Input files ##
+# Path to reference fasta file. 
+ref_path: /home/databases/metagenomics/db/ResFinder_20200125/ResFinder
+refname: "ResFinder_20200125"
+# Path to trimmed illumina paired end fastq sequences 
+seq_path: "input_files/fastq/"
+
+## Meta data ##
+# Path to sample metadata file 
+meta_data: "input_files/gs2_metadata.txt"
+# Collumn name for sample name
+sample_names_col: "new_complete_name"
+# Collom name for interesting sample variable - for example location
+sample_var_col: "country_alpha3"
+
+
+
+
+## Variant Calling ##
+# minimum allele depth for non-reference allele for the call to be accepted
+minimum_ALT_AD: "5"
+# minimum allele frequency for non-reference allele for the call to be accepted
+minimum_ALT_AF: "0.75"
+
+# minimum base quality
+minimum_base_Q: "15"
+
+
+## Consensus Sequence filtering ##
+
+
+# minimum template coverage in percent, in order to accept the consensus sequence as "high coverage" and keep it 
+min_template_cov: "100" 
+
+## Consensus sequence purging ##
+percentage_unknown_nuc_allowed: "0"
+
+
+
+## Clustering ##
+# Read the documentation! https://github.com/weizhongli/cdhit/wiki/3.-User's-Guide#CDHITEST
+minimum_cluster_size: "1"
+cluster_identity_cd_hit: "0.90"
+cluster_wordsize_cd_hit: "8"
+
+
+
+## Tree software ##
+# Choose "fasttree" for fast but less accurate trees with unlimited number of sequences. 
+Tree_software: "fasttree"
