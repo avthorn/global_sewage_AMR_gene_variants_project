@@ -1,7 +1,7 @@
 configfile: "config.yaml"
 
 import os
-import re
+#import re
 
 
 SAMPLE_NAMES, = glob_wildcards(config["seq_path"] + "{sample_name}_R1.trim.fq.gz")
@@ -12,27 +12,24 @@ SAMPLE_NAMES, = glob_wildcards(config["seq_path"] + "{sample_name}_R1.trim.fq.gz
 
 rule all:
     input:
-        "intermediate_data/bam/DTU_2016_62_2_MG_DEU-27_1.bam"
+        "output/metadata/gene_name_conversion.tsv"
 
 
 
 
-#rule all:
-#    input:
-#        expand("intermediate_data/bam_sorted/{sample_name}.sort.bam", sample_name=SAMPLE_NAMES)
 
 rule prepare_ref:
     input:
         config["ref_path"]
     output:
         fasta="intermediate_data/ref/ref.fasta",
-        "intermediate_data/ref/ref.comp.b",
-        "intermediate_data/ref/ref.fasta.fai",
-        "intermediate_data/ref/ref.name"
+        c="intermediate_data/ref/ref.comp.b",
+        fai="intermediate_data/ref/ref.fasta.fai",
+        name="intermediate_data/ref/ref.name"
     shell:
         '''
-        cp {input} {output.fasta;
-        sed -i -e 's/(/_/g' -e 's/)/_/g' -e 's/|/_/g' -e 's/:/_/g' -e 's/+/_/g' -e 's/-/_/g' {output.fasta};
+        cp {input} {output.fasta};
+        sed -i -e 's/(/_/g' -e 's/)/_/g' -e 's/\//_/g' -e 's/|/_/g' -e 's/:/_/g' -e 's/+/_/g' -e 's/-/_/g' -e "s/'/_/g" {output.fasta};
         kma index -i {output.fasta} -o intermediate_data/ref/ref;
         samtools faidx {output.fasta}
         '''
