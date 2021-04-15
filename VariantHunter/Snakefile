@@ -16,9 +16,9 @@ rule all:
 
 
 
+# Remove illegal characters from reference names and index the reference
 
-
-rule prepare_ref:
+rule prepare_index_reference:
     input:
         config["ref_path"]
     output:
@@ -29,10 +29,15 @@ rule prepare_ref:
     shell:
         '''
         cp {input} {output.fasta};
-        sed -i -e 's/(/_/g' -e 's/)/_/g' -e 's/\//_/g' -e 's/|/_/g' -e 's/:/_/g' -e 's/+/_/g' -e 's/-/_/g' -e "s/'/_/g" {output.fasta};
+        sed -i -e "s/[;|:|,| |(|)|'|+]/_/g" -e "s/-/_/g" -e "s/\//_/g" -e "s/\./_/g"  -e "s/|/_/g"  {output.fasta};
+        sed -i 's/__/_/g'  {output.fasta};
+        sed -i 's/__/_/g'  {output.fasta};
+
         kma index -i {output.fasta} -o intermediate_data/ref/ref;
         samtools faidx {output.fasta}
         '''
+
+
 
 rule make_gene_name_conversion_file:
     input:
@@ -49,7 +54,7 @@ rule make_gene_name_conversion_file:
 
 
 
-
+## THIS FAR
 
 
 
