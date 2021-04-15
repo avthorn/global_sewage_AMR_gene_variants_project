@@ -1,12 +1,22 @@
 ## Input files ##
 # Path to reference fasta file. 
-ref_path: /home/databases/metagenomics/db/ResFinder_20200125/ResFinder
+ref_path: "../data/input_for_VariantHunter/ResFinder_20200125"
+
+# Path to list of sample names. One line per name.
+sample_name_path: "../data/input_for_VariantHunter/gs2_sample_names.txt"
 
 
-#
 
-# Path to trimmed illumina paired end fastq sequences 
-seq_path: "/home/projects/cge/people/aletho/speciale/input_files/fastq/"
+# Path to folder with trimmed illumina paired end fastq sequences 
+seq_path: "/home/projects/cge/data/projects/5001/Sewage_data_symbolic_links/Trimmed/"
+
+# What comes after sample name for singletons
+singleton_suf: "_R1.singletons.fq.gz"
+
+# What comes after sample name for forwar og reverse reads. Use * to indicate a 1 or a 2.
+for_rev_suf: "_R*.trim.fq.gz"
+
+
 
 ## Meta data ##
 # Path to sample metadata file 
