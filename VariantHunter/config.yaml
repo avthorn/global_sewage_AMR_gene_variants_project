@@ -1,10 +1,9 @@
 ## Input files ##
 # Path to reference fasta file. 
-ref_path: "../data/input_for_VariantHunter/ResFinder_20200125"
+ref_path: "../data/VariantHunter_input/ResFinder_20200125"
 
 # Path to list of sample names. One line per name.
-sample_name_path: "../data/input_for_VariantHunter/gs2_sample_names.txt"
-
+sample_name_path: "../data/VariantHunter_input/gs2_sample_names_exclude_62.txt"
 
 
 # Path to folder with trimmed illumina paired end fastq sequences 
@@ -17,26 +16,49 @@ singleton_suf: "_R1.singletons.fq.gz"
 for_rev_suf: "_R*.trim.fq.gz"
 
 
+## Mapping
 
-## Meta data ##
-# Path to sample metadata file 
-meta_data: "input_files/gs2_metadata.txt"
-# Collumn name for sample name
-sample_names_col: "new_complete_name"
-# Collom name for interesting sample variable - for example location
-sample_var_col: "country_alpha3"
+# ConClave version, choose "1" or "2"
+conclave_verson: "2"
+
+# Chose alignment parameters for kma. 
+# Suggestion: "-reward 1 -penalty -3 -gapopen -5 -gapextend -1 -per 17 -mrs 0.75"
+# If defalt are wanted: ""
+# If settings tested ideal for ResFinder database is wanted choose: "-cge" 
+alignment_setting_for_kma:  "-cge"
 
 
 
 
 ## Variant Calling ##
-# minimum allele depth for non-reference allele for the call to be accepted
-minimum_ALT_AD: "5"
-# minimum allele frequency for non-reference allele for the call to be accepted
-minimum_ALT_AF: "0.75"
+
+# Ignore variant if proportion of ref allele is equal or more than given value. Suggested value 0.5
+p_value: "0.5"
+
+# Include "orphan" reads, where the mate is not paired? For yes choose "-A" , for no choose "".
+orphan_reads: "-A"
+
+# Choose ploidy for samples. Choose "1" for haploid. 
+# See http://samtools.github.io/bcftools/bcftools.html#call for more options
+ploidy: "1"
+
 
 # minimum base quality
 minimum_base_Q: "15"
+
+# minimum mapping quality
+minimum_map_Q: "10"
+
+# minimum proportion of  forward and reverse for ALT  alleles. Suggested value 0.25  
+minimum_ALT_strand_prop_forward_and_reverse: "0.2"
+
+
+# minimum allele depth for non-reference allele for the call to be accepted
+minimum_ALT_AD: "5"
+
+# minimum allele frequency for non-reference allele for the call to be accepted
+minimum_ALT_AF: "0.75"
+
 
 
 ## Consensus Sequence filtering ##
