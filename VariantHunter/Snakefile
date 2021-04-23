@@ -16,7 +16,7 @@ with open(config["sample_name_path"], 'r') as file:
 
 rule all:
     input:
-        "output/pre-clustering_pooled_sample_files/clear_ref_plus_consensus_seq_no_dub.fasta"
+        expand("output/sample_consensus/high_cov_id/{sample_name}.hc.id.fasta", sample_name=SAMPLE_NAMES)
 
 
 
@@ -139,14 +139,16 @@ rule consensus_high_cov:
         cov="output/mapping/{sample_name}.cov"
     output:
         hc_c="output/sample_consensus/high_cov/{sample_name}.hc.fasta",
-        hc_list=temp("output/mapping/{sample_name}.hc_list")
+        hc_list="output/sample_consensus/high_cov/{sample_name}.hc_list"
     params:
         min_cov=config["min_template_cov"]    # minimum template coverage in percent to accept consensus
-    shell:
-        '''
-        awk '$6 >= {params.min_cov}' {input.cov} | awk '{{print $1}}'  > {output.hc_list};
-        seqkit grep -n -f {output.hc_list} {input.r_c} > {output.hc_c} 
-        '''
+    run:
+        shell("awk '$6 >= {params.min_cov}' {input.cov} | awk '{{print $1}}'  > {output.hc_list}")
+        if os.path.getsize(output[1]) > 0:  # Test that high coverage list file is not empty.
+            shell("seqkit grep -n -f {output.hc_list} {input.r_c} > {output.hc_c}")
+        else:
+            shell("touch {output.hc_c}")    # Create empty fasta file if high coverage list is empty
+        
 
 rule perl_sample_id_to_header_sample_fasta:
     input: 
@@ -175,9 +177,9 @@ rule cat_variant_fastas:
 # Find relavant ref genes
 rule cat_make_list_of_genes_found_in_samples:
     input:
-        expand("output/mapping/{sample_name}.hc_list", sample_name=SAMPLE_NAMES)
+        expand("output/sample_consensus/high_cov/{sample_name}.hc_list", sample_name=SAMPLE_NAMES)
     output:
-        temp("output/pre-clustering_pooled_sample_files/gene_names_from_consensus_files.txt")
+        "output/pre-clustering_pooled_sample_files/gene_names_from_consensus_files.txt"
     shell:
         '''
         cat output/mapping/*.hc_list | sort -u > {output}  
