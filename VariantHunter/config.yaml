@@ -32,8 +32,8 @@ alignment_setting_for_kma:  "-cge"
 
 ## Variant Calling ##
 
-# Ignore variant if proportion of ref allele is equal or more than given value. Suggested value 0.5
-p_value: "0.5"
+# Ignore ALT allele  if proportion of ref allele is equal or more than given value. E.g. "0.5"
+p_value: "0.6"
 
 # Include "orphan" reads, where the mate is not paired? For yes choose "-A" , for no choose "".
 orphan_reads: "-A"
@@ -65,10 +65,12 @@ minimum_ALT_AF: "0.75"
 
 
 # minimum template coverage in percent, in order to accept the consensus sequence as "high coverage" and keep it 
-min_template_cov: "100" 
+min_template_cov: "95"
 
-## Consensus sequence purging ##
-percentage_unknown_nuc_allowed: "0"
+# Minimum mean depth
+min_meandepth: 5 
+
+percentage_unknown_nuc_allowed: "1"
 
 
 

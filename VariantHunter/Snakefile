@@ -113,11 +113,23 @@ rule bcftools_filter_vcf:
         min_strand=config["minimum_ALT_strand_prop_forward_and_reverse"]
     shell:
         '''
-        bcftools filter -i 'INFO/DP!=0 && (ALT="." || (DP4[2] >= AD[1]*{params.min_strand} && \
+        bcftools filter -i '(ALT="." || (DP4[2] >= AD[1]*{params.min_strand} && \
         DP4[3]  >= AD[1]*{params.min_strand} && AD[1] = max(AD) && AD[1] >= {params.min_AD} && \
         AD[1] >= (INFO/DP*{params.min_AF} )))' {input.vn} -Oz -o {output.vf};
         bcftools index -o {output.vf_index} {output.vf}
         '''
+
+#        '''
+#        bcftools filter -i 'INFO/DP!=0 && (ALT="." || (DP4[2] >= AD[1]*{params.min_strand} && \
+#        DP4[3]  >= AD[1]*{params.min_strand} && AD[1] = max(AD) && AD[1] >= {params.min_AD} && \
+#        AD[1] >= (INFO/DP*{params.min_AF} )))' {input.vn} -Oz -o {output.vf};
+#        bcftools index -o {output.vf_index} {output.vf}
+#        '''
+
+
+
+
+
 rule bcftools_consensus_raw:
     input:
         vf="output/vcf/filter_norm/{sample_name}.filter.norm.vcf.gz",
@@ -141,9 +153,10 @@ rule consensus_high_cov:
         hc_c="output/sample_consensus/high_cov/{sample_name}.hc.fasta",
         hc_list="output/sample_consensus/high_cov/{sample_name}.hc_list"
     params:
-        min_cov=config["min_template_cov"]    # minimum template coverage in percent to accept consensus
+        min_cov=config["min_template_cov"],    # minimum template coverage in percent to accept consensus
+        min_meandepth=config["min_meandepth"]
     run:
-        shell("awk '$6 >= {params.min_cov}' {input.cov} | awk '{{print $1}}'  > {output.hc_list}")
+        shell("awk '$6 >= {params.min_cov} && $7 >= {params.min_meandepth}' {input.cov} | awk '{{print $1}}'  > {output.hc_list}")
         if os.path.getsize(output[1]) > 0:  # Test that high coverage list file is not empty.
             shell("seqkit grep -n -f {output.hc_list} {input.r_c} > {output.hc_c}")
         else:
