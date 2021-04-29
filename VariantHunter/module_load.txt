@@ -12,3 +12,4 @@ module load cd-hit/4.8.1
 module load pigz/2.3.4 
 module load seqkit/0.13.2 
 module load fasttree/2.1.11
+module load mafft/7.453

@@ -65,10 +65,10 @@ minimum_ALT_AF: "0.75"
 
 
 # minimum template coverage in percent, in order to accept the consensus sequence as "high coverage" and keep it 
-min_template_cov: "95"
+min_template_cov: "97"
 
 # Minimum mean depth
-min_meandepth: 5 
+min_meandepth: "7" 
 
 percentage_unknown_nuc_allowed: "1"
 
