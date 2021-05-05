@@ -1,10 +1,11 @@
+
 ## Input files ##
 # Path to reference fasta file. 
 ref_path: "../data/VariantHunter_input/ResFinder_20200125"
 
 # Path to list of sample names. One line per name.
-sample_name_path: "../data/VariantHunter_input/gs2_sample_names_exclude_62.txt"
-
+#sample_name_path: "../data/VariantHunter_input/gs2_sample_names_exclude_62.txt"
+sample_name_path: "test_input_names"
 
 # Path to folder with trimmed illumina paired end fastq sequences 
 seq_path: "/home/projects/cge/data/projects/5001/Sewage_data_symbolic_links/Trimmed/"
@@ -16,30 +17,28 @@ singleton_suf: "_R1.singletons.fq.gz"
 for_rev_suf: "_R*.trim.fq.gz"
 
 
-## Mapping
+## Mapping ##
 
-# ConClave version, choose "1" or "2"
+# ConClave version, Choose "1" or "2"
 conclave_verson: "2"
 
-# Chose alignment parameters for kma. 
+# Choose alignment parameters for kma mapping software. 
 # Suggestion: "-reward 1 -penalty -3 -gapopen -5 -gapextend -1 -per 17 -mrs 0.75"
-# If defalt are wanted: ""
+# If defalt are wanted choose: ""
 # If settings tested ideal for ResFinder database is wanted choose: "-cge" 
 alignment_setting_for_kma:  "-cge"
 
 
-
-
 ## Variant Calling ##
 
-# Ignore ALT allele  if proportion of ref allele is equal or more than given value. E.g. "0.5"
-p_value: "0.6"
+# Do not even consider ALT allele if proportion of ref allele is equal to or more than given value. E.g. "0.5"
+p_value: "0.75"
 
 # Include "orphan" reads, where the mate is not paired? For yes choose "-A" , for no choose "".
 orphan_reads: "-A"
 
 # Choose ploidy for samples. Choose "1" for haploid. 
-# See http://samtools.github.io/bcftools/bcftools.html#call for more options
+# See http://samtools.github.io/bcftools/bcftools.html#call for more options.
 ploidy: "1"
 
 
@@ -49,9 +48,8 @@ minimum_base_Q: "15"
 # minimum mapping quality
 minimum_map_Q: "10"
 
-# minimum proportion of  forward and reverse for ALT  alleles. Suggested value 0.25  
+# minimum proportion of  forward and reverse for ALT  alleles. Suggested value 0.2  
 minimum_ALT_strand_prop_forward_and_reverse: "0.2"
-
 
 # minimum allele depth for non-reference allele for the call to be accepted
 minimum_ALT_AD: "5"
@@ -60,9 +58,7 @@ minimum_ALT_AD: "5"
 minimum_ALT_AF: "0.75"
 
 
-
-## Consensus Sequence filtering ##
-
+## Consensus Sequence quality filtering ##
 
 # minimum template coverage in percent, in order to accept the consensus sequence as "high coverage" and keep it 
 min_template_cov: "97"
@@ -70,18 +66,17 @@ min_template_cov: "97"
 # Minimum mean depth
 min_meandepth: "7" 
 
+# Percentage unknown nucleotides "N" allowed. 
+# N can mean that the position did not get through the vcf filtering 
+# or the position was not found in the vcf file due to problems with coverage or bcftools
 percentage_unknown_nuc_allowed: "1"
 
 
-
 ## Clustering ##
-# Read the documentation! https://github.com/weizhongli/cdhit/wiki/3.-User's-Guide#CDHITEST
+# Read the documentation to choose correct wordsize for the cluster_identity!  
+# https://github.com/weizhongli/cdhit/wiki/3.-User's-Guide#CDHITEST
+
 minimum_cluster_size: "1"
-cluster_identity_cd_hit: "0.90"
-cluster_wordsize_cd_hit: "8"
+cluster_identity_cd_hit: "0.95"
+cluster_wordsize_cd_hit: "9"
 
-
-
-## Tree software ##
-# Choose "fasttree" for fast but less accurate trees with unlimited number of sequences. 
-Tree_software: "fasttree"
