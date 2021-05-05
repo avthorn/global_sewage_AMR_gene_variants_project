@@ -198,7 +198,6 @@ rule seqkit_perl_make_fasta_of_ref_seqs_for_genes_in_samples:
         '''
 
 
-
 # Merge dublicate sequences so that all sequences are unique. Also merges the headers
 rule rm_dup:
     input:
@@ -258,7 +257,7 @@ rule python3_create_variant_ID_and_meta_file:
         fasta_id_file.close()
         fasta_file.close()
 
-######## Clusters ###############################################################################
+## Clusters ###############################################################################
 
 rule cd_hit:
     input:
@@ -322,7 +321,6 @@ rule align:
         "mafft --auto {input.fasta} > {output.fasta};"
         "seqkit fx2tab {output.fasta} > {output.tab};"
         "seqret {output.fasta} {output.nex} -osformat2=nexus"
-
 
 
 rule tree:
