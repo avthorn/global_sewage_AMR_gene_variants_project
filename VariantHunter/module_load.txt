@@ -13,3 +13,4 @@ module load pigz/2.3.4
 module load seqkit/0.13.2 
 module load fasttree/2.1.11
 module load mafft/7.453
+module load emboss/6.6.0
