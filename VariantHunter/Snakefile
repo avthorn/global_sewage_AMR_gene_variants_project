@@ -109,6 +109,10 @@ rule bcftools_filter_vcf:
         min_AD=config["minimum_ALT_AD"],   # minimum ALT allele depth to be accepted.
         min_AF=config["minimum_ALT_AF"],    # minimum ALT allele freq to be accepted.
         min_strand=config["minimum_ALT_strand_prop_forward_and_reverse"]
+    log:
+        out="logs/3/bcftools_filter_vcf/{sample_name}.out",
+        err="logs/3/bcftools_filter_vcf/{sample_name}.err"
+
     shell:
         '''
         bcftools filter -i '(ALT="." || (DP4[2] >= AD[1]*{params.min_strand} && \
@@ -126,6 +130,10 @@ rule bcftools_consensus_raw:
         ref="output/1_reference/ref.fasta"
     output:
         raw_consensus="output/4_sample_consensus/raw/{sample_name}.raw.fasta"
+    log:
+        out="logs/4/bcftools_consensus_raw/{sample_name}.out",
+        err="logs/4/bcftools_consensus_raw/{sample_name}.err"
+
     shell:
         '''
         bcftools consensus --absent N  -f {input.ref} {input.vf} > {output.raw_consensus}
@@ -199,11 +207,15 @@ rule seqkit_perl_make_fasta_of_ref_seqs_for_genes_in_samples:
 
 
 # Merge dublicate sequences so that all sequences are unique. Also merges the headers
-rule rm_dup:
+rule DupRemover:
     input:
         "output/5_all_samples_pooled/sample_consensus_plus_ref_seqs.fasta"
     output:
         "output/5_all_samples_pooled/sample_consensus_plus_ref_seqs_dublicants_merged.fasta"
+    log:
+        out="logs/5/dupremover.out",
+        err="logs/5/dupremover.err"
+
     shell:
         "python3 scripts/DupRemover.py -i {input} -o {output}"
 
@@ -216,22 +228,35 @@ rule seq_cleaner:
     params:
         l="0",  # minimum length of sequences. Set to 0 since coverage is filtered upstreams in the pipeline.
         p=config["percentage_unknown_nuc_allowed"]   # max percentage Ns allowed in sequenses
+    log:
+        out="logs/5/seq_cleaner.out",
+        err="logs/5/seq_cleaner.err"
+
     shell:
         "cd output/5_all_samples_pooled;"
         "python3 ../../scripts/sequence_cleaner.py  sample_consensus_plus_ref_seqs_dublicants_merged.fasta {params.l} {params.p}"
 
 
-rule python3_create_variant_ID_and_meta_file:
+rule python3_create_variant_ID_and_metafiles:
     input:
-        fasta="output/5_all_samples_pooled/clear_sample_consensus_plus_ref_seqs_dublicants_merged.fasta"
+        fasta="output/5_all_samples_pooled/clear_sample_consensus_plus_ref_seqs_dublicants_merged.fasta",
+        gene_name_conversion_file="output/1_reference/gene_name_conversion.tsv"
     output:
         fasta_id="output/5_all_samples_pooled/final_sequenses_for_clustering.fasta",
-        tsv="output/5_all_samples_pooled/final_sequenses_sample_metadata.tsv"
+        raw_tsv=temp("output/5_all_samples_pooled/raw_final_sequenses_sample_metadata.tsv"),
+        tsv="output/5_all_samples_pooled/final_sequenses_sample_metadata.tsv",
+        raw_template_metadata_file =temp("output/5_all_samples_pooled/raw_template_metadata.tsv"),
+        template_metadata_file ="output/5_all_samples_pooled/template_metadata.tsv"
+    log:
+        out="logs/5/python3_create_variant_ID_and_metafiles.out",
+        err="logs/5/python3_create_variant_ID_and_metafiles.err"
+
     run:
-        variant_meta = open("output/5_all_samples_pooled/final_sequenses_sample_metadata.tsv", 'w')
+        variant_meta = open("output/5_all_samples_pooled/raw_final_sequenses_sample_metadata.tsv", 'w')
         fasta_id_file = open("output/5_all_samples_pooled/final_sequenses_for_clustering.fasta",'w')
         fasta_file = open("output/5_all_samples_pooled/clear_sample_consensus_plus_ref_seqs_dublicants_merged.fasta","r")
         variant_count = {}
+        refs_found=set()
         for line in fasta_file:
             if line.startswith(">"):
                 line = line.strip(">")
@@ -239,6 +264,8 @@ rule python3_create_variant_ID_and_meta_file:
                 gene_name= last_entry.split("+")[1].strip()  
                 if last_entry.startswith("Ref"):
                     varname = gene_name + ".R"
+                    if len(line.split("|")) > 1:        # if the reference was found in any actual samples and not just added.
+                        refs_found.add(gene_name)
                 else:
                     if gene_name not in variant_count:
                         variant_count[gene_name] = 1
@@ -249,13 +276,41 @@ rule python3_create_variant_ID_and_meta_file:
                 print(new_header, file =fasta_id_file)
                 sample_and_gene_list = line.split("|") # split the string into the different headers
                 sample_list = [i.split("+", 1)[0] for i in sample_and_gene_list] # make list of sample IDs
-                metafile_line = varname + "\t" + ' '.join(sample_list)
+                if sample_list == ["Ref"]:
+                    sample_list = []
+                if "Ref" in sample_list:
+                    sample_list.remove("Ref")                
+                metafile_line = varname + "\t" + str(len(sample_list)) + "\t" + ','.join(sample_list)
                 print(metafile_line, file =variant_meta)
             else:
                 print(line.strip(), file =fasta_id_file)
         variant_meta.close()        
         fasta_id_file.close()
         fasta_file.close()
+        shell("sort -k 2 -n -r  {output.raw_tsv} > {output.tsv}")  # sort by number of samples the sequence was found in
+## Create Template metadata file
+        gene_name_conversion_file = open("output/1_reference/gene_name_conversion.tsv","r")
+        raw_template_metadata_file = open("output/5_all_samples_pooled/raw_template_metadata.tsv","w")
+        print("#Official_gene_name	software_friendly_gene_name	template_sequence_found?	number_of_new_variants_found?")
+        for line in gene_name_conversion_file:
+            line = line.strip()
+            new_name = line.split("\t")[1]
+            if new_name in refs_found:
+                ref_found = "y"
+            else:
+                ref_found = "n"
+            if new_name in variant_count:
+                new_vars=str(variant_count[new_name])
+            else:
+                new_vars="0"
+            new_line= line + "\t" + ref_found + "\t" + new_vars
+            print(new_line, file = raw_template_metadata_file)
+        gene_name_conversion_file.close()
+        raw_template_metadata_file.close()
+        shell("sort -k 4 -n -r  {output.raw_template_metadata_file} > {output.template_metadata_file}") 
+
+
+
 
 ## Clusters ###############################################################################
 
@@ -263,29 +318,45 @@ rule cd_hit:
     input:
         "output/5_all_samples_pooled/final_sequenses_for_clustering.fasta"
     output:
-        fastas=temp(dynamic("output/6_clusters/cd-hit_fastas/{cluster_id}"))
+        clus="output/6_clusters/genes.clstr",
+        genes="output/6_clusters/genes"
     params:
         i= config["cluster_identity_cd_hit"],
-        w= config["cluster_wordsize_cd_hit"],
+        w= config["cluster_wordsize_cd_hit"]
+    log:
+        out="logs/6/cd-hit.out",
+        err="logs/6/cd-hit.err"
+    shell:
+        '''
+        cd-hit-est -i {input} -o {output.genes} -M 0 -d 0 -c {params.i} -n {params.w} -d 0 -T 8 -s 0.5 -sc 1 -g 1 -mask N
+        '''
+
+rule make_cd_hit_fastas:
+    input:
+        clus="output/6_clusters/genes.clstr",
+        seq="output/5_all_samples_pooled/final_sequenses_for_clustering.fasta"
+    output:
+        dynamic("output/6_clusters/cd-hit_fastas/{cluster_id}")
+    params:
         fasta_outdir="output/6_clusters/cd-hit_fastas",
         min_cluster_size = config["minimum_cluster_size"]
 
     shell:
-        '''
-        cd-hit-est -i {input} -o output/6_clusters/genes -M 0 -d 0 -c {params.i} -n {params.w} -d 0 -T 8 -s 0.5 -sc 1 -g 1 -mask N;
-        rm output/6_clusters/genes;
-        perl scripts/make_multi_seq.pl {input} output/6_clusters/genes.clstr {params.fasta_outdir} {params.min_cluster_size};
-        rm output/6_clusters/genes.clstr
-        '''
+        "perl scripts/make_multi_seq.pl {input.seq} {input.clus} {params.fasta_outdir} {params.min_cluster_size}"
 
 
-rule python3_seqkit_add_refs_to_clusters_that_lost_refs_in_clustering:
+
+
+rule python3_seqkit_add_refs_to_clusters_that_lost_refs:
     input:
         c_fasta_raw="output/6_clusters/cd-hit_fastas/{cluster_id}",
         all_seq_fasta="output/5_all_samples_pooled/final_sequenses_for_clustering.fasta"
     output:
         list=temp("output/6_clusters/ref_add_lists/{cluster_id}.ref_add.txt"),
         complete_c_fasta="output/6_clusters/fastas/{cluster_id}.fasta"
+    log:
+        out="logs/6/python3_seqkit_add_refs_to_clusters_that_lost_refs/{cluster_id}.out",
+        err="logs/6/python3_seqkit_add_refs_to_clusters_that_lost_refs/{cluster_id}.err"
     run:
         fasta_in = open(input[0],"r")
         ref_set = set()
@@ -317,17 +388,24 @@ rule align:
         fasta="output/6_clusters/alignments/fasta/{cluster_id}.fasta",
         tab="output/6_clusters/alignments/tab/{cluster_id}.tab",
         nex="output/6_clusters/alignments/nexus/{cluster_id}.nexus"
+    log:
+        out="logs/6/align/{cluster_id}.out",
+        err="logs/6/align/{cluster_id}.err"
+
     shell:
         "mafft --auto {input.fasta} > {output.fasta};"
         "seqkit fx2tab {output.fasta} > {output.tab};"
         "seqret {output.fasta} {output.nex} -osformat2=nexus"
 
 
-rule tree:
+rule fasttree:
     input:
         "output/6_clusters/alignments/fasta/{cluster_id}.fasta"
     output:
         "output/6_clusters/trees/{cluster_id}.tree"
+    log:
+        out="logs/6/fasttree/{cluster_id}.out",
+        err="logs/6/fasttree/{cluster_id}.err"
     shell:
         "FastTree -gtr -nt  {input} > {output}"
 
