@@ -1,10 +1,12 @@
+# VariantHunter Version 0.3.0
 
 ## Input files ##
+
 # Path to reference fasta file. 
-ref_path: "../data/VariantHunter_input/ResFinder_20200125"
+ref_path: "../data/raw/ResFinder_20200125"
 
 # Path to list of sample names. One line per name.
-sample_name_path: "../data/VariantHunter_input/gs2_sample_names_exclude_62.txt"
+sample_name_path: "../data/raw/gs2_sample_names_exclude_62.txt"
 
 # Path to folder with trimmed illumina paired end fastq sequences 
 seq_path: "/home/projects/cge/data/projects/5001/Sewage_data_symbolic_links/Trimmed/"
@@ -27,6 +29,9 @@ conclave_verson: "2"
 # If settings tested ideal for ResFinder database is wanted choose: "-cge" 
 alignment_setting_for_kma:  "-cge"
 
+# minimum base quality.
+minimum_base_Q: "20"
+
 
 ## Variant Calling ##
 
@@ -34,27 +39,24 @@ alignment_setting_for_kma:  "-cge"
 p_value: "0.75"
 
 # Include "orphan" reads, where the mate is not paired? For yes choose "-A" , for no choose "".
-orphan_reads: "-A"
+orphan_reads: ""
 
 # Choose ploidy for samples. Choose "1" for haploid. 
 # See http://samtools.github.io/bcftools/bcftools.html#call for more options.
 ploidy: "1"
 
 
-# minimum base quality
-minimum_base_Q: "15"
-
 # minimum mapping quality
-minimum_map_Q: "10"
+minimum_map_Q: "20"
 
 # minimum proportion of  forward and reverse for ALT  alleles. Suggested value 0.2  
 minimum_ALT_strand_prop_forward_and_reverse: "0.2"
 
 # minimum allele depth for non-reference allele for the call to be accepted
-minimum_ALT_AD: "5"
+minimum_ALT_AD: "15"
 
 # minimum allele frequency for non-reference allele for the call to be accepted
-minimum_ALT_AF: "0.75"
+minimum_ALT_AF: "0.80"
 
 
 ## Consensus Sequence quality filtering ##
@@ -62,8 +64,8 @@ minimum_ALT_AF: "0.75"
 # minimum template coverage in percent, in order to accept the consensus sequence as "high coverage" and keep it 
 min_template_cov: "97"
 
-# Minimum mean depth
-min_meandepth: "7" 
+# Minimum mean depth of sequence
+min_meandepth: "20" 
 
 # Percentage unknown nucleotides "N" allowed. 
 # N can mean that the position did not get through the vcf filtering 
@@ -78,5 +80,5 @@ percentage_unknown_nuc_allowed: "1"
 cluster_identity_cd_hit: "0.95"
 cluster_wordsize_cd_hit: "9"
 
-# Choose at least "2" for minimum cluster size.
+# Choose at least "2" for minimum cluster size. The pipe will not work with a cluster size of one.
 minimum_cluster_size: "2"

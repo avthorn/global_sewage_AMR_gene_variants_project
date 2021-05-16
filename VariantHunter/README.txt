@@ -1,6 +1,6 @@
 Hello Variant Hunter!
 
-This is VariantHunter version 0.1.
+This is VariantHunter version 0.3.0
 
 VariantHunter is written by Alex Thorn.
 
@@ -21,4 +21,5 @@ Notes on running the pipeline:
 -For example to run the consensus sequence filtering again with new parameters simply delete folders 4, 5, and 6 and update the config file.
 -Then run snakemake again. This will take shorter time than the entire run since the mapping has already been done.
 
+Log files can be found in the hidden snakemake folder. Try "cd .snakemake/log"
 

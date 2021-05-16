@@ -1,4 +1,4 @@
-# VariantHunter Version 0.2.5
+# VariantHunter Version 0.3.0
 
 configfile: "config.yaml"
 
@@ -26,10 +26,6 @@ rule prepare_index_reference:
         name="output/1_reference/ref.name",
         old_names=temp("output/1_reference/ref.old_name.txt"),
         converstion_file="output/1_reference/gene_name_conversion.tsv"
-    log:
-        kma="logs/1/prepare_index_reference/kma_index.log",
-        samtools="logs/1/prepare_index_reference/samtools_faidx.log"
-
     shell:
         '''
         cp {input} {output.fasta};
@@ -37,8 +33,8 @@ rule prepare_index_reference:
         sed -i 's/__/_/g'  {output.fasta};
         sed -i 's/__/_/g'  {output.fasta};
 
-        kma index -i {output.fasta} -o output/1_reference/ref &> {log.kma};
-        samtools faidx {output.fasta} &> {log.samtools};
+        kma index -i {output.fasta} -o output/1_reference/ref;
+        samtools faidx {output.fasta};
         grep -e ">" {input} | sed 's/>//g'  > {output.old_names};
         paste {output.old_names} {output.name} > {output.converstion_file}
 
@@ -64,16 +60,13 @@ rule mapping:
         min_BQ=config["minimum_base_Q"],        # Minimum base quality for a base to be considered by samtools coverage
         conclave=config["conclave_verson"],
         ali_settings=config["alignment_setting_for_kma"]
-    log:
-        kma="logs/2/kma/{sample_name}.log",
-        samtools_cov="logs/2/samtools_cov/{sample_name}.log"
 
     shell:
         "kma -i {params.S} -ipe {params.PE} -o {params.out_dir} -t_db {params.ref} "
-        " -1t1 -sam 2096 -ConClave {params.conclave} {params.ali_settings} -nc -nf | samtools view -bS > {output.bam_raw} &> {log.kma};"
+        " -1t1 -sam 2096 -ConClave {params.conclave} {params.ali_settings} -nc -nf | samtools view -bS > {output.bam_raw};"
         "samtools sort -o {output.bam_sort} {output.bam_raw};"
         "samtools index {output.bam_sort};"
-        "samtools coverage --no-header --min-BQ {params.min_BQ}  {output.bam_sort} > {output.cov} &> {log.samtools_cov}"
+        "samtools coverage --no-header --min-BQ {params.min_BQ}  {output.bam_sort} > {output.cov}"
 
 ## vcf ################################################################################
 
@@ -90,13 +83,11 @@ rule bcftools_mpileup_call:
         p=config["p_value"],          # Ignore variant if the frequency of the ref allele  >= p
         ploidy=config["ploidy"],      # Choose ploidy eg. haploid
         orphan=config["orphan_reads"] # Choose whether or not to include orphan reads
-    log:
-        bcftools="logs/3/bcftools_mpileup_call/{sample_name}.log"
 
     shell:
         "bcftools mpileup -Ou -f {input.ref} {params.max_dp} --min-MQ {params.MQ} --min-BQ {params.BQ} {params.orphan} "
         " -a INFO/AD  {input.bam} | "
-        "bcftools call -c -p {params.p} --ploidy {params.ploidy} -Oz -o {output.vcf} &> {log.bcftools};"
+        "bcftools call -c -p {params.p} --ploidy {params.ploidy} -Oz -o {output.vcf};"
         
 
 # Normalize and left-align indels and remove dublicate entries of the same indel.
@@ -106,12 +97,9 @@ rule bcftools_norm_vcf:
         ref="output/1_reference/ref.fasta"
     output:
         norm_vcf="output/3_vcf/2_norm/{sample_name}.norm.vcf.gz"
-    log:
-        bcftools="logs/3/bcftools_norm_vcf/{sample_name}.log"
-
     shell:
         '''
-        bcftools norm --rm-dup indels -f {input.ref} {input.vcf_raw} -Oz -o {output.norm_vcf} &> {log.bcftools}
+        bcftools norm --rm-dup indels -f {input.ref} {input.vcf_raw} -Oz -o {output.norm_vcf}
         '''
         
 rule bcftools_filter_vcf:
@@ -124,16 +112,12 @@ rule bcftools_filter_vcf:
         min_AD=config["minimum_ALT_AD"],   # minimum ALT allele depth to be accepted.
         min_AF=config["minimum_ALT_AF"],    # minimum ALT allele freq to be accepted.
         min_strand=config["minimum_ALT_strand_prop_forward_and_reverse"]
-    log:
-        bcftools_filter="logs/3/bcftools_filter_vcf/bcftools_filter/{sample_name}.log",
-        bcftools_index="logs/3/bcftools_filter_vcf/bcftools_index/{sample_name}.log"
-
     shell:
         '''
         bcftools filter -i '(ALT="." || (DP4[2] >= AD[1]*{params.min_strand} && \
         DP4[3]  >= AD[1]*{params.min_strand} && AD[1] = max(AD) && AD[1] >= {params.min_AD} && \
-        AD[1] >= (INFO/DP*{params.min_AF} )))' {input.vn} -Oz -o {output.vf} &> {log.bcftools_filter};
-        bcftools index -o {output.vf_index} {output.vf} &> {log.bcftools_index}
+        AD[1] >= (INFO/DP*{params.min_AF} )))' {input.vn} -Oz -o {output.vf};
+        bcftools index -o {output.vf_index} {output.vf}
         '''
 
 ## Sample consensus sequence wrangling  ##########################################
@@ -145,11 +129,9 @@ rule bcftools_consensus_raw:
         ref="output/1_reference/ref.fasta"
     output:
         raw_consensus="output/4_induvidual_sample_seqs/1_raw/{sample_name}.fasta"
-    log:
-        "logs/4/bcftools_consensus_raw/{sample_name}.log"
     shell:
         '''
-        bcftools consensus --absent N  -f {input.ref} {input.vf} > {output.raw_consensus}  &> {log}
+        bcftools consensus --absent N  -f {input.ref} {input.vf} > {output.raw_consensus}
         '''
 
 
@@ -164,10 +146,8 @@ rule filter_coverage:
     params:
         min_cov=config["min_template_cov"],    # minimum template coverage in percent to accept consensus
         min_meandepth=config["min_meandepth"]
-    log:
-        "logs/4/filter_coverage/{sample_name}.log"
     run:
-        shell("awk '$6 >= {params.min_cov} && $7 >= {params.min_meandepth}' {input.cov} | awk '{{print $1}}'  > {output.hc_list} &> {log}")
+        shell("awk '$6 >= {params.min_cov} && $7 >= {params.min_meandepth}' {input.cov} | awk '{{print $1}}'  > {output.hc_list}")
         if os.path.getsize(output[1]) > 0:  # Test that high coverage list file is not empty.
             shell("seqkit grep -n -f {output.hc_list} {input.r_c} > {output.hc_c}")
         else:
@@ -184,11 +164,9 @@ rule seq_cleaner_filter_Ns:
     params:
         l="0",  # minimum length of sequences. Set to 0 since coverage is filtered upstreams in the pipeline.
         p=config["percentage_unknown_nuc_allowed"]   # max percentage Ns allowed in sequenses
-    log:
-        "logs/4/seq_cleaner/{sample_name}.log"
     shell:
         "cd output/4_induvidual_sample_seqs/2_high_cov;"
-        "python3 ../../../scripts/sequence_cleaner.py  {wildcards.sample_name}.fasta  {params.l} {params.p}  &> {log};"
+        "python3 ../../../scripts/sequence_cleaner.py  {wildcards.sample_name}.fasta  {params.l} {params.p};"
         "mv clear_{wildcards.sample_name}.fasta ../3_high_cov_n/{wildcards.sample_name}.fasta"
 
 rule make_list_of_templates_used:
@@ -207,7 +185,6 @@ rule perl_sample_id_to_header_sample_fasta:
         "output/4_induvidual_sample_seqs/4_high_cov_n_ID/{sample_name}.fasta"
     params:
          sample_id= lambda wildcards: wildcards.sample_name
-  
     shell:
         '''   
         perl -p -e 's/^>/>{params.sample_id}+/g' {input}  > {output}
@@ -232,10 +209,8 @@ rule add_ref_sequences:
     output:
         both_fasta="output/5_results/all_consensus_and_ref_sequenses.fasta",
         ref_subset_fasta=temp("output/5_results/ref_sequenses.fasta")
-    log:
-        "logs/5/add_ref_sequences.log"
     shell:
-        "seqkit grep -n -f {input.ref_names} {input.ref_fasta} | perl -p -e 's/^>/>Ref+/g' > {output.ref_subset_fasta} &> {log};"
+        "seqkit grep -n -f {input.ref_names} {input.ref_fasta} | perl -p -e 's/^>/>Ref+/g' > {output.ref_subset_fasta};"
         "cat {input.cons_fasta} {output.ref_subset_fasta}  >   {output.both_fasta}"
 
 
@@ -245,10 +220,8 @@ rule DupRemover:
         "output/5_results/all_consensus_and_ref_sequenses.fasta"
     output:
         "output/5_results/all_consensus_and_ref_sequenses_dublicants_merged.fasta"
-    log:
-        "logs/5/dupremover.log"
     shell:
-        "python3 scripts/DupRemover.py -i {input} -o {output} &> {log};"
+        "python3 scripts/DupRemover.py -i {input} -o {output};"
 
 # Give the sequences proper names and create 2 metadata files
 rule python3_create_variant_ID_and_metafiles:
@@ -261,9 +234,8 @@ rule python3_create_variant_ID_and_metafiles:
         tsv="output/5_results/sequense_sample_metadata.tsv",
         raw_template_metadata_file =temp("output/5_results/raw_template_metadata.tsv"),
         template_metadata_file ="output/5_results/template_metadata.tsv"
-
     run:
-## Create ID fasta and sequence sample metadata
+    ## Create ID fasta and sequence sample metadata
         variant_meta = open("output/5_results/raw_sequense_sample_metadata.tsv", 'w')
         fasta_id_file = open("output/5_results/all_consensus_and_ref_sequenses_dublicants_merged_ID.fasta",'w')
         fasta_file = open("output/5_results/all_consensus_and_ref_sequenses_dublicants_merged.fasta","r")
@@ -300,8 +272,7 @@ rule python3_create_variant_ID_and_metafiles:
         fasta_id_file.close()
         fasta_file.close()
         shell("sort -k 2 -n -r  {output.raw_tsv} > {output.tsv}")  # sort by number of samples the sequence was found in
-
-## Create Template metadata file
+    ## Create Template metadata file
         gene_name_conversion_file = open("output/1_reference/gene_name_conversion.tsv","r")
         raw_template_metadata_file = open("output/5_results/raw_template_metadata.tsv","w")
         print("#Official_gene_name	software_friendly_gene_name	template_sequence_found?	number_of_new_variants_found?")
@@ -323,8 +294,6 @@ rule python3_create_variant_ID_and_metafiles:
         shell("sort -k 4 -n -r  {output.raw_template_metadata_file} > {output.template_metadata_file}") 
 
 
-
-
 ## Clusters ###############################################################################
 
 rule cd_hit:
@@ -336,11 +305,9 @@ rule cd_hit:
     params:
         i= config["cluster_identity_cd_hit"],
         w= config["cluster_wordsize_cd_hit"]
-    log:
-        "logs/5/cd-hit.log"
     shell:
         '''
-        cd-hit-est -i {input} -o {output.genes} -M 0 -d 0 -c {params.i} -n {params.w} -d 0 -T 8 -s 0.5 -sc 1 -g 1 -mask N &> {log}
+        cd-hit-est -i {input} -o {output.genes} -M 0 -d 0 -c {params.i} -n {params.w} -d 0 -T 8 -s 0.5 -sc 1 -g 1 -mask N
         '''
 
 rule make_cd_hit_fastas:
@@ -398,15 +365,11 @@ rule align:
         fasta="output/5_results/cluster_alignments/fasta/{cluster_id}.fasta",
         tab="output/5_results/cluster_alignments/tab/{cluster_id}.tab",
         nex="output/5_results/cluster_alignments/nexus/{cluster_id}.nexus"
-    log:
-        mafft="logs/5/align/mafft/{cluster_id}.log",
-        seqkit="logs/5/align/seqkit/{cluster_id}.log",
-        seqret="logs/5/align/seqret/{cluster_id}.log"
 
     shell:
-        "mafft --auto {input.fasta} > {output.fasta} &> {log.mafft};"
-        "seqkit fx2tab {output.fasta} > {output.tab} &> {log.seqkit};"
-        "seqret {output.fasta} {output.nex} -osformat2=nexus &> {log.seqret}"
+        "mafft --auto {input.fasta} > {output.fasta};"
+        "seqkit fx2tab {output.fasta} > {output.tab};"
+        "seqret {output.fasta} {output.nex} -osformat2=nexus"
 
 
 rule fasttree:
@@ -414,10 +377,8 @@ rule fasttree:
         "output/5_results/cluster_alignments/fasta/{cluster_id}.fasta"
     output:
         "output/5_results/cluster_trees/{cluster_id}.tree"
-    log:
-        "logs/5/fasttree/{cluster_id}.log"
     shell:
-        "FastTree -gtr -nt  {input} > {output} &> {log}"
+        "FastTree -gtr -nt  {input} > {output}"
 
 
 
