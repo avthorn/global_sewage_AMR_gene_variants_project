@@ -1,6 +1,6 @@
 Hello Variant Hunter!
 
-This is VariantHunter version 0.3.0
+This is VariantHunter version 0.4.0
 
 VariantHunter is written by Alex Thorn.
 
@@ -16,9 +16,9 @@ More commanline instructions can be found here: https://snakemake.readthedocs.io
 
 Notes on running the pipeline:
 -Mapping with kma is the ratelimiting step.
--The output folders are ordered 1-6 according to when they are created in the pipeline.
+-The output folders are ordered 1-5 according to when they are created in the pipeline.
 -To rerun part of the pipeline without running the mapping again simply delete the relavant output folders.
--For example to run the consensus sequence filtering again with new parameters simply delete folders 4, 5, and 6 and update the config file.
+-For example to run the consensus sequence filtering again with new parameters simply delete folders 3, 4, and 5 and update the config file.
 -Then run snakemake again. This will take shorter time than the entire run since the mapping has already been done.
 
 Log files can be found in the hidden snakemake folder. Try "cd .snakemake/log"

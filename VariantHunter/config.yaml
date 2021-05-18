@@ -1,4 +1,4 @@
-# VariantHunter Version 0.3.0
+# VariantHunter Version 0.4.0
 
 ## Input files ##
 
@@ -53,10 +53,10 @@ minimum_map_Q: "20"
 minimum_ALT_strand_prop_forward_and_reverse: "0.2"
 
 # minimum allele depth for non-reference allele for the call to be accepted
-minimum_ALT_AD: "15"
+minimum_ALT_AD: "20"
 
 # minimum allele frequency for non-reference allele for the call to be accepted
-minimum_ALT_AF: "0.80"
+minimum_ALT_AF: "0.85"
 
 
 ## Consensus Sequence quality filtering ##

@@ -1,4 +1,4 @@
-# VariantHunter Version 0.3.0
+# VariantHunter Version 0.4.0
 
 configfile: "config.yaml"
 
@@ -11,7 +11,8 @@ with open(config["sample_name_path"], 'r') as file:
 # Change input to desired output
 rule all:
     input:
-        dynamic("output/5_results/cluster_trees/{cluster_id}.tree")        
+#        dynamic("output/5_results/cluster_trees/{cluster_id}.tree"),
+        "output/5_results/cluster_lookup.txt"        
 
 ## Reference ##################################################################
 
@@ -380,6 +381,25 @@ rule fasttree:
     shell:
         "FastTree -gtr -nt  {input} > {output}"
 
+rule make_cluster_sequense_sample_metadata:
+    input:
+        tsv="output/5_results/sequense_sample_metadata.tsv",
+        fasta="output/5_results/cluster_fastas/{cluster_id}.fasta"
+    output:
+        tsv="output/5_results/cluster_meta/{cluster_id}.tsv",
+        cc=temp("output/5_results/cluster_content/{cluster_id}.txt"),
+        list=temp("output/5_results/cluster_list/{cluster_id}.txt)"
+    shell:
+        "grep '>' {input.fasta} | sed 's/>//g' > {output.list};"
+        "grep -wFf {output.list}  {input.tsv} > {output.tsv};"
+        "grep '\.R' {output.list} | sed 's/\.R//g' | sed 's/^/{wildcards.cluster_id}	/' > {output.cc} "
 
 
 
+rule make_cluster_lookup_file:
+    input:
+        dynamic("output/5_results/cluster_content/{cluster_id}.txt")
+    output:
+        "output/5_results/cluster_lookup.txt"
+    shell:
+        "cat output/5_results/cluster_content/*.txt | sort -n > {output}"
