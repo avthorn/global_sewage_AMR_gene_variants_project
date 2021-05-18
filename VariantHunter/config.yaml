@@ -1,4 +1,4 @@
-# VariantHunter Version 0.4.0
+# VariantHunter Version 0.4.1
 
 ## Input files ##
 
@@ -50,27 +50,27 @@ ploidy: "1"
 minimum_map_Q: "20"
 
 # minimum proportion of  forward and reverse for ALT  alleles. Suggested value 0.2  
-minimum_ALT_strand_prop_forward_and_reverse: "0.2"
+minimum_ALT_strand_prop_forward_and_reverse: "0.33"
 
 # minimum allele depth for non-reference allele for the call to be accepted
 minimum_ALT_AD: "20"
 
 # minimum allele frequency for non-reference allele for the call to be accepted
-minimum_ALT_AF: "0.85"
+minimum_ALT_AF: "0.90"
 
 
 ## Consensus Sequence quality filtering ##
 
 # minimum template coverage in percent, in order to accept the consensus sequence as "high coverage" and keep it 
-min_template_cov: "97"
+min_template_cov: "98"
 
-# Minimum mean depth of sequence
+# Minimum mean depth of sequence.
 min_meandepth: "20" 
 
 # Percentage unknown nucleotides "N" allowed. 
 # N can mean that the position did not get through the vcf filtering 
 # or the position was not found in the vcf file due to problems with coverage or bcftools
-percentage_unknown_nuc_allowed: "1"
+percentage_unknown_nuc_allowed: "0.5"
 
 
 ## Clustering ##
