@@ -11,7 +11,7 @@ with open(config["sample_name_path"], 'r') as file:
 # Change input to desired output
 rule all:
     input:
-#        dynamic("output/5_results/cluster_trees/{cluster_id}.tree"),
+        dynamic("output/5_results/cluster_trees/{cluster_id}.tree"),
         "output/5_results/cluster_lookup.txt"        
 
 ## Reference ##################################################################
