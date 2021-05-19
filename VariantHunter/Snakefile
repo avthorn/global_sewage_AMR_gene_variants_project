@@ -1,4 +1,4 @@
-# VariantHunter Version 0.4.1
+# VariantHunter Version 0.4.3
 
 configfile: "config.yaml"
 
@@ -8,11 +8,9 @@ import os
 with open(config["sample_name_path"], 'r') as file:
     SAMPLE_NAMES = [sample_name.rstrip() for sample_name in file.readlines()]
 
-# Change input to desired output
 rule all:
     input:
-        dynamic("output/5_results/cluster_trees/{cluster_id}.tree"),
-        "output/5_results/cluster_lookup.txt"        
+        "output/5_results/cluster_lookup.txt"
 
 ## Reference ##################################################################
 
@@ -358,6 +356,8 @@ rule python3_seqkit_add_refs_to_clusters_that_lost_refs:
             shell("seqkit grep --line-width 0 -n -f {output.list} {input.all_seq_fasta} >> {output.complete_c_fasta}") 
 
 
+
+
 # Perform multible alignment of cluster fastas
 rule align:
     input:
@@ -373,6 +373,8 @@ rule align:
         "seqret {output.fasta} {output.nex} -osformat2=nexus"
 
 
+
+
 rule fasttree:
     input:
         "output/5_results/cluster_alignments/fasta/{cluster_id}.fasta"
@@ -381,8 +383,10 @@ rule fasttree:
     shell:
         "FastTree -gtr -nt  {input} > {output}"
 
+
 rule make_cluster_sequense_sample_metadata:
     input:
+        tree="output/5_results/cluster_trees/{cluster_id}.tree",
         tsv="output/5_results/sequense_sample_metadata.tsv",
         fasta="output/5_results/cluster_fastas/{cluster_id}.fasta"
     output:
@@ -392,8 +396,7 @@ rule make_cluster_sequense_sample_metadata:
     shell:
         "grep '>' {input.fasta} | sed 's/>//g' > {output.list};"
         "grep -wFf {output.list}  {input.tsv} > {output.tsv};"
-        "grep '\.R' {output.list} | sed 's/\.R//g' | sed 's/^/{wildcards.cluster_id}	/' > {output.cc} "
-
+        "grep '\.R' {output.list} | sed 's/\.R//g' | sed 's/^/{wildcards.cluster_id}    /' > {output.cc} "
 
 
 rule make_cluster_lookup_file:
@@ -403,3 +406,4 @@ rule make_cluster_lookup_file:
         "output/5_results/cluster_lookup.txt"
     shell:
         "cat output/5_results/cluster_content/*.txt | sort -n > {output}"
+

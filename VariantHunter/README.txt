@@ -1,6 +1,6 @@
-Hello Variant Hunter!
+# Hello Variant Hunter!
 
-This is VariantHunter version 0.4.1
+This is VariantHunter version 0.4.3
 
 VariantHunter is written by Alex Thorn.
 
@@ -23,3 +23,11 @@ Notes on running the pipeline:
 
 Log files can be found in the hidden snakemake folder. Try "cd .snakemake/log"
 
+Outout folder 5_results contain the actual results that you may be interested in.
+template_metadata.tsv contains 4 columns. 
+1) The original template name, 
+2) the template name with illegal characters removed.
+3) a column with y and n. y indicate that the exact template was present in one or more samples. 
+n indicate the exact template was not found in any of the samples. 
+All templates found are listed in the file and  also some of the templates that were not found at all.
+4) a column with a number. The number indicates how many new variants that where found for the template. 
