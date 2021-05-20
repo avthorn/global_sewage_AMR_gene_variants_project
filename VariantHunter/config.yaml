@@ -1,4 +1,4 @@
-# VariantHunter Version 0.4.3
+# VariantHunter Version 0.4.4
 
 ## Input files ##
 
@@ -50,10 +50,10 @@ ploidy: "1"
 minimum_map_Q: "20"
 
 # minimum proportion of  forward and reverse for ALT  alleles. Suggested value 0.2  
-minimum_ALT_strand_prop_forward_and_reverse: "0.33"
+minimum_ALT_strand_prop_forward_and_reverse: "0.1"
 
 # minimum allele depth for non-reference allele for the call to be accepted
-minimum_ALT_AD: "20"
+minimum_ALT_AD: "10"
 
 # minimum allele frequency for non-reference allele for the call to be accepted
 minimum_ALT_AF: "0.90"
@@ -65,7 +65,7 @@ minimum_ALT_AF: "0.90"
 min_template_cov: "98"
 
 # Minimum mean depth of sequence.
-min_meandepth: "20" 
+min_meandepth: "10" 
 
 # Percentage unknown nucleotides "N" allowed. 
 # N can mean that the position did not get through the vcf filtering 

@@ -1,4 +1,4 @@
-# VariantHunter Version 0.4.3
+# VariantHunter Version 0.4.4
 
 configfile: "config.yaml"
 
@@ -134,7 +134,7 @@ rule bcftools_consensus_raw:
         '''
 
 
-# Filter  consensus sequenses on coverage
+# Filter  consensus sequences on coverage
 rule filter_coverage:
     input:
         r_c="output/4_induvidual_sample_seqs/1_raw/{sample_name}.fasta",
@@ -162,7 +162,7 @@ rule seq_cleaner_filter_Ns:
         "output/4_induvidual_sample_seqs/3_high_cov_n/{sample_name}.fasta"
     params:
         l="0",  # minimum length of sequences. Set to 0 since coverage is filtered upstreams in the pipeline.
-        p=config["percentage_unknown_nuc_allowed"]   # max percentage Ns allowed in sequenses
+        p=config["percentage_unknown_nuc_allowed"]   # max percentage Ns allowed in sequences
     shell:
         "cd output/4_induvidual_sample_seqs/2_high_cov;"
         "python3 ../../../scripts/sequence_cleaner.py  {wildcards.sample_name}.fasta  {params.l} {params.p};"
@@ -194,7 +194,7 @@ rule cat_variant_fastas:
     input:
         gene_fasta=expand("output/4_induvidual_sample_seqs/4_high_cov_n_ID/{sample_name}.fasta", sample_name=SAMPLE_NAMES)
     output:
-        "output/5_results/all_consensus_sequenses.fasta"
+        "output/5_results/all_consensus_sequences.fasta"
     shell:
         '''
         cat output/4_induvidual_sample_seqs/4_high_cov_n_ID/*.fasta   >   {output}
@@ -203,11 +203,11 @@ rule cat_variant_fastas:
 rule add_ref_sequences:
     input:
         ref_names="output/5_results/template_names.txt",
-        cons_fasta="output/5_results/all_consensus_sequenses.fasta",
+        cons_fasta="output/5_results/all_consensus_sequences.fasta",
         ref_fasta="output/1_reference/ref.fasta"
     output:
-        both_fasta="output/5_results/all_consensus_and_ref_sequenses.fasta",
-        ref_subset_fasta=temp("output/5_results/ref_sequenses.fasta")
+        both_fasta="output/5_results/all_consensus_and_ref_sequences.fasta",
+        ref_subset_fasta=temp("output/5_results/ref_sequences.fasta")
     shell:
         "seqkit grep -n -f {input.ref_names} {input.ref_fasta} | perl -p -e 's/^>/>Ref+/g' > {output.ref_subset_fasta};"
         "cat {input.cons_fasta} {output.ref_subset_fasta}  >   {output.both_fasta}"
@@ -216,28 +216,28 @@ rule add_ref_sequences:
 # Merge dublicate sequences so that all sequences are unique. Also merges the headers
 rule DupRemover:
     input:
-        "output/5_results/all_consensus_and_ref_sequenses.fasta"
+        "output/5_results/all_consensus_and_ref_sequences.fasta"
     output:
-        "output/5_results/all_consensus_and_ref_sequenses_dublicants_merged.fasta"
+        "output/5_results/all_consensus_and_ref_sequences_dublicants_merged.fasta"
     shell:
         "python3 scripts/DupRemover.py -i {input} -o {output};"
 
 # Give the sequences proper names and create 2 metadata files
 rule python3_create_variant_ID_and_metafiles:
     input:
-        fasta="output/5_results/all_consensus_and_ref_sequenses_dublicants_merged.fasta",
+        fasta="output/5_results/all_consensus_and_ref_sequences_dublicants_merged.fasta",
         gene_name_conversion_file="output/1_reference/gene_name_conversion.tsv"
     output:
-        fasta_id="output/5_results/all_consensus_and_ref_sequenses_dublicants_merged_ID.fasta",
-        raw_tsv=temp("output/5_results/raw_sequense_sample_metadata.tsv"),
-        tsv="output/5_results/sequense_sample_metadata.tsv",
+        fasta_id="output/5_results/all_consensus_and_ref_sequences_dublicants_merged_ID.fasta",
+        raw_tsv=temp("output/5_results/raw_sequence_sample_metadata.tsv"),
+        tsv="output/5_results/sequence_sample_metadata.tsv",
         raw_template_metadata_file =temp("output/5_results/raw_template_metadata.tsv"),
         template_metadata_file ="output/5_results/template_metadata.tsv"
     run:
     ## Create ID fasta and sequence sample metadata
-        variant_meta = open("output/5_results/raw_sequense_sample_metadata.tsv", 'w')
-        fasta_id_file = open("output/5_results/all_consensus_and_ref_sequenses_dublicants_merged_ID.fasta",'w')
-        fasta_file = open("output/5_results/all_consensus_and_ref_sequenses_dublicants_merged.fasta","r")
+        variant_meta = open("output/5_results/raw_sequence_sample_metadata.tsv", 'w')
+        fasta_id_file = open("output/5_results/all_consensus_and_ref_sequences_dublicants_merged_ID.fasta",'w')
+        fasta_file = open("output/5_results/all_consensus_and_ref_sequences_dublicants_merged.fasta","r")
         variant_count = {}
         refs_found=set()
         for line in fasta_file:
@@ -260,10 +260,14 @@ rule python3_create_variant_ID_and_metafiles:
                 sample_and_gene_list = line.split("|") # split the string into the different headers
                 sample_list = [i.split("+", 1)[0] for i in sample_and_gene_list] # make list of sample IDs
                 if sample_list == ["Ref"]:
-                    sample_list = []
+                    sample_list = ["*"]
                 if "Ref" in sample_list:
-                    sample_list.remove("Ref")                
-                metafile_line = varname + "\t" + str(len(sample_list)) + "\t" + ','.join(sample_list)
+                    sample_list.remove("Ref")
+                if sample_list == ["*"]:
+                    length = "0"
+                else:            
+                    length = str(len(sample_list))    
+                metafile_line = varname + "\t" + length + "\t" + ','.join(sample_list)
                 print(metafile_line, file =variant_meta)
             else:
                 print(line.strip(), file =fasta_id_file)
@@ -297,7 +301,7 @@ rule python3_create_variant_ID_and_metafiles:
 
 rule cd_hit:
     input:
-        "output/5_results/all_consensus_and_ref_sequenses_dublicants_merged_ID.fasta"
+        "output/5_results/all_consensus_and_ref_sequences_dublicants_merged_ID.fasta"
     output:
         clus="output/5_results/cd_hit.clstr",
         genes=temp("output/5_results/cd_hit")
@@ -312,7 +316,7 @@ rule cd_hit:
 rule make_cd_hit_fastas:
     input:
         clus="output/5_results/cd_hit.clstr",
-        seq="output/5_results/all_consensus_and_ref_sequenses_dublicants_merged_ID.fasta"
+        seq="output/5_results/all_consensus_and_ref_sequences_dublicants_merged_ID.fasta"
     output:
         temp(dynamic("output/5_results/cd-hit_fastas/{cluster_id}"))
     params:
@@ -329,7 +333,7 @@ rule make_cd_hit_fastas:
 rule python3_seqkit_add_refs_to_clusters_that_lost_refs:
     input:
         c_fasta_raw="output/5_results/cd-hit_fastas/{cluster_id}",
-        all_seq_fasta="output/5_results/all_consensus_and_ref_sequenses_dublicants_merged_ID.fasta"
+        all_seq_fasta="output/5_results/all_consensus_and_ref_sequences_dublicants_merged_ID.fasta"
     output:
         list=temp("output/5_results/ref_add_lists/{cluster_id}.ref_add.txt"),
         complete_c_fasta="output/5_results/cluster_fastas/{cluster_id}.fasta"
@@ -384,10 +388,10 @@ rule fasttree:
         "FastTree -gtr -nt  {input} > {output}"
 
 
-rule make_cluster_sequense_sample_metadata:
+rule make_cluster_sequence_sample_metadata:
     input:
         tree="output/5_results/cluster_trees/{cluster_id}.tree",
-        tsv="output/5_results/sequense_sample_metadata.tsv",
+        tsv="output/5_results/sequence_sample_metadata.tsv",
         fasta="output/5_results/cluster_fastas/{cluster_id}.fasta"
     output:
         tsv="output/5_results/cluster_meta/{cluster_id}.tsv",
