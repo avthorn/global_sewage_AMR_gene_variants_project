@@ -46,7 +46,7 @@ for file in os.listdir(directory):
 
     country_list = sorted(list(country_set))
 
-    outfile_path = "../data/tree_meta_data/" + cluster_name + "_tree_meta.tsv"
+    outfile_path = "../data/tree_meta_data/" + cluster_name + "_tree_meta.csv"
 
     country_meta = open(outfile_path, "w")
     header = "id, gene, type, version, " + ", ".join(country_list)
