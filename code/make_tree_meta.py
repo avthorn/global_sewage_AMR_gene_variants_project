@@ -55,8 +55,10 @@ for file in os.listdir(directory):
     for v_id in variant_dict.keys():
         gene = v_id.split(".")[0]
         type = v_id.split(".")[1][0]
-        version = v_id[-1]
-
+        if type == "R":
+            version = type
+        else:
+            version = v_id.split(".")[1][1:]
         for sample in variant_dict[v_id]:
             if sample != "*":
                 variant_dict[v_id][variant_dict[v_id].index(sample)] = gs2_dict[sample]
