@@ -63,9 +63,10 @@ for file in os.listdir(directory):
         country_string = ""
         for country in country_list:
             if country in variant_dict[v_id]:
-                country_string += "y, "
+                table_value = country + ", "
+                country_string += table_value
             else:
-                country_string += "n, "
+                country_string += ", "
         line = v_id + ", " + gene + ", " + type + ", " + version + ", " + country_string.rstrip(", ")
         print(line, file = country_meta)
 
