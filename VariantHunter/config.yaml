@@ -1,4 +1,4 @@
-# VariantHunter Version 0.4.5
+# VariantHunter Version 0.4.6
 
 ## Input files ##
 
@@ -70,7 +70,7 @@ min_meandepth: "10"
 # Percentage unknown nucleotides "N" allowed. 
 # N can mean that the position did not get through the vcf filtering 
 # or the position was not found in the vcf file due to problems with coverage or bcftools
-percentage_unknown_nuc_allowed: "0.5"
+percentage_unknown_nuc_allowed: "0"
 
 
 ## Clustering ##
@@ -82,3 +82,11 @@ cluster_wordsize_cd_hit: "9"
 
 # Choose at least "2" for minimum cluster size. The pipe will not work with a cluster size of one.
 minimum_cluster_size: "2"
+
+
+## SNP-dist matrix
+# for all options see https://github.com/tseemann/snp-dists
+# to count only ACTG as differences choose the  default ""
+# to count also gaps and Ns as differences choose "-a"
+
+snp_dists_options: "-a"

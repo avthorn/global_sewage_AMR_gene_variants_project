@@ -1,6 +1,6 @@
 # Hello Variant Hunter!
 
-This is VariantHunter version 0.4.5
+This is VariantHunter version 0.4.6
 
 VariantHunter is written by Alex Thorn.
 

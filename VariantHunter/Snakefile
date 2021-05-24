@@ -1,4 +1,4 @@
-# VariantHunter Version 0.4.5
+# VariantHunter Version 0.4.6
 
 configfile: "config.yaml"
 
@@ -325,6 +325,13 @@ rule make_cd_hit_fastas:
     shell:
         "perl scripts/make_multi_seq.pl {input.seq} {input.clus} {params.fasta_outdir} {params.min_cluster_size}"
 
+rule mv_gene_name_conversion_file:
+    input:
+        "output/1_reference/gene_name_conversion.tsv"
+    output:
+        "output/5_results/gene_name_conversion.tsv"
+    shell:
+        "cp {input} {output}"
 
 
 # Some new variants may have ended up in an other cluster than their reference sequence.
@@ -378,11 +385,25 @@ rule fasttree:
     shell:
         "FastTree -gtr -nt  {input} > {output}"
 
+rule snp_dists:
+    input:
+        "output/5_results/cluster_alignments/{cluster_id}.fasta"
+    output:
+        "output/5_results/cluster_snp_dist/{cluster_id}.tsv"
+    params:
+        options =config["snp_dists_options"] 
+    shell:
+        "snp-dists {params.options} {input} > {output}"
+
+
+
 
 rule make_cluster_sequence_sample_metadata:
     input:
+        gc="output/5_results/gene_name_conversion.tsv",
         tree="output/5_results/cluster_trees/{cluster_id}.tree",
         tsv="output/5_results/sequence_sample_metadata.tsv",
+        dist="output/5_results/cluster_snp_dist/{cluster_id}.tsv",
         fasta="output/5_results/cluster_fastas/{cluster_id}.fasta"
     output:
         tsv="output/5_results/cluster_meta/{cluster_id}.tsv",
@@ -401,4 +422,3 @@ rule make_cluster_lookup_file:
         "output/5_results/cluster_lookup.txt"
     shell:
         "cat output/5_results/cluster_content/*.txt | sort -n > {output}"
-
