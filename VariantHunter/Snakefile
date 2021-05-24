@@ -1,4 +1,4 @@
-# VariantHunter Version 0.4.4
+# VariantHunter Version 0.4.5
 
 configfile: "config.yaml"
 
@@ -360,28 +360,19 @@ rule python3_seqkit_add_refs_to_clusters_that_lost_refs:
             shell("seqkit grep --line-width 0 -n -f {output.list} {input.all_seq_fasta} >> {output.complete_c_fasta}") 
 
 
-
-
-# Perform multible alignment of cluster fastas
 rule align:
     input:
         fasta="output/5_results/cluster_fastas/{cluster_id}.fasta"
     output:
-        fasta="output/5_results/cluster_alignments/fasta/{cluster_id}.fasta",
-        tab="output/5_results/cluster_alignments/tab/{cluster_id}.tab",
-        nex="output/5_results/cluster_alignments/nexus/{cluster_id}.nexus"
+        fasta="output/5_results/cluster_alignments/{cluster_id}.fasta"
 
     shell:
-        "mafft --auto {input.fasta} > {output.fasta};"
-        "seqkit fx2tab {output.fasta} > {output.tab};"
-        "seqret {output.fasta} {output.nex} -osformat2=nexus"
-
-
+        "mafft --auto {input.fasta} > {output.fasta}"
 
 
 rule fasttree:
     input:
-        "output/5_results/cluster_alignments/fasta/{cluster_id}.fasta"
+        "output/5_results/cluster_alignments/{cluster_id}.fasta"
     output:
         "output/5_results/cluster_trees/{cluster_id}.tree"
     shell:
