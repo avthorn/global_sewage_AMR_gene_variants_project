@@ -229,6 +229,7 @@ rule python3_create_variant_ID_and_metafiles:
         gene_name_conversion_file="output/1_reference/gene_name_conversion.tsv"
     output:
         fasta_id="output/5_results/all_consensus_and_ref_sequences_dublicants_merged_ID.fasta",
+        gene_name="output/5_results/gene_name_conversion.tsv",
         raw_tsv=temp("output/5_results/raw_sequence_sample_metadata.tsv"),
         tsv="output/5_results/sequence_sample_metadata.tsv",
         raw_template_metadata_file =temp("output/5_results/raw_template_metadata.tsv"),
@@ -295,9 +296,12 @@ rule python3_create_variant_ID_and_metafiles:
         gene_name_conversion_file.close()
         raw_template_metadata_file.close()
         shell("sort -k 4 -n -r  {output.raw_template_metadata_file} > {output.template_metadata_file}") 
-
+    ## Copy gene name conversion to results folder
+        shell("cp {input.gene_name_conversion_file} {output.gene_name}")
 
 ## Clusters ###############################################################################
+
+
 
 rule cd_hit:
     input:
@@ -325,13 +329,6 @@ rule make_cd_hit_fastas:
     shell:
         "perl scripts/make_multi_seq.pl {input.seq} {input.clus} {params.fasta_outdir} {params.min_cluster_size}"
 
-rule mv_gene_name_conversion_file:
-    input:
-        "output/1_reference/gene_name_conversion.tsv"
-    output:
-        "output/5_results/gene_name_conversion.tsv"
-    shell:
-        "cp {input} {output}"
 
 
 # Some new variants may have ended up in an other cluster than their reference sequence.
@@ -400,7 +397,6 @@ rule snp_dists:
 
 rule make_cluster_sequence_sample_metadata:
     input:
-        gc="output/5_results/gene_name_conversion.tsv",
         tree="output/5_results/cluster_trees/{cluster_id}.tree",
         tsv="output/5_results/sequence_sample_metadata.tsv",
         dist="output/5_results/cluster_snp_dist/{cluster_id}.tsv",
