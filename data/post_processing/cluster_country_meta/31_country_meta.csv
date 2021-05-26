@@ -1,0 +1,6 @@
+id, gene, type, version, AUS, BFA, BGD, CAN, CHN, CIV, CMR, ETH, HKG, IND, JPN, KAZ, KEN, KHM, KOR, MDA, MNE, MUS, MWI, NGA, NIC, NPL, PER, PRY, RKS, SRB, TCD, TGO, TWN, TZA, UGA, ZMB
+aac_6_aph_2_1_M13771.R, aac_6_aph_2_1_M13771, R, R, AUS, BFA, BGD, *, CHN, CIV, CMR, ETH, HKG, IND, JPN, KAZ, KEN, KHM, KOR, MDA, MNE, MUS, MWI, NGA, NIC, NPL, PER, *, RKS, SRB, TCD, TGO, TWN, TZA, UGA, ZMB
+aph_2_Ia_2_AP009486.v2, aph_2_Ia_2_AP009486, v, 2, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, MNE, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+aph_2_Ia_2_AP009486.v1, aph_2_Ia_2_AP009486, v, 1, *, *, *, CAN, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+aph_2_Ia_2_AP009486.R, aph_2_Ia_2_AP009486, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *, *, KOR, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+aac_6_aph_2_1_M13771.v1, aac_6_aph_2_1_M13771, v, 1, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, PRY, *, *, *, *, *, *, *, *

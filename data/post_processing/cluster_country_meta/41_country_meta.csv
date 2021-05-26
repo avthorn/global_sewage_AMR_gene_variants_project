@@ -1,0 +1,6 @@
+id, gene, type, version, ALB, AUS, AUT, BEL, BFA, BIH, BRA, CAN, CHL, CIV, CMR, COD, COL, DNK, ECU, EST, GEO, IND, IRN, ITA, KEN, KOR, LCA, LKA, LUX, LVA, MAR, MWI, MYS, NGA, NIC, NPL, PER, PRY, RKS, TUR, TZA, UGA, URY, USA, ZMB
+cfxA6_1_GQ342996.v1, cfxA6_1_GQ342996, v, 1, *, AUS, *, BEL, BFA, *, BRA, CAN, CHL, CIV, CMR, COD, COL, DNK, ECU, EST, *, IND, IRN, ITA, KEN, KOR, LCA, LKA, LUX, *, MAR, *, MYS, NGA, *, NPL, PER, PRY, *, *, TZA, UGA, URY, USA, ZMB
+cfxA6_1_GQ342996.v4, cfxA6_1_GQ342996, v, 4, *, AUS, *, *, *, *, *, *, *, *, *, COD, *, *, *, *, *, *, *, *, *, *, *, *, *, LVA, *, *, *, *, NIC, *, *, *, *, *, *, *, *, *, *
+cfxA6_1_GQ342996.R, cfxA6_1_GQ342996, R, R, ALB, *, AUT, *, *, BIH, *, *, *, *, *, *, *, *, *, *, GEO, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, RKS, TUR, *, *, *, *, *
+cfxA6_1_GQ342996.v3, cfxA6_1_GQ342996, v, 3, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, MWI, *, *, *, *, *, *, *, *, *, *, *, *, *
+cfxA6_1_GQ342996.v2, cfxA6_1_GQ342996, v, 2, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, MWI, *, *, *, *, *, *, *, *, *, *, *, *, *

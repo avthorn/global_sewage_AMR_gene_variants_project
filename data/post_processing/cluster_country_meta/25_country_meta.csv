@@ -1,0 +1,7 @@
+id, gene, type, version, ARE, AUS, BFA, BRA, BRB, CIV, COD, CZE, DNK, FRA, GBR, IND, IRN, ISL, KEN, KWT, LCA, LKA, LVA, MNE, MWI, NIC, NLD, NPL, PAK, SEN, SVK, TCD, TGO, TUR, TZA, UGA, URY, USA, ZMB
+blaCMY_4_1_LNHZ01000079.R, blaCMY_4_1_LNHZ01000079, R, R, ARE, *, BFA, *, *, CIV, COD, *, *, *, *, IND, IRN, *, KEN, KWT, *, *, *, *, MWI, NIC, *, NPL, PAK, SEN, *, TCD, TGO, TUR, TZA, UGA, *, *, ZMB
+blaCMY_2_1_X91840.R, blaCMY_2_1_X91840, R, R, *, AUS, BFA, BRA, BRB, *, *, *, DNK, FRA, GBR, *, *, ISL, *, *, LCA, LKA, LVA, MNE, MWI, *, NLD, *, PAK, *, SVK, *, *, *, *, *, URY, USA, *
+blaCMY_42_1_HM146927.R, blaCMY_42_1_HM146927, R, R, *, *, *, *, *, *, *, *, *, *, *, IND, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+blaCMY_35_1_EF394371.R, blaCMY_35_1_EF394371, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, LCA, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+blaCMY_34_1_EF394370.R, blaCMY_34_1_EF394370, R, R, *, *, *, *, *, *, *, CZE, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+blaCMY_13_1_AY339625.R, blaCMY_13_1_AY339625, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, PAK, *, *, *, *, *, *, *, *, *, *

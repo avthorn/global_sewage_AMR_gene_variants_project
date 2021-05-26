@@ -1,0 +1,6 @@
+id, gene, type, version, BWA, COD, CZE, DNK, EST, IND, MWI, PAK, TCD, TZA
+qnrB6_2_EF523819.R, qnrB6_2_EF523819, R, R, BWA, COD, *, *, *, *, MWI, *, TCD, TZA
+qnrB1_1_DQ351241.R, qnrB1_1_DQ351241, R, R, *, *, *, *, *, *, MWI, PAK, TCD, TZA
+qnrB7_1_EU043311.R, qnrB7_1_EU043311, R, R, *, *, *, *, *, IND, *, *, *, *
+qnrB9_1_EF526508.R, qnrB9_1_EF526508, R, R, *, *, CZE, DNK, *, *, *, *, *, *
+qnrB2_1_DQ351242.R, qnrB2_1_DQ351242, R, R, *, *, *, *, EST, *, *, *, *, TZA

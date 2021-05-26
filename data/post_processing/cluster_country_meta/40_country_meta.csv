@@ -1,0 +1,6 @@
+id, gene, type, version, ARE, AUS, BFA, BRA, BRB, BWA, CHN, CIV, CMR, COD, ESP, FRA, GBR, GHA, HKG, IND, IRN, ISL, LCA, LKA, LUX, LVA, MKD, MLT, MNE, MUS, MYS, NGA, NLD, NPL, PAK, PER, SGP, TCD, TGO, TZA, URY, VNM, ZMB
+mdf_A_1_Y08743.v1, mdf_A_1_Y08743, v, 1, ARE, AUS, BFA, BRA, BRB, BWA, CHN, CIV, CMR, COD, ESP, FRA, GBR, GHA, HKG, IND, IRN, ISL, LCA, LKA, LUX, LVA, MKD, MLT, MNE, MUS, MYS, NGA, NLD, NPL, PAK, PER, SGP, TCD, TGO, TZA, URY, VNM, ZMB
+mdf_A_1_Y08743.v2, mdf_A_1_Y08743, v, 2, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, IND, *, *, LCA, *, *, *, *, *, *, *, MYS, *, *, *, *, *, *, *, TGO, *, *, *, *
+mdf_A_1_Y08743.v4, mdf_A_1_Y08743, v, 4, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, LVA, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+mdf_A_1_Y08743.v3, mdf_A_1_Y08743, v, 3, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, SGP, *, *, *, *, *, *
+mdf_A_1_Y08743.R, mdf_A_1_Y08743, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

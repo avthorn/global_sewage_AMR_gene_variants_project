@@ -1,0 +1,4 @@
+id, gene, type, version, DNK, IRL, IRN
+blaOXA_427_1_KX827604.v1, blaOXA_427_1_KX827604, v, 1, DNK, IRL, *
+blaOXA_427_1_KX827604.v2, blaOXA_427_1_KX827604, v, 2, *, *, IRN
+blaOXA_427_1_KX827604.R, blaOXA_427_1_KX827604, R, R, *, *, *

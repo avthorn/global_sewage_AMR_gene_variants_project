@@ -1,0 +1,3 @@
+id, gene, type, version, ARE, BFA, BGD, BWA, CHN, CIV, COD, GHA, IND, KEN, KHM, KOR, MUS, MWI, NGA, NPL, PAK, PHL, SAU, SEN, SGP, TCD, TGO, THA, TWN, TZA, UGA, VNM, ZMB
+sul4_1_MG649393.R, sul4_1_MG649393, R, R, ARE, BFA, BGD, BWA, CHN, CIV, COD, GHA, IND, KEN, KHM, *, MUS, MWI, NGA, NPL, PAK, PHL, SAU, SEN, SGP, TCD, TGO, THA, *, TZA, UGA, VNM, ZMB
+sul4_1_MG649393.v1, sul4_1_MG649393, v, 1, *, *, *, *, CHN, CIV, *, *, *, *, *, KOR, *, *, *, *, *, *, *, *, *, *, *, *, TWN, *, *, *, *

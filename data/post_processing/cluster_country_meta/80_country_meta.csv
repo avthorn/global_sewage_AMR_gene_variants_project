@@ -1,0 +1,4 @@
+id, gene, type, version, BIH, CAN, CHE, CHL, CHN, CIV, CZE, DEU, ECU, FIN, FRA, HKG, IND, KEN, KHM, KOR, LKA, MLT, MWI, NGA, NPL, PAK, RKS, SRB, SWE, TCD, TGO, TZA, UGA, URY, USA, VNM
+aac_3_IId_1_EU022314.v1, aac_3_IId_1_EU022314, v, 1, *, CAN, CHE, *, CHN, CIV, CZE, DEU, *, FIN, FRA, HKG, IND, KEN, KHM, KOR, LKA, *, MWI, NGA, NPL, PAK, *, *, SWE, *, TGO, TZA, UGA, URY, USA, VNM
+aac_3_IIa_1_X51534.R, aac_3_IIa_1_X51534, R, R, BIH, *, *, CHL, *, *, *, *, ECU, *, *, *, *, *, *, *, *, MLT, MWI, *, *, *, RKS, SRB, *, TCD, *, *, *, *, *, *
+aac_3_IId_1_EU022314.R, aac_3_IId_1_EU022314, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

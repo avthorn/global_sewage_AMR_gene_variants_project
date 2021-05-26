@@ -1,0 +1,4 @@
+id, gene, type, version, BEN, BFA, CHN, CIV, CMR, COD, ECU, ESP, GHA, HKG, KEN, KOR, MAR, MOZ, MUS, MWI, MYS, NGA, SAU, SEN, SGP, TGO, TWN, TZA, UGA, VNM
+floR_2_AF118107.R, floR_2_AF118107, R, R, BEN, BFA, CHN, CIV, CMR, COD, ECU, ESP, GHA, *, KEN, KOR, MAR, MOZ, *, MWI, MYS, NGA, SAU, SEN, SGP, TGO, TWN, TZA, UGA, VNM
+floR_2_AF118107.v1, floR_2_AF118107, v, 1, *, *, *, *, *, *, *, *, *, HKG, *, *, *, *, MUS, *, *, *, *, *, *, *, *, *, *, *
+floR_2_AF118107.v2, floR_2_AF118107, v, 2, *, *, *, *, CMR, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

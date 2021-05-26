@@ -1,0 +1,5 @@
+id, gene, type, version, AUS, BWA, IND, KOR, MYS, TZA
+blaACT_2_1_AM076977.R, blaACT_2_1_AM076977, R, R, AUS, BWA, IND, *, MYS, *
+blaACT_4_2_AJ311172.v1, blaACT_4_2_AJ311172, v, 1, *, *, IND, KOR, *, TZA
+blaACT_3_1_EF125013.R, blaACT_3_1_EF125013, R, R, *, BWA, *, *, *, *
+blaACT_4_2_AJ311172.R, blaACT_4_2_AJ311172, R, R, *, *, *, *, *, *

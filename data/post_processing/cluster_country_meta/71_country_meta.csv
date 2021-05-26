@@ -1,0 +1,4 @@
+id, gene, type, version, AUT, IND
+blaADC_25_1_EF016355.v2, blaADC_25_1_EF016355, v, 2, *, IND
+blaADC_25_1_EF016355.v1, blaADC_25_1_EF016355, v, 1, AUT, *
+blaADC_25_1_EF016355.R, blaADC_25_1_EF016355, R, R, *, *

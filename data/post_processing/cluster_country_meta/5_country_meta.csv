@@ -1,0 +1,13 @@
+id, gene, type, version, BFA, CIV, HKG, KWT, LCA, LKA, MYS, SGP, TGO, USA
+oqxA_1_EU370913.v5, oqxA_1_EU370913, v, 5, *, *, *, *, LCA, *, MYS, *, TGO, *
+oqxA_1_EU370913.v9, oqxA_1_EU370913, v, 9, *, *, *, *, LCA, *, *, SGP, *, *
+oqxA_1_EU370913.v4, oqxA_1_EU370913, v, 4, *, *, HKG, *, *, *, MYS, *, *, *
+oqxA_1_EU370913.v8, oqxA_1_EU370913, v, 8, *, *, *, *, LCA, *, *, *, *, *
+oqxA_1_EU370913.v7, oqxA_1_EU370913, v, 7, *, *, *, *, *, *, MYS, *, *, *
+oqxA_1_EU370913.v6, oqxA_1_EU370913, v, 6, *, *, *, KWT, *, *, *, *, *, *
+oqxA_1_EU370913.v3, oqxA_1_EU370913, v, 3, *, *, *, *, *, LKA, *, *, *, *
+oqxA_1_EU370913.v2, oqxA_1_EU370913, v, 2, BFA, *, *, *, *, *, *, *, *, *
+oqxA_1_EU370913.v11, oqxA_1_EU370913, v, 11, *, CIV, *, *, *, *, *, *, *, *
+oqxA_1_EU370913.v10, oqxA_1_EU370913, v, 10, *, *, *, *, *, *, *, *, *, USA
+oqxA_1_EU370913.v1, oqxA_1_EU370913, v, 1, BFA, *, *, *, *, *, *, *, *, *
+oqxA_1_EU370913.R, oqxA_1_EU370913, R, R, *, *, *, *, *, *, *, *, *, *

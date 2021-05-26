@@ -1,0 +1,5 @@
+id, gene, type, version, BEL, BRA, CAN, CHE, CMR, DEU, DNK, ESP, FIN, GBR, GHA, GRL, HRV, IRL, KAZ, LUX, LVA, MLT, MYS, NGA, NZL, POL, PRT, PRY, SAU, SWE, TWN, UGA, URY, USA
+blaOXA_129_1_FJWZ01000025.R, blaOXA_129_1_FJWZ01000025, R, R, BEL, BRA, CAN, CHE, CMR, DEU, DNK, ESP, FIN, GBR, GHA, GRL, *, IRL, *, LUX, LVA, MLT, MYS, NGA, *, POL, PRT, PRY, SAU, *, TWN, UGA, URY, USA
+blaOXA_129_1_FJWZ01000025.v1, blaOXA_129_1_FJWZ01000025, v, 1, BEL, *, *, *, *, *, *, *, FIN, *, *, *, HRV, *, KAZ, *, *, *, *, *, *, *, *, *, *, SWE, *, *, *, USA
+blaOXA_129_1_FJWZ01000025.v3, blaOXA_129_1_FJWZ01000025, v, 3, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, NZL, *, *, *, *, *, *, *, *, *
+blaOXA_129_1_FJWZ01000025.v2, blaOXA_129_1_FJWZ01000025, v, 2, *, *, CAN, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

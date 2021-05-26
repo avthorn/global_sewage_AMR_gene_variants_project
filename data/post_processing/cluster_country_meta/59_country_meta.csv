@@ -1,0 +1,5 @@
+id, gene, type, version, BEL, BFA, COL, GHA, NPL, SRB
+lnu_A_1_M14039.v1, lnu_A_1_M14039, v, 1, *, BFA, COL, *, NPL, *
+lnu_A_1_M14039.v2, lnu_A_1_M14039, v, 2, *, *, *, GHA, *, SRB
+lnu_A_1_M14039.v3, lnu_A_1_M14039, v, 3, BEL, *, *, *, *, *
+lnu_A_1_M14039.R, lnu_A_1_M14039, R, R, *, *, *, *, *, *

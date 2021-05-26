@@ -1,0 +1,5 @@
+id, gene, type, version, CMR, COD, ECU, GTM, IND, MYS, NIC, NPL, PAK, SGP, TZA, UGA
+erm_X_2_X51472.v1, erm_X_2_X51472, v, 1, CMR, COD, ECU, GTM, IND, MYS, NIC, NPL, PAK, *, TZA, *
+erm_X_3_U21300.v1, erm_X_3_U21300, v, 1, *, *, *, *, IND, MYS, *, NPL, *, *, TZA, UGA
+erm_X_2_X51472.R, erm_X_2_X51472, R, R, *, *, *, *, *, *, *, *, *, SGP, *, *
+erm_X_3_U21300.R, erm_X_3_U21300, R, R, *, *, *, *, *, *, *, *, *, *, *, *

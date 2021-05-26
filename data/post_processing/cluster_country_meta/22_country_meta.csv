@@ -1,0 +1,7 @@
+id, gene, type, version, BFA, CAN, CHL, CIV, CMR, COD, CZE, ECU, FIN, FRA, GHA, GRC, GTM, HRV, HUN, ISL, ISR, LCA, LVA, MAR, MKD, MLT, MNE, MUS, NGA, PER, PRT, SEN, TGO, TUR, TZA, USA, ZMB
+aadA7_1_AF224733.R, aadA7_1_AF224733, R, R, BFA, *, *, CIV, CMR, *, CZE, ECU, FIN, FRA, GHA, GRC, *, HRV, HUN, *, ISR, LCA, LVA, MAR, MKD, MLT, MNE, MUS, *, *, PRT, SEN, *, TUR, TZA, *, ZMB
+aadA7_1_AF224733.v3, aadA7_1_AF224733, v, 3, *, *, *, *, *, *, *, ECU, *, *, *, GRC, GTM, *, *, *, *, *, *, *, *, *, MNE, *, NGA, *, *, *, TGO, *, *, *, *
+aadA7_1_AF224733.v1, aadA7_1_AF224733, v, 1, *, CAN, *, *, *, *, *, *, *, *, *, *, GTM, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, USA, *
+aadA7_1_AF224733.v2, aadA7_1_AF224733, v, 2, *, *, *, *, *, COD, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, PER, *, *, *, *, *, *, *
+aadA7_1_AF224733.v5, aadA7_1_AF224733, v, 5, *, *, CHL, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+aadA7_1_AF224733.v4, aadA7_1_AF224733, v, 4, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, ISL, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

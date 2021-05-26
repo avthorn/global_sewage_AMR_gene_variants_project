@@ -1,0 +1,3 @@
+id, gene, type, version, BEN, BRA, BRB, BWA, CIV, CMR, COD, GHA, IND, ISR, MOZ, MWI, NGA, PAK, SAU, SEN, TCD, TGO, TZA, USA, VNM, ZMB
+dfrA15_2_AF221900.R, dfrA15_2_AF221900, R, R, BEN, *, *, BWA, CIV, CMR, COD, GHA, IND, ISR, MOZ, MWI, NGA, PAK, SAU, SEN, TCD, TGO, TZA, USA, VNM, ZMB
+dfrA15_1_AF156486.R, dfrA15_1_AF156486, R, R, BEN, BRA, BRB, *, CIV, *, COD, GHA, *, *, *, *, NGA, PAK, *, *, TCD, TGO, *, *, *, *

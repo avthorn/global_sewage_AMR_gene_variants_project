@@ -1,0 +1,5 @@
+id, gene, type, version, AUS, BEL, BEN, BFA, CAN, CIV, CMR, COD, ESP, FIN, GBR, GHA, GTM, IND, KEN, KOR, MLT, MUS, MWI, MYS, NPL, PAK, PRT, TGO, TZA, UGA, USA
+tet_M_7_FN433596.R, tet_M_7_FN433596, R, R, *, BEL, *, BFA, CAN, CIV, CMR, COD, ESP, FIN, GBR, GHA, GTM, IND, KEN, KOR, MLT, MUS, MWI, MYS, NPL, PAK, PRT, TGO, TZA, UGA, USA
+tet_M_13_AM990992.R, tet_M_13_AM990992, R, R, AUS, *, BEN, *, *, *, *, COD, *, *, *, GHA, GTM, *, *, *, *, *, *, MYS, NPL, *, *, TGO, *, *, *
+tet_M_1_X92947.R, tet_M_1_X92947, R, R, *, *, *, *, *, *, *, *, *, *, *, GHA, *, *, *, *, *, *, *, *, *, *, *, *, TZA, *, *
+tet_M_7_FN433596.v1, tet_M_7_FN433596, v, 1, *, *, *, *, *, *, *, *, *, *, *, GHA, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

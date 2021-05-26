@@ -1,0 +1,5 @@
+id, gene, type, version, BRA, CIV, ESP, GHA, NGA, PHL, TGO
+dfrA22_4_AJ628423.R, dfrA22_4_AJ628423, R, R, BRA, CIV, *, GHA, NGA, *, TGO
+dfrA22_3_FM957884.v1, dfrA22_3_FM957884, v, 1, *, *, ESP, *, *, *, *
+dfrA22_2_KF525301.R, dfrA22_2_KF525301, R, R, *, *, *, *, *, PHL, *
+dfrA22_3_FM957884.R, dfrA22_3_FM957884, R, R, *, *, *, *, *, *, *

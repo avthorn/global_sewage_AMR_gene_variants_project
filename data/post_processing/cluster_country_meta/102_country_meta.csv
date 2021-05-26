@@ -1,0 +1,3 @@
+id, gene, type, version, BWA, CIV, COD, GHA, IND, IRN, ITA, KAZ, KEN, KHM, MAR, MLT, MWI, NPL, PAK, PER, PHL, SAU, SEN, TCD, TZA, UGA, VNM, ZMB
+ARR_3_1_JF806499.R, ARR_3_1_JF806499, R, R, BWA, CIV, COD, GHA, IND, IRN, ITA, KAZ, KEN, *, MAR, MLT, MWI, NPL, PAK, PER, *, SAU, SEN, TCD, TZA, UGA, *, ZMB
+ARR_2_1_HQ141279.R, ARR_2_1_HQ141279, R, R, *, *, *, *, IND, *, *, *, *, KHM, *, *, *, *, PAK, *, PHL, *, *, TCD, TZA, *, VNM, *

@@ -1,0 +1,5 @@
+id, gene, type, version, BEN, GHA, IND, NGA, TCD, TZA
+blaCARB_4_1_FJ785525.v2, blaCARB_4_1_FJ785525, v, 2, *, *, *, *, *, TZA
+blaCARB_4_1_FJ785525.R, blaCARB_4_1_FJ785525, R, R, BEN, GHA, IND, NGA, TCD, *
+blaCARB_4_1_FJ785525.v3, blaCARB_4_1_FJ785525, v, 3, *, *, *, *, *, TZA
+blaCARB_4_1_FJ785525.v1, blaCARB_4_1_FJ785525, v, 1, *, *, *, NGA, *, *

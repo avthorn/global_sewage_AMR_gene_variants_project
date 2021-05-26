@@ -1,0 +1,5 @@
+id, gene, type, version, CMR, ECU, IND, JPN, KOR, LUX, NIC, PAK, TCD, URY
+aph_3_VI_1_KC170992.R, aph_3_VI_1_KC170992, R, R, *, *, *, JPN, KOR, *, NIC, PAK, *, *
+aph_3_VIb_1_AJ627643.R, aph_3_VIb_1_AJ627643, R, R, *, *, *, JPN, *, LUX, *, *, *, *
+aph_3_VIa_1_X07753.R, aph_3_VIa_1_X07753, R, R, *, ECU, IND, *, *, *, *, *, TCD, URY
+aph_3_VIa_1_X07753.v1, aph_3_VIa_1_X07753, v, 1, CMR, *, *, *, *, *, *, *, *, *

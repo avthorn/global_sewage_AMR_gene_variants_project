@@ -1,0 +1,4 @@
+id, gene, type, version, ETH, JPN, MAR, NZL
+aac_6_31_1_AM283489.R, aac_6_31_1_AM283489, R, R, *, JPN, *, NZL
+aac_6_31_1_AM283489.v2, aac_6_31_1_AM283489, v, 2, *, *, MAR, *
+aac_6_31_1_AM283489.v1, aac_6_31_1_AM283489, v, 1, ETH, *, *, *

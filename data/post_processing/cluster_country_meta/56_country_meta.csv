@@ -1,0 +1,5 @@
+id, gene, type, version, AUS, AUT, BEL, BIH, BRB, CAN, CHE, CZE, ESP, ETH, GRC, HUN, MNE, NIC, PRT, SRB, SVK, SVN, TUR, USA
+mef_A_3_AF227520.v1, mef_A_3_AF227520, v, 1, AUS, AUT, BEL, BIH, BRB, CAN, CHE, *, ESP, ETH, GRC, HUN, MNE, NIC, PRT, SRB, SVK, SVN, TUR, USA
+mef_A_3_AF227520.v3, mef_A_3_AF227520, v, 3, *, *, *, *, *, *, *, CZE, *, *, *, *, *, *, *, *, *, *, *, *
+mef_A_3_AF227520.v2, mef_A_3_AF227520, v, 2, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, SVN, *, *
+mef_A_3_AF227520.R, mef_A_3_AF227520, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

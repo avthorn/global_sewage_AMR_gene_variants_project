@@ -1,0 +1,4 @@
+id, gene, type, version, AUT, BEL, BEN, CMR, COD, ITA, LUX, MWI, PER, SRB
+cat_2_M35190.R, cat_2_M35190, R, R, AUT, BEL, BEN, CMR, COD, *, LUX, *, PER, *
+cat_2_M35190.v2, cat_2_M35190, v, 2, *, *, *, *, COD, *, *, MWI, *, *
+cat_2_M35190.v1, cat_2_M35190, v, 1, *, *, *, *, *, ITA, *, *, *, SRB

@@ -1,0 +1,11 @@
+id, gene, type, version, ARE, AUS, BFA, BRA, BWA, CHN, CIV, CMR, COD, GHA, KHM, MLT, MUS, MYS, NGA, NIC, NPL, NZL, PRT, SAU, SEN, SRB, TCD, THA, TZA, UGA, ZMB
+aadA2_2_JQ364967.R, aadA2_2_JQ364967, R, R, *, *, *, BRA, BWA, CHN, CIV, CMR, COD, *, *, MLT, MUS, MYS, NGA, NIC, NPL, *, *, *, *, *, TCD, *, TZA, UGA, *
+aadA2_1_NC_010870.R, aadA2_1_NC_010870, R, R, *, AUS, *, *, *, *, CIV, CMR, COD, *, *, MLT, *, *, *, *, *, NZL, PRT, *, *, *, *, *, TZA, UGA, *
+aadA2_1_NC_010870.v1, aadA2_1_NC_010870, v, 1, ARE, *, *, *, *, *, *, CMR, *, GHA, KHM, *, *, MYS, NGA, *, *, *, *, *, SEN, *, *, THA, *, *, ZMB
+aadA3_1_AF047479.v1, aadA3_1_AF047479, v, 1, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, SAU, *, *, *, *, *, *, *
+aadA8b_1_AY139603.R, aadA8b_1_AY139603, R, R, *, *, *, *, *, *, *, CMR, *, *, *, *, *, *, NGA, *, *, *, *, *, *, *, *, *, *, *, *
+aadA8_1_AF326210.v1, aadA8_1_AF326210, v, 1, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, SRB, *, *, *, *, *
+aadA3_1_AF047479.R, aadA3_1_AF047479, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *, *, NGA, *, *, *, *, *, *, *, *, *, *, *, *
+aadA2_1_NC_010870.v3, aadA2_1_NC_010870, v, 3, *, *, *, *, *, *, *, *, *, *, *, *, *, *, NGA, *, *, *, *, *, *, *, *, *, *, *, *
+aadA2_1_NC_010870.v2, aadA2_1_NC_010870, v, 2, *, *, BFA, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+aadA8_1_AF326210.R, aadA8_1_AF326210, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

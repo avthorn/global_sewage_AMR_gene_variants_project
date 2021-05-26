@@ -1,0 +1,6 @@
+id, gene, type, version, CAN, DNK, ETH, JPN, NIC, TZA, UGA
+blaAER_1_1_U14748.v1, blaAER_1_1_U14748, v, 1, *, *, ETH, JPN, *, TZA, UGA
+blaAER_1_1_U14748.v2, blaAER_1_1_U14748, v, 2, *, *, *, *, NIC, *, *
+blaAER_1_1_U14748.v4, blaAER_1_1_U14748, v, 4, *, DNK, *, *, *, *, *
+blaAER_1_1_U14748.v3, blaAER_1_1_U14748, v, 3, CAN, *, *, *, *, *, *
+blaAER_1_1_U14748.R, blaAER_1_1_U14748, R, R, *, *, *, *, *, *, *

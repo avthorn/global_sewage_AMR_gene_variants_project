@@ -1,0 +1,4 @@
+id, gene, type, version, ARE, BFA, BIH, BWA, CIV, COD, DEU, DNK, ECU, GEO, GRC, HKG, IND, IRN, ISR, ITA, KAZ, KEN, KHM, LCA, LKA, LVA, MAR, MKD, MLT, MNE, MOZ, MUS, MYS, NPL, PAK, PER, PHL, POL, PRT, SAU, TGO, THA, TZA, UGA, USA, VNM, ZAF, ZMB
+qnrVC4_1_GQ891757.R, qnrVC4_1_GQ891757, R, R, ARE, BFA, BIH, BWA, CIV, COD, DEU, DNK, ECU, GEO, GRC, *, IND, IRN, ISR, ITA, KAZ, KEN, KHM, *, LKA, LVA, MAR, MKD, MLT, MNE, MOZ, MUS, MYS, NPL, PAK, PER, PHL, POL, PRT, SAU, TGO, THA, TZA, UGA, USA, VNM, ZAF, ZMB
+qnrVC5_1_JN408080.R, qnrVC5_1_JN408080, R, R, *, *, *, *, *, *, *, *, *, *, *, HKG, *, *, *, *, *, *, *, LCA, *, *, *, *, *, *, *, *, *, *, *, *, PHL, *, *, *, *, *, *, *, *, *, *, *
+qnrVC4_1_GQ891757.v1, qnrVC4_1_GQ891757, v, 1, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, LKA, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

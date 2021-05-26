@@ -1,0 +1,6 @@
+id, gene, type, version, AUS, BEL, BFA, BWA, CHL, CHN, CIV, CMR, COD, ECU, ESP, GRC, IND, IRN, MAR, MLT, MNE, MUS, MWI, NGA, NPL, PAK, PER, POL, PRT, PRY, TCD, TZA, UGA, ZAF
+aac_6_Ib_cr_1_DQ303918.R, aac_6_Ib_cr_1_DQ303918, R, R, AUS, BEL, BFA, BWA, *, CHN, CIV, *, COD, ECU, ESP, GRC, IND, IRN, MAR, MLT, MNE, MUS, MWI, NGA, NPL, PAK, PER, POL, PRT, *, TCD, TZA, UGA, *
+aac_6_Ib_cr_2_EF636461.R, aac_6_Ib_cr_2_EF636461, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *, IRN, MAR, MLT, *, *, *, *, *, *, *, *, *, *, *, TZA, *, *
+aac_6_Ib_1_M21682.R, aac_6_Ib_1_M21682, R, R, *, *, *, *, *, *, *, *, *, *, *, GRC, *, *, *, *, *, *, *, *, *, *, *, *, *, PRY, *, *, *, *
+aac_6_Ib3_1_X60321.v1, aac_6_Ib3_1_X60321, v, 1, *, *, *, *, *, *, *, CMR, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, ZAF
+aac_6_Ib3_1_X60321.R, aac_6_Ib3_1_X60321, R, R, *, *, *, *, CHL, *, *, *, *, *, *, *, *, *, MAR, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

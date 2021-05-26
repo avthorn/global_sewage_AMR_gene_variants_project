@@ -1,0 +1,4 @@
+id, gene, type, version, ECU, HKG, LCA, PHL, TZA
+dfrA31_1_AB200915.R, dfrA31_1_AB200915, R, R, *, HKG, LCA, PHL, *
+dfrA6_2_FJ905898.v1, dfrA6_2_FJ905898, v, 1, ECU, *, *, *, TZA
+dfrA6_2_FJ905898.R, dfrA6_2_FJ905898, R, R, *, *, *, *, *

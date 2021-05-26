@@ -1,0 +1,9 @@
+id, gene, type, version, AUS, AUT, BEL, BGD, BRA, CAN, CHE, CHN, CIV, CMR, COD, DEU, DNK, ESP, FIN, GHA, HUN, IND, JPN, KAZ, KEN, KHM, KOR, LKA, LVA, MLT, MNE, MUS, MYS, NGA, NLD, NPL, PAK, PHL, POL, SWE, TGO, THA, TWN, TZA, UGA, USA
+lsa_E_1_JX560992.v1, lsa_E_1_JX560992, v, 1, *, *, *, BGD, BRA, *, *, CHN, CIV, CMR, COD, *, *, *, FIN, GHA, *, IND, *, KAZ, KEN, KHM, KOR, LKA, LVA, MLT, *, MUS, *, NGA, *, NPL, PAK, *, POL, SWE, TGO, THA, TWN, TZA, UGA, *
+lsa_E_1_JX560992.v2, lsa_E_1_JX560992, v, 2, *, *, BEL, *, *, *, *, CHN, *, *, *, *, *, ESP, *, *, HUN, *, JPN, *, *, *, *, *, *, *, MNE, *, *, NGA, NLD, *, PAK, *, *, *, TGO, *, *, *, *, USA
+lsa_E_1_JX560992.R, lsa_E_1_JX560992, R, R, AUS, *, *, *, *, *, *, *, *, *, *, *, *, *, *, GHA, *, IND, *, *, *, *, KOR, *, *, *, *, MUS, MYS, *, *, *, PAK, PHL, *, *, *, *, *, *, *, *
+lsa_E_1_JX560992.v3, lsa_E_1_JX560992, v, 3, *, *, *, *, *, CAN, CHE, *, *, *, *, DEU, DNK, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+lsa_E_1_JX560992.v4, lsa_E_1_JX560992, v, 4, *, AUT, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+lsa_E_1_JX560992.v7, lsa_E_1_JX560992, v, 7, *, *, *, *, *, *, *, *, *, *, *, DEU, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+lsa_E_1_JX560992.v6, lsa_E_1_JX560992, v, 6, *, *, *, *, *, CAN, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+lsa_E_1_JX560992.v5, lsa_E_1_JX560992, v, 5, *, *, *, *, *, CAN, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

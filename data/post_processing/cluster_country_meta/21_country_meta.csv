@@ -1,0 +1,7 @@
+id, gene, type, version, AUS, AUT, BEN, BFA, BGD, CAN, COD, DNK, ESP, GHA, GRC, GRL, GTM, HUN, KOR, LCA, MWI, NGA, NIC, NLD, NPL, PAK, POL, SGP, TGO, THA, USA
+erm_G_1_M15332.R, erm_G_1_M15332, R, R, AUS, AUT, BEN, BFA, BGD, CAN, COD, DNK, ESP, GHA, GRC, GRL, GTM, HUN, KOR, LCA, *, NGA, NIC, NLD, NPL, PAK, POL, SGP, TGO, THA, USA
+erm_G_1_M15332.v5, erm_G_1_M15332, v, 5, *, *, *, *, *, *, *, *, *, *, *, *, *, *, KOR, *, *, *, *, *, *, *, *, *, *, *, *
+erm_G_1_M15332.v4, erm_G_1_M15332, v, 4, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, MWI, *, *, *, *, *, *, *, *, *, *
+erm_G_1_M15332.v3, erm_G_1_M15332, v, 3, *, AUT, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+erm_G_1_M15332.v2, erm_G_1_M15332, v, 2, *, *, *, *, *, CAN, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+erm_G_1_M15332.v1, erm_G_1_M15332, v, 1, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, USA

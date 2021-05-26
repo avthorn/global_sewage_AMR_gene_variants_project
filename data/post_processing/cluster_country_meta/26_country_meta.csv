@@ -1,0 +1,7 @@
+id, gene, type, version, AUS, CAN, CHE, CHL, CHN, CIV, CMR, COD, CZE, ECU, EST, FIN, GTM, HRV, IND, IRN, ITA, KEN, KHM, KOR, MLT, MNE, MWI, MYS, NLD, NPL, PAK, PRT, SAU, SGP, TCD, THA, TZA, UGA, URY, USA, VNM
+aph_3_Ia_7_X62115.R, aph_3_Ia_7_X62115, R, R, *, *, CHE, CHL, CHN, *, CMR, COD, CZE, ECU, *, FIN, *, HRV, IND, *, *, KEN, KHM, KOR, MLT, MNE, MWI, *, *, *, PAK, PRT, SAU, SGP, TCD, *, TZA, UGA, *, USA, VNM
+aph_3_Ia_1_V00359.R, aph_3_Ia_1_V00359, R, R, AUS, CAN, *, *, *, CIV, *, *, *, *, EST, FIN, GTM, *, *, IRN, ITA, *, *, *, MLT, *, *, MYS, NLD, NPL, *, PRT, *, *, *, THA, *, *, URY, USA, VNM
+aph_3_Ia_5_AP004237.R, aph_3_Ia_5_AP004237, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, KOR, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+aph_3_Ia_3_EF015636.v1, aph_3_Ia_3_EF015636, v, 1, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, SGP, *, *, *, *, *, *, *
+aph_3_Ia_1_V00359.v1, aph_3_Ia_1_V00359, v, 1, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, USA, *
+aph_3_Ia_3_EF015636.R, aph_3_Ia_3_EF015636, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

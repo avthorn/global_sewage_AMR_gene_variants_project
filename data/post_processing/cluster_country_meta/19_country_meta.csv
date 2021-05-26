@@ -1,0 +1,8 @@
+id, gene, type, version, ARG, BEL, BGR, BOL, BRA, BWA, CAN, CHN, CIV, CMR, COD, DEU, DNK, ECU, ESP, ETH, FIN, GBR, GHA, IND, IRL, IRN, KAZ, KEN, KHM, KOR, KWT, MAR, MLT, MWI, NGA, NIC, NPL, PAK, PRT, RKS, SEN, SVN, SWE, TCD, TGO, TUR, TZA, USA, VNM, ZAF, ZMB
+blaCARB_8_1_AY178993.R, blaCARB_8_1_AY178993, R, R, ARG, *, *, BOL, BRA, *, *, CHN, CIV, CMR, COD, *, *, ECU, ESP, ETH, *, GBR, GHA, *, *, IRN, KAZ, KEN, *, KOR, KWT, MAR, MLT, MWI, NGA, NIC, NPL, PAK, PRT, RKS, SEN, SVN, *, TCD, TGO, *, TZA, USA, VNM, *, ZMB
+blaCARB_10_1_EU850412.v1, blaCARB_10_1_EU850412, v, 1, *, BEL, BGR, *, *, BWA, CAN, *, *, *, *, DEU, DNK, *, ESP, *, FIN, GBR, GHA, *, IRL, IRN, *, *, *, *, *, *, *, MWI, *, NIC, *, PAK, PRT, RKS, SEN, SVN, SWE, TCD, *, *, TZA, *, *, ZAF, *
+blaCARB_16_1_HF953351.R, blaCARB_16_1_HF953351, R, R, *, *, *, *, *, *, *, *, CIV, CMR, COD, *, *, *, *, *, *, *, GHA, IND, *, *, *, *, KHM, *, *, MAR, MLT, *, *, NIC, NPL, PAK, PRT, *, SEN, SVN, *, TCD, TGO, TUR, TZA, *, *, *, *
+blaCARB_10_1_EU850412.v2, blaCARB_10_1_EU850412, v, 2, *, *, *, *, *, *, *, *, *, CMR, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+blaCARB_8_1_AY178993.v1, blaCARB_8_1_AY178993, v, 1, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, SVN, *, *, *, *, *, *, *, *, *
+blaCARB_5_1_AF135373.R, blaCARB_5_1_AF135373, R, R, *, *, *, *, *, *, *, *, CIV, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+blaCARB_10_1_EU850412.R, blaCARB_10_1_EU850412, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

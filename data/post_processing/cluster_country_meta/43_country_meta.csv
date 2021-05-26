@@ -1,0 +1,5 @@
+id, gene, type, version, ARE, AUS, BEL, BRB, BWA, CAN, CHL, CIV, CMR, COD, DNK, FRA, GHA, HKG, IRN, ISR, KEN, LCA, LUX, MAR, MLT, MUS, MWI, NGA, PAK, PHL, PRT, SAU, SEN, TGO, TUR, TZA, UGA, ZMB
+blaNPS_1_AY027589.v1, blaNPS_1_AY027589, v, 1, ARE, AUS, *, BRB, BWA, CAN, *, CIV, CMR, COD, *, *, GHA, HKG, IRN, ISR, KEN, *, *, MAR, MLT, MUS, MWI, NGA, PAK, PHL, *, SAU, SEN, TGO, TUR, *, UGA, ZMB
+blaLCR_1_1_X56809.R, blaLCR_1_1_X56809, R, R, ARE, *, *, BRB, *, *, CHL, *, *, *, DNK, *, GHA, *, IRN, ISR, *, *, *, *, *, MUS, *, *, PAK, *, PRT, SAU, SEN, TGO, TUR, TZA, *, *
+blaNPS_1_AY027589.v2, blaNPS_1_AY027589, v, 2, *, *, BEL, *, *, CAN, *, CIV, *, *, DNK, FRA, *, *, *, *, *, LCA, LUX, *, MLT, *, *, NGA, PAK, *, PRT, *, *, *, *, *, *, *
+blaNPS_1_AY027589.R, blaNPS_1_AY027589, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, TZA, *, *

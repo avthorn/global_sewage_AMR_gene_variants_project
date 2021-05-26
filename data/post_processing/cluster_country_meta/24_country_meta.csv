@@ -1,0 +1,7 @@
+id, gene, type, version, AUS, BGR, BRA, CAN, CHN, CIV, CMR, COD, DNK, ECU, GBR, GHA, LCA, MAR, MYS, NGA, NIC, PAK, PHL, SAU, SEN, SVK, THA, TZA, UGA, ZMB
+tet_C_2_AY046276.R, tet_C_2_AY046276, R, R, *, BGR, *, CAN, CHN, CIV, CMR, COD, DNK, ECU, *, GHA, LCA, MAR, MYS, NGA, *, PAK, *, *, SEN, *, *, TZA, UGA, ZMB
+tet_C_3_AF055345.v1, tet_C_3_AF055345, v, 1, AUS, *, BRA, *, *, CIV, *, *, *, *, *, *, *, *, *, NGA, NIC, *, PHL, SAU, *, *, *, *, *, *
+tet_C_2_AY046276.v1, tet_C_2_AY046276, v, 1, *, *, *, *, *, *, *, *, DNK, *, *, *, *, *, *, *, *, *, *, *, *, SVK, THA, *, *, *
+tet_C_1_NC_003123.v1, tet_C_1_NC_003123, v, 1, *, *, *, *, *, *, *, *, *, ECU, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+tet_C_1_NC_003123.R, tet_C_1_NC_003123, R, R, *, *, *, *, *, *, *, *, *, *, GBR, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+tet_C_3_AF055345.R, tet_C_3_AF055345, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

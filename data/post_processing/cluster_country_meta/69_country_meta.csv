@@ -1,0 +1,4 @@
+id, gene, type, version, BFA, CHN, CIV, CMR, COD, DNK, GHA, IND, KEN, KHM, KOR, LKA, MUS, MYS, NGA, NPL, PAK, SAU, TGO, THA, TWN, TZA, UGA
+catB8_1_AF227506.R, catB8_1_AF227506, R, R, BFA, CHN, CIV, CMR, COD, DNK, *, IND, KEN, KHM, KOR, LKA, MUS, MYS, NGA, NPL, PAK, SAU, TGO, THA, TWN, *, *
+catB8_1_AF227506.v2, catB8_1_AF227506, v, 2, *, *, *, *, COD, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, TZA, UGA
+catB8_1_AF227506.v1, catB8_1_AF227506, v, 1, *, *, *, *, *, *, GHA, *, *, *, *, *, *, *, NGA, *, *, *, *, *, *, TZA, *

@@ -1,0 +1,4 @@
+id, gene, type, version, ISL, SGP
+aac_6_Ig_1_L09246.v1, aac_6_Ig_1_L09246, v, 1, ISL, *
+aac_6_Ig_1_L09246.v2, aac_6_Ig_1_L09246, v, 2, *, SGP
+aac_6_Ig_1_L09246.R, aac_6_Ig_1_L09246, R, R, *, *

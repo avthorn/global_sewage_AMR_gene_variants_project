@@ -1,0 +1,6 @@
+id, gene, type, version, BRA, CHN, CIV, CMR, COD, ESP, GRC, IRN, ISR, ITA, KEN, KHM, MKD, MWI, NGA, PAK, PER, PRT, PRY, SAU, THA, TUR, TWN, TZA, UGA, VNM
+ere_A_1_AY183453.v1, ere_A_1_AY183453, v, 1, *, CHN, CIV, CMR, COD, ESP, GRC, *, *, ITA, *, *, MKD, *, *, *, PER, PRT, PRY, *, *, *, TWN, TZA, *, *
+ere_A_6_DQ157752.v1, ere_A_6_DQ157752, v, 1, *, CHN, *, *, COD, *, *, *, *, *, KEN, KHM, *, MWI, *, PAK, PER, *, *, SAU, *, *, *, TZA, UGA, VNM
+ere_A_6_DQ157752.v2, ere_A_6_DQ157752, v, 2, BRA, *, CIV, *, *, *, *, *, *, *, *, KHM, *, MWI, NGA, *, *, *, *, *, THA, *, *, *, *, *
+ere_A_1_AY183453.R, ere_A_1_AY183453, R, R, *, CHN, *, *, *, *, *, IRN, ISR, *, *, *, *, *, *, *, *, *, *, *, *, TUR, *, TZA, *, *
+ere_A_6_DQ157752.R, ere_A_6_DQ157752, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

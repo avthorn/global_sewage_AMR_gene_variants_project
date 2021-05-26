@@ -1,0 +1,5 @@
+id, gene, type, version, AUS, BRB, CAN, GBR, GRC, IND, KOR, LCA, TGO
+fosA_3_ACWO01000079.R, fosA_3_ACWO01000079, R, R, AUS, BRB, CAN, GBR, GRC, IND, KOR, LCA, *
+fosA_3_ACWO01000079.v1, fosA_3_ACWO01000079, v, 1, AUS, *, *, *, *, *, *, *, TGO
+fosA5_1_EU195449.v1, fosA5_1_EU195449, v, 1, AUS, *, *, *, *, *, *, *, *
+fosA5_1_EU195449.R, fosA5_1_EU195449, R, R, *, *, *, *, *, *, *, *, *

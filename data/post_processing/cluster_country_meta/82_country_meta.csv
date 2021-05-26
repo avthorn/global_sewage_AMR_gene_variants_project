@@ -1,0 +1,4 @@
+id, gene, type, version, AUS, BRA, CAN, CIV, COL, ECU, ETH, FIN, GBR, GHA, GTM, IRN, ITA, KHM, LVA, MAR, MLT, MUS, MYS, NGA, NLD, PAK, PHL, SAU, SEN, SGP, THA, TZA, URY, USA
+lnu_F_1_EU118119.R, lnu_F_1_EU118119, R, R, AUS, BRA, CAN, CIV, COL, ECU, *, FIN, GBR, GHA, GTM, IRN, ITA, KHM, *, MAR, MLT, MUS, MYS, NGA, NLD, PAK, PHL, SAU, SEN, SGP, THA, TZA, URY, USA
+lnu_F_1_EU118119.v1, lnu_F_1_EU118119, v, 1, *, BRA, CAN, *, *, *, *, *, *, *, *, *, *, *, LVA, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+lnu_F_1_EU118119.v2, lnu_F_1_EU118119, v, 2, *, *, *, *, *, *, ETH, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

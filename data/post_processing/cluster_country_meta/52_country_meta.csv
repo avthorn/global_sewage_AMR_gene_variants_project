@@ -1,0 +1,5 @@
+id, gene, type, version, CZE, KWT, NPL, SVN
+mef_A_2_U83667.v3, mef_A_2_U83667, v, 3, CZE, *, *, *
+mef_A_2_U83667.v2, mef_A_2_U83667, v, 2, *, KWT, *, *
+mef_A_2_U83667.v1, mef_A_2_U83667, v, 1, *, *, *, SVN
+mef_A_2_U83667.R, mef_A_2_U83667, R, R, *, *, NPL, *

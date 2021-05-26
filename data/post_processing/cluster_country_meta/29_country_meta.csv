@@ -1,0 +1,6 @@
+id, gene, type, version, CHL, CIV, CMR, COD, COL, ECU, EST, GRL, GTM, LTU, LVA, MNE, NGA, NIC, NPL, PER, PRY, RKS, SWE, TZA, UGA, USA, ZAF, ZMB
+tet_O_32_O_5_FP929050.R, tet_O_32_O_5_FP929050, R, R, CHL, *, CMR, COD, COL, ECU, *, GRL, GTM, *, LVA, MNE, NGA, NIC, NPL, PER, PRY, RKS, SWE, TZA, UGA, USA, ZAF, ZMB
+tet_O_32_O_4_AIOQ01000025.R, tet_O_32_O_4_AIOQ01000025, R, R, *, CIV, CMR, *, *, *, *, *, *, *, *, *, *, *, NPL, *, *, *, *, *, *, *, *, *
+tet_O_32_O_3_NZ_AUJS01000017.R, tet_O_32_O_3_NZ_AUJS01000017, R, R, *, *, CMR, *, *, *, EST, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+tet_O_32_O_5_FP929050.v2, tet_O_32_O_5_FP929050, v, 2, *, *, *, *, *, *, *, *, *, LTU, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+tet_O_32_O_5_FP929050.v1, tet_O_32_O_5_FP929050, v, 1, *, *, *, *, *, *, *, *, *, *, *, *, NGA, *, *, *, *, *, *, *, *, *, *, *

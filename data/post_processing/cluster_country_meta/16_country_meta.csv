@@ -1,0 +1,8 @@
+id, gene, type, version, AUS, AUT, BEL, CAN, CHE, CZE, ESP, GRC, NPL, PRT, SRB, SVN, TUR, USA, ZAF
+msr_D_3_AF227520.v1, msr_D_3_AF227520, v, 1, AUS, AUT, BEL, CAN, CHE, *, ESP, GRC, *, PRT, SRB, SVN, TUR, USA, *
+msr_D_2_AF274302.R, msr_D_2_AF274302, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *, USA, *
+msr_D_3_AF227520.v3, msr_D_3_AF227520, v, 3, *, *, *, CAN, *, *, *, *, *, *, *, *, *, *, *
+msr_D_3_AF227520.v2, msr_D_3_AF227520, v, 2, *, *, *, *, *, CZE, *, *, *, *, *, *, *, *, *
+msr_D_2_AF274302.v2, msr_D_2_AF274302, v, 2, *, *, *, *, *, *, *, *, NPL, *, *, *, *, *, *
+msr_D_2_AF274302.v1, msr_D_2_AF274302, v, 1, *, *, *, *, *, *, *, *, *, *, *, *, *, *, ZAF
+msr_D_3_AF227520.R, msr_D_3_AF227520, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

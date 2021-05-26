@@ -1,0 +1,5 @@
+id, gene, type, version, ARE, AUS, BRA, BWA, CHN, CIV, CMR, COD, ECU, EST, ETH, IRN, ISR, KEN, MAR, MDG, MKD, MUS, MWI, NEG, NGA, NPL, NZL, PAK, PER, POL, SAU, SEN, SGP, SRB, TCD, TGO, TUR, TZA, USA, ZMB
+tet_B_2_AF326777.R, tet_B_2_AF326777, R, R, ARE, AUS, BRA, BWA, CHN, CIV, CMR, COD, ECU, EST, ETH, IRN, ISR, KEN, MAR, MDG, MKD, MUS, MWI, NEG, NGA, NPL, *, PAK, *, POL, SAU, SEN, SGP, SRB, TCD, TGO, TUR, TZA, USA, ZMB
+tet_B_1_AP000342.R, tet_B_1_AP000342, R, R, *, *, *, *, *, CIV, *, COD, ECU, *, ETH, *, *, *, *, *, *, *, *, *, *, *, NZL, *, PER, *, *, *, *, *, TCD, *, *, *, USA, *
+tet_B_1_AP000342.v2, tet_B_1_AP000342, v, 2, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, TZA, *, *
+tet_B_1_AP000342.v1, tet_B_1_AP000342, v, 1, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, MWI, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

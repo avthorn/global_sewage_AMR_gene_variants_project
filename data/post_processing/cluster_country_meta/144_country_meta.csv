@@ -1,0 +1,3 @@
+id, gene, type, version, CAN, CIV, GHA, MLT, NGA, POL, SWE, USA
+tet_44_1_NZ_ABDU01000081.R, tet_44_1_NZ_ABDU01000081, R, R, CAN, CIV, *, MLT, NGA, POL, SWE, USA
+tet_44_2_FN594949.R, tet_44_2_FN594949, R, R, *, *, GHA, *, *, *, *, *

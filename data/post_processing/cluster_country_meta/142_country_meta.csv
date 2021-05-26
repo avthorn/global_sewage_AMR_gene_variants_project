@@ -1,0 +1,3 @@
+id, gene, type, version, BWA, GHA, IND, PAK, TCD
+blaACT_16_1_AB737978.R, blaACT_16_1_AB737978, R, R, BWA, GHA, *, PAK, TCD
+blaACT_16_1_AB737978.v1, blaACT_16_1_AB737978, v, 1, *, *, IND, *, *

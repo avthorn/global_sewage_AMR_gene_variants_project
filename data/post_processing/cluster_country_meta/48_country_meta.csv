@@ -1,0 +1,5 @@
+id, gene, type, version, BRB, GRL, IND, LCA, PAK, SRB, TZA
+blaSHV_12_1_KF976405.R, blaSHV_12_1_KF976405, R, R, *, *, IND, *, PAK, *, TZA
+blaSHV_1_1_AF148850.R, blaSHV_1_1_AF148850, R, R, BRB, *, *, LCA, *, *, *
+blaSHV_26_1_AF227204.R, blaSHV_26_1_AF227204, R, R, *, GRL, *, *, *, *, *
+blaSHV_119_1_JX192924.R, blaSHV_119_1_JX192924, R, R, *, *, *, *, *, SRB, *

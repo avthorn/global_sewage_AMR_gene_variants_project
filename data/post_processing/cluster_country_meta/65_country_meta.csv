@@ -1,0 +1,4 @@
+id, gene, type, version, ALB, AUT, BFA, BRB, CHE, CHN, CZE, DEU, FIN, FRA, GBR, GRC, HKG, ITA, KAZ, LKA, LUX, MLT, MUS, MWI, NLD, PRT, SAU, SWE, TCD, TGO, URY, USA
+blaCTX_M_14_1_AF252622.R, blaCTX_M_14_1_AF252622, R, R, ALB, AUT, BFA, *, CHE, CHN, CZE, DEU, FIN, FRA, GBR, GRC, HKG, ITA, KAZ, LKA, LUX, MLT, MUS, MWI, NLD, PRT, SAU, SWE, TCD, TGO, URY, USA
+blaCTX_M_27_1_AY156923.R, blaCTX_M_27_1_AY156923, R, R, *, *, *, *, *, CHN, *, *, *, *, *, *, *, *, *, *, *, *, *, MWI, *, *, *, *, *, *, *, *
+blaCTX_M_14b_1_DQ359215.R, blaCTX_M_14b_1_DQ359215, R, R, *, *, *, BRB, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, URY, *

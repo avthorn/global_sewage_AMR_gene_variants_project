@@ -1,0 +1,3 @@
+id, gene, type, version, BEL, CHN, ECU, MOZ, TUR, USA, VNM
+tet_E_3_CP000645.R, tet_E_3_CP000645, R, R, *, CHN, ECU, MOZ, TUR, USA, VNM
+tet_E_3_CP000645.v1, tet_E_3_CP000645, v, 1, BEL, CHN, *, *, *, *, *

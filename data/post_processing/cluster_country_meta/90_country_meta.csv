@@ -1,0 +1,3 @@
+id, gene, type, version, ARE, BFA, BRA, BRB, CHL, CIV, CMR, COD, ESP, GHA, GRC, IRN, KHM, LCA, MLT, MUS, MWI, NGA, PAK, PER, PRT, PRY, SAU, SEN, TCD, TGO, THA, TZA, UGA
+blaOXA_46_1_AF317511.R, blaOXA_46_1_AF317511, R, R, ARE, BFA, BRA, *, CHL, CIV, CMR, COD, ESP, GHA, GRC, IRN, KHM, *, MLT, MUS, MWI, NGA, PAK, PER, PRT, PRY, SAU, SEN, TCD, TGO, THA, TZA, UGA
+blaOXA_46_1_AF317511.v1, blaOXA_46_1_AF317511, v, 1, *, *, *, BRB, *, *, *, *, *, *, *, *, *, LCA, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

@@ -1,0 +1,10 @@
+id, gene, type, version, ARE, BEN, BFA, BWA, CAN, CHN, CIV, CMR, COD, DEU, DNK, EST, GEO, GHA, GRC, IND, IRN, ISL, ITA, KEN, KHM, KWT, LCA, LKA, LVA, MAR, MKD, MLT, MUS, MWI, MYS, NGA, NIC, NPL, PAK, PHL, POL, PRT, SAU, SEN, SRB, TGO, THA, TZA, UGA, URY, USA, VNM, ZAF
+cmlA1_2_AB212941.R, cmlA1_2_AB212941, R, R, *, BEN, BFA, *, *, CHN, CIV, *, *, *, *, *, *, GHA, *, IND, *, ISL, *, *, KHM, *, LCA, *, *, *, *, MLT, MUS, *, MYS, NGA, *, NPL, *, PHL, *, *, SAU, SEN, *, TGO, THA, TZA, UGA, *, *, VNM, *
+cmlA1_1_M64556.v1, cmlA1_1_M64556, v, 1, ARE, *, *, BWA, *, *, *, CMR, COD, DEU, DNK, *, GEO, GHA, GRC, IND, IRN, *, ITA, KEN, *, KWT, *, *, LVA, MAR, MKD, MLT, *, MWI, *, *, *, *, PAK, *, POL, *, SAU, SEN, SRB, *, *, TZA, UGA, *, *, *, ZAF
+cmlA1_1_M64556.v2, cmlA1_1_M64556, v, 2, *, *, *, *, CAN, CHN, *, *, *, *, *, EST, *, *, *, IND, IRN, *, *, *, *, *, *, *, *, *, *, *, *, *, *, NGA, *, *, PAK, PHL, *, *, *, *, *, TGO, *, *, *, URY, USA, VNM, *
+cmlA1_1_M64556.v3, cmlA1_1_M64556, v, 3, ARE, *, *, *, *, *, *, CMR, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, MWI, MYS, *, *, *, *, *, *, PRT, *, *, *, TGO, *, *, *, *, *, *, *
+cmlA1_1_M64556.v4, cmlA1_1_M64556, v, 4, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, KHM, *, *, LKA, *, *, *, *, *, *, *, *, *, NPL, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+cmlA1_2_AB212941.v2, cmlA1_2_AB212941, v, 2, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, MAR, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+cmlA1_2_AB212941.v1, cmlA1_2_AB212941, v, 1, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, NIC, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+cmlA1_1_M64556.v5, cmlA1_1_M64556, v, 5, *, *, *, *, *, *, *, *, COD, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+cmlA1_1_M64556.R, cmlA1_1_M64556, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

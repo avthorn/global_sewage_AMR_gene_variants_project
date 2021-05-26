@@ -1,0 +1,3 @@
+id, gene, type, version, CMR, COD, GHA, MAR, NPL, PRT
+cat_5_U35036.v1, cat_5_U35036, v, 1, CMR, COD, *, MAR, *, PRT
+cat_5_U35036.R, cat_5_U35036, R, R, *, *, GHA, *, NPL, *

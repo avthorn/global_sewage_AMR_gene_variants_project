@@ -1,0 +1,4 @@
+id, gene, type, version, AUS, BFA, BRA, CIV, CMR, COD, ETH, GHA, IRN, KEN, KOR, KWT, MAR, MLT, MOZ, MWI, MYS, NGA, NPL, SEN, SGP, SRB, TCD, TGO, TZA, UGA, VNM, ZMB
+blaCARB_2_1_M69058.R, blaCARB_2_1_M69058, R, R, AUS, BFA, *, CIV, CMR, COD, ETH, GHA, IRN, KEN, KOR, KWT, MAR, MLT, MOZ, MWI, MYS, NGA, NPL, SEN, *, SRB, TCD, TGO, TZA, UGA, VNM, ZMB
+blaCARB_12_1_D13210.R, blaCARB_12_1_D13210, R, R, *, *, BRA, *, *, *, *, *, *, *, KOR, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *
+blaCARB_2_1_M69058.v1, blaCARB_2_1_M69058, v, 1, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, SGP, *, *, *, *, *, *, *

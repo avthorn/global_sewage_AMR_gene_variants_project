@@ -1,0 +1,4 @@
+id, gene, type, version, BWA, CIV, GHA, IND, LCA, NPL, PAK, TCD, TGO, USA
+blaMIR_3_1_AY743435.R, blaMIR_3_1_AY743435, R, R, BWA, CIV, GHA, IND, LCA, *, PAK, TCD, TGO, USA
+blaMIR_5_1_FJ237367.R, blaMIR_5_1_FJ237367, R, R, *, CIV, *, IND, LCA, *, PAK, *, *, *
+blaMIR_3_1_AY743435.v1, blaMIR_3_1_AY743435, v, 1, *, *, *, *, *, NPL, *, *, *, *

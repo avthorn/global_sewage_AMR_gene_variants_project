@@ -1,0 +1,4 @@
+id, gene, type, version, CIV, CMR, COD, GEO, GHA, KOR, MWI, NGA, PER, SGP, TZA
+cmx_1_U85507.v1, cmx_1_U85507, v, 1, CIV, CMR, COD, GEO, GHA, *, MWI, NGA, PER, SGP, TZA
+cmx_1_U85507.v2, cmx_1_U85507, v, 2, *, *, *, *, *, KOR, *, *, *, *, *
+cmx_1_U85507.R, cmx_1_U85507, R, R, *, *, *, *, *, *, *, *, *, *, *

@@ -1,0 +1,3 @@
+id, gene, type, version, BWA, EST, LCA
+blaCMY_48_1_HM569226.R, blaCMY_48_1_HM569226, R, R, BWA, *, LCA
+blaCMY_152_1_KY978224.R, blaCMY_152_1_KY978224, R, R, *, EST, *

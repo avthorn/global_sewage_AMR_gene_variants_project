@@ -1,0 +1,4 @@
+id, gene, type, version, BEN, CAN, CHN, GHA, TGO
+erm_47_1_KU612222.v2, erm_47_1_KU612222, v, 2, BEN, CAN, CHN, GHA, *
+erm_47_1_KU612222.v1, erm_47_1_KU612222, v, 1, *, *, *, *, TGO
+erm_47_1_KU612222.R, erm_47_1_KU612222, R, R, *, *, *, *, *

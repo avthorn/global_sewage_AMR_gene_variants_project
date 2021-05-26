@@ -1,0 +1,6 @@
+id, gene, type, version, BWA, CIV, CMR, COD, ECU, KHM, MUS, NGA, NPL, PAK, TCD, TZA
+aadA16_1_EU675686.v2, aadA16_1_EU675686, v, 2, BWA, CIV, *, COD, *, *, *, *, *, PAK, TCD, TZA
+aadA16_1_EU675686.v1, aadA16_1_EU675686, v, 1, *, CIV, CMR, *, *, KHM, *, NGA, *, *, *, TZA
+aadA16_1_EU675686.v4, aadA16_1_EU675686, v, 4, *, *, *, COD, *, *, MUS, *, *, *, *, TZA
+aadA16_1_EU675686.v3, aadA16_1_EU675686, v, 3, *, *, CMR, *, ECU, *, *, *, NPL, *, *, *
+aadA16_1_EU675686.R, aadA16_1_EU675686, R, R, *, *, *, *, *, *, *, *, *, *, *, *

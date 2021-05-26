@@ -1,0 +1,3 @@
+id, gene, type, version, BFA, DNK, EST, ETH, GBR, GHA, ITA, KAZ, KEN, KOR, MLT, NPL, TZA
+str_1_X92946.R, str_1_X92946, R, R, BFA, DNK, EST, ETH, GBR, GHA, ITA, KAZ, KEN, KOR, MLT, NPL, *
+str_2_FN435330.R, str_2_FN435330, R, R, *, *, *, *, *, *, *, *, *, *, *, *, TZA

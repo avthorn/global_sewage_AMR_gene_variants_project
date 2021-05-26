@@ -1,0 +1,5 @@
+id, gene, type, version, BRB, CHN, CIV, ECU, KHM, NGA, PAK, PER, SAU, THA, TWN, TZA, VNM
+lnu_F_3_AJ561197.v1, lnu_F_3_AJ561197, v, 1, BRB, CHN, CIV, ECU, KHM, NGA, PAK, PER, SAU, THA, TWN, TZA, VNM
+lnu_F_3_AJ561197.v3, lnu_F_3_AJ561197, v, 3, *, CHN, *, *, *, *, *, *, *, *, *, *, *
+lnu_F_3_AJ561197.v2, lnu_F_3_AJ561197, v, 2, *, *, *, *, *, *, *, PER, *, *, *, *, *
+lnu_F_3_AJ561197.R, lnu_F_3_AJ561197, R, R, *, *, *, *, *, *, *, *, *, *, *, *, *

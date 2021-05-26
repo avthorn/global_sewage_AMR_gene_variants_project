@@ -1,0 +1,3 @@
+id, gene, type, version, EST, MLT, VNM
+mcr_4_3_1_MG026621.R, mcr_4_3_1_MG026621, R, R, EST, MLT, *
+mcr_4_3_1_MG026621.v1, mcr_4_3_1_MG026621, v, 1, *, *, VNM

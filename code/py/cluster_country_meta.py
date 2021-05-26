@@ -3,7 +3,7 @@ import os
 
 gs2_dict = {}
 
-gs2_meta = open("../data/raw/gs2_metadata.txt","r")
+gs2_meta = open("../../data/raw/gs2_metadata.txt","r")
 
 row_count = 0
 for row in gs2_meta:
@@ -17,12 +17,12 @@ for row in gs2_meta:
 
 gs2_meta.close()
 
-directory = os.fsencode("../data/VH_output/5_results/cluster_meta/")
+directory = os.fsencode("../../data/vh_results/cluster_meta/")
     
 for file in os.listdir(directory):
     cluster_meta_filename = os.fsdecode(file)
     cluster_name = cluster_meta_filename.split(".")[0]
-    infile_path = "../data/VH_output/5_results/cluster_meta/" + cluster_meta_filename  
+    infile_path = "../../data/vh_results/cluster_meta/" + cluster_meta_filename  
     cluster_meta = open(infile_path,"r")
 
     country_set = set()
@@ -46,7 +46,7 @@ for file in os.listdir(directory):
 
     country_list = sorted(list(country_set))
 
-    outfile_path = "../data/tree_meta_data/" + cluster_name + "_tree_meta.csv"
+    outfile_path = "../../data/post_processing/cluster_country_meta/" + cluster_name + "_country_meta.csv"
 
     country_meta = open(outfile_path, "w")
     header = "id, gene, type, version, " + ", ".join(country_list)
@@ -68,7 +68,7 @@ for file in os.listdir(directory):
                 table_value = country + ", "
                 country_string += table_value
             else:
-                country_string += ", "
+                country_string += "*, "
         line = v_id + ", " + gene + ", " + type + ", " + version + ", " + country_string.rstrip(", ")
         print(line, file = country_meta)
 

@@ -1,0 +1,4 @@
+id, gene, type, version, AUS, BOL, BRA, BRB, CAN, CHN, CIV, DEU, DNK, ECU, ESP, GBR, GRC, HKG, IND, IRL, ITA, KEN, KOR, LKA, LUX, MUS, MWI, MYS, NGA, NIC, NOR, NPL, PAK, SAU, SWE, TCD, TGO, TWN, TZA, UGA, USA, VNM, ZAF, ZMB
+ere_D_1_KP265721.v1, ere_D_1_KP265721, v, 1, AUS, BOL, *, *, CAN, *, CIV, *, *, ECU, ESP, *, GRC, *, IND, *, ITA, KEN, *, *, *, MUS, MWI, MYS, NGA, *, NOR, NPL, PAK, SAU, SWE, *, TGO, *, TZA, UGA, USA, *, ZAF, ZMB
+ere_D_1_KP265721.R, ere_D_1_KP265721, R, R, *, *, BRA, BRB, *, CHN, CIV, *, *, *, *, *, *, HKG, IND, *, *, *, KOR, LKA, *, *, *, MYS, *, NIC, *, NPL, *, *, *, TCD, *, TWN, TZA, *, *, VNM, *, *
+ere_D_1_KP265721.v2, ere_D_1_KP265721, v, 2, *, *, *, *, *, *, *, DEU, DNK, *, *, GBR, *, *, *, IRL, *, *, *, *, LUX, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *

@@ -1,0 +1,4 @@
+id, gene, type, version, BFA, CIV, CMR, COD, GHA, NGA, TGO
+nimA_1_X71444.v1, nimA_1_X71444, v, 1, BFA, CIV, CMR, COD, GHA, NGA, TGO
+nimA_1_X71444.v2, nimA_1_X71444, v, 2, *, CIV, *, *, *, *, *
+nimA_1_X71444.R, nimA_1_X71444, R, R, *, *, *, *, *, *, *
