@@ -1,0 +1,6 @@
+snp-dists 0.7.0	aac_6_aph_2_1_M13771.R	aph_2_Ia_2_AP009486.v1	aac_6_aph_2_1_M13771.v1	aph_2_Ia_2_AP009486.v2	aph_2_Ia_2_AP009486.R
+aac_6_aph_2_1_M13771.R	0	42	1	43	42
+aph_2_Ia_2_AP009486.v1	42	0	43	5	1
+aac_6_aph_2_1_M13771.v1	1	43	0	44	43
+aph_2_Ia_2_AP009486.v2	43	5	44	0	6
+aph_2_Ia_2_AP009486.R	42	1	43	6	0

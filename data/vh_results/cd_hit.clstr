@@ -1,0 +1,969 @@
+>Cluster 0
+0	738nt, >erm_B_23_X72021.R... at +/99.46%
+1	738nt, >erm_B_1_JN899585.R... at +/99.73%
+2	738nt, >erm_B_10_U86375.R... at +/100.00%
+3	738nt, >erm_B_12_U18931.R... at +/99.59%
+4	762nt, >erm_B_18_X66468.v1... at +/100.00%
+5	738nt, >erm_B_20_AF109075.v1... at +/98.51%
+6	763nt, >erm_B_18_X66468.v2... *
+7	738nt, >erm_B_9_AF299292.R... at +/99.86%
+8	738nt, >erm_B_23_X72021.v1... at +/99.46%
+9	738nt, >erm_B_23_X72021.v2... at +/99.32%
+10	738nt, >erm_B_20_AF109075.R... at +/98.64%
+11	738nt, >erm_B_23_X72021.v3... at +/99.59%
+12	747nt, >erm_B_6_AF242872.R... at +/97.86%
+13	738nt, >erm_B_10_U86375.v1... at +/99.86%
+14	738nt, >erm_B_10_U86375.v2... at +/99.86%
+15	762nt, >erm_B_18_X66468.R... at +/99.74%
+>Cluster 1
+0	825nt, >blaOXA_333_1_KF203107.R... at +/95.15%
+1	825nt, >blaOXA_211_1_JN861779.R... at +/96.61%
+2	825nt, >blaOXA_334_1_KF203108.R... at +/95.52%
+3	828nt, >blaOXA_280_1_APPZ01000001.R... *
+4	828nt, >blaOXA_280_1_APPZ01000001.v1... at +/99.76%
+5	825nt, >blaOXA_334_1_KF203108.v1... at +/95.39%
+6	825nt, >blaOXA_281_1_APON01000041.R... at +/96.24%
+7	825nt, >blaOXA_212_1_JN861780.v1... at +/95.76%
+8	825nt, >blaOXA_373_1_HG931732.R... at +/96.48%
+9	828nt, >blaOXA_280_1_APPZ01000001.v2... at +/99.88%
+10	825nt, >blaOXA_212_1_JN861780.v2... at +/95.64%
+11	825nt, >blaOXA_212_1_JN861780.R... at +/95.64%
+12	825nt, >blaOXA_212_1_JN861780.v3... at +/95.76%
+>Cluster 2
+0	801nt, >blaOXA_10_1_J03427.R... *
+1	801nt, >blaOXA_101_1_AM412777.R... at +/96.75%
+2	801nt, >blaOXA_17_1_DQ902344.R... at +/99.88%
+3	801nt, >blaOXA_256_1_HE616889.R... at +/99.88%
+4	801nt, >blaOXA_35_1_AF315786.R... at +/97.00%
+5	801nt, >blaOXA_74_1_EU161636.R... at +/99.75%
+6	801nt, >blaOXA_101_1_AM412777.v1... at +/96.63%
+7	801nt, >blaOXA_246_1_EU886980.R... at +/99.88%
+8	801nt, >blaOXA_256_1_HE616889.v1... at +/99.88%
+9	801nt, >blaOXA_520_1_KX388630.R... at +/99.88%
+10	801nt, >blaOXA_56_1_AY445080.R... at +/96.50%
+11	801nt, >blaOXA_14_1_KJ420612.R... at +/99.88%
+>Cluster 3
+0	864nt, >blaGES_5_1_DQ236171.R... *
+1	864nt, >blaGES_2_1_AF326355.R... at +/99.88%
+2	864nt, >blaGES_1_1_HQ170511.R... at +/99.88%
+3	864nt, >blaGES_13_1_GU169702.R... at +/99.77%
+4	864nt, >blaGES_3_1_AB113580.R... at +/99.54%
+5	864nt, >blaGES_16_1_HM173356.R... at +/99.77%
+6	864nt, >blaGES_7_1_HM453325.R... at +/99.77%
+7	864nt, >blaGES_6_1_AY494718.R... at +/99.77%
+8	864nt, >blaGES_4_1_AB116723.R... at +/99.65%
+9	864nt, >blaGES_9_1_AY920928.R... at +/99.65%
+10	864nt, >blaGES_2_1_AF326355.v1... at +/99.77%
+11	864nt, >blaGES_14_1_GU207844.R... at +/99.88%
+>Cluster 4
+0	1218nt, >mef_A_4_HG423652.v1... *
+1	1218nt, >mef_A_4_HG423652.v2... at +/98.69%
+2	1218nt, >mef_A_4_HG423652.v3... at +/99.26%
+3	1218nt, >mef_A_4_HG423652.v4... at +/99.92%
+4	1218nt, >mef_A_4_HG423652.v5... at +/99.34%
+5	1218nt, >mef_A_4_HG423652.v6... at +/98.60%
+6	1218nt, >mef_A_4_HG423652.v7... at +/99.75%
+7	1218nt, >mef_A_4_HG423652.v8... at +/99.84%
+8	1218nt, >mef_A_4_HG423652.v9... at +/99.59%
+9	1218nt, >mef_A_4_HG423652.v10... at +/99.43%
+10	1218nt, >mef_A_4_HG423652.v11... at +/99.67%
+11	1218nt, >mef_A_4_HG423652.R... at +/99.92%
+>Cluster 5
+0	1176nt, >oqxA_1_EU370913.v1... *
+1	1176nt, >oqxA_1_EU370913.v2... at +/99.83%
+2	1176nt, >oqxA_1_EU370913.v3... at +/99.66%
+3	1176nt, >oqxA_1_EU370913.v4... at +/99.91%
+4	1176nt, >oqxA_1_EU370913.v5... at +/99.57%
+5	1176nt, >oqxA_1_EU370913.v6... at +/99.83%
+6	1176nt, >oqxA_1_EU370913.v7... at +/99.74%
+7	1176nt, >oqxA_1_EU370913.v8... at +/99.74%
+8	1176nt, >oqxA_1_EU370913.v9... at +/99.83%
+9	1176nt, >oqxA_1_EU370913.v10... at +/99.91%
+10	1176nt, >oqxA_1_EU370913.v11... at +/99.66%
+11	1176nt, >oqxA_1_EU370913.R... at +/99.66%
+>Cluster 6
+0	861nt, >blaTEM_1B_1_AY458016.R... *
+1	861nt, >blaTEM_1C_1_FJ560503.R... at +/99.77%
+2	861nt, >blaTEM_1A_1_HM749966.R... at +/99.65%
+3	861nt, >blaTEM_116_1_AY425988.R... at +/99.42%
+4	861nt, >blaTEM_176_1_GU550123.R... at +/99.88%
+5	861nt, >blaTEM_215_1_KP050492.R... at +/99.88%
+6	861nt, >blaTEM_33_1_GU371926.R... at +/99.88%
+7	861nt, >blaTEM_35_1_KP860986.R... at +/99.77%
+8	861nt, >blaTEM_15_1_AM849805.R... at +/99.77%
+9	861nt, >blaTEM_30_1_AJ437107.R... at +/99.88%
+10	861nt, >blaTEM_40_1_FR717535.R... at +/99.65%
+11	861nt, >blaTEM_135_1_GQ896333.R... at +/99.77%
+>Cluster 7
+0	816nt, >sul2_2_AY034138.R... at +/99.88%
+1	816nt, >sul2_13_AJ289135.v1... at +/99.75%
+2	816nt, >sul2_11_AY232670.R... at +/99.75%
+3	816nt, >sul2_3_HQ840942.R... at +/99.51%
+4	816nt, >sul2_18_AJ830714.R... at +/99.75%
+5	819nt, >sul2_10_AM183225.R... at +/99.51%
+6	816nt, >sul2_6_FN995456.R... at +/99.63%
+7	852nt, >sul2_9_FJ197818.R... *
+8	816nt, >sul2_12_AF497970.R... at +/99.75%
+9	816nt, >sul2_17_U57647.R... at +/99.75%
+10	816nt, >sul2_13_AJ289135.R... at +/99.63%
+>Cluster 8
+0	792nt, >aadA2_2_JQ364967.R... at +/99.75%
+1	819nt, >aadA2_1_NC_010870.v1... *
+2	819nt, >aadA2_1_NC_010870.R... at +/99.88%
+3	792nt, >aadA3_1_AF047479.v1... at +/98.74%
+4	819nt, >aadA2_1_NC_010870.v2... at +/99.76%
+5	792nt, >aadA8b_1_AY139603.R... at +/96.84%
+6	792nt, >aadA8_1_AF326210.v1... at +/96.46%
+7	792nt, >aadA3_1_AF047479.R... at +/98.86%
+8	819nt, >aadA2_1_NC_010870.v3... at +/99.88%
+9	792nt, >aadA8_1_AF326210.R... at +/96.34%
+>Cluster 9
+0	831nt, >blaOXA_1_1_HQ170510.R... *
+1	831nt, >blaOXA_4_1_AY162283.R... at +/99.76%
+2	831nt, >blaOXA_392_1_AB901044.R... at +/97.95%
+3	831nt, >blaOXA_4_1_AY162283.v1... at +/99.64%
+4	831nt, >blaOXA_392_1_AB901044.v1... at +/97.23%
+5	831nt, >blaOXA_392_1_AB901044.v2... at +/97.83%
+6	831nt, >blaOXA_392_1_AB901044.v3... at +/97.95%
+7	831nt, >blaOXA_4_1_AY162283.v2... at +/99.64%
+8	831nt, >blaOXA_392_1_AB901044.v4... at +/97.83%
+9	831nt, >blaOXA_392_1_AB901044.v5... at +/98.07%
+>Cluster 10
+0	534nt, >ant_2_Ia_1_X04555.R... *
+1	534nt, >ant_2_Ia_6_AJ871915.R... at +/99.25%
+2	534nt, >ant_2_Ia_13_DQ176450.R... at +/99.44%
+3	534nt, >ant_2_Ia_20_AY139599.R... at +/98.69%
+4	534nt, >ant_2_Ia_19_GQ466184.v1... at +/99.25%
+5	534nt, >ant_2_Ia_13_DQ176450.v1... at +/99.06%
+6	534nt, >ant_2_Ia_6_AJ871915.v1... at +/99.06%
+7	534nt, >ant_2_Ia_9_HM367610.R... at +/99.44%
+8	534nt, >ant_2_Ia_19_GQ466184.R... at +/99.06%
+>Cluster 11
+0	840nt, >sul1_2_U12338.R... at +/99.88%
+1	852nt, >sul1_9_AY963803.R... at +/99.18%
+2	840nt, >sul1_36_X15024.R... at +/99.76%
+3	852nt, >sul1_38_BX248359.R... at +/99.06%
+4	867nt, >sul1_5_EU780013.R... *
+5	840nt, >sul1_20_JF262165.R... at +/99.76%
+6	840nt, >sul1_33_AJ564903.R... at +/99.76%
+7	840nt, >sul1_3_EU855787.R... at +/99.76%
+8	837nt, >sul1_8_JN581942.R... at +/99.76%
+>Cluster 12
+0	1926nt, >tet_Q_4_Z21523.R... *
+1	1926nt, >tet_Q_1_L33696.v1... at +/97.35%
+2	1926nt, >tet_Q_1_L33696.v2... at +/97.35%
+3	1926nt, >tet_Q_2_X58717.R... at +/97.46%
+4	1926nt, >tet_Q_1_L33696.v3... at +/97.40%
+5	1926nt, >tet_Q_1_L33696.R... at +/97.30%
+6	1926nt, >tet_Q_1_L33696.v4... at +/97.30%
+7	1926nt, >tet_Q_2_X58717.v1... at +/97.51%
+8	1926nt, >tet_Q_4_Z21523.v1... at +/99.84%
+>Cluster 13
+0	1260nt, >cmlA1_2_AB212941.R... *
+1	1260nt, >cmlA1_1_M64556.v1... at +/99.13%
+2	1260nt, >cmlA1_1_M64556.v2... at +/99.05%
+3	1260nt, >cmlA1_1_M64556.v3... at +/99.13%
+4	1260nt, >cmlA1_2_AB212941.v1... at +/99.84%
+5	1260nt, >cmlA1_1_M64556.v4... at +/99.21%
+6	1260nt, >cmlA1_2_AB212941.v2... at +/99.92%
+7	1260nt, >cmlA1_1_M64556.v5... at +/99.05%
+8	1260nt, >cmlA1_1_M64556.R... at +/98.97%
+>Cluster 14
+0	1485nt, >lsa_E_1_JX560992.v1... *
+1	1485nt, >lsa_E_1_JX560992.v2... at +/99.93%
+2	1485nt, >lsa_E_1_JX560992.R... at +/99.93%
+3	1485nt, >lsa_E_1_JX560992.v3... at +/99.12%
+4	1485nt, >lsa_E_1_JX560992.v4... at +/99.39%
+5	1485nt, >lsa_E_1_JX560992.v5... at +/98.65%
+6	1485nt, >lsa_E_1_JX560992.v6... at +/99.06%
+7	1485nt, >lsa_E_1_JX560992.v7... at +/99.12%
+>Cluster 15
+0	972nt, >ant_3_Ia_1_X02340.R... *
+1	789nt, >aadA1_4_JQ480156.R... at +/99.75%
+2	792nt, >aadA1_3_JQ414041.R... at +/99.75%
+3	792nt, >aadA1b_1_M95287.R... at +/99.37%
+4	792nt, >aadA22_1_AM261837.R... at +/97.47%
+5	972nt, >ant_3_Ia_1_X02340.v1... at +/99.90%
+6	792nt, >aadA1_5_JX185132.R... at +/99.75%
+7	780nt, >aadA24_1_DQ677333.R... at +/98.21%
+>Cluster 16
+0	1464nt, >msr_D_3_AF227520.v1... *
+1	1464nt, >msr_D_2_AF274302.R... at +/98.02%
+2	1464nt, >msr_D_3_AF227520.v2... at +/99.93%
+3	1464nt, >msr_D_3_AF227520.v3... at +/99.86%
+4	1464nt, >msr_D_2_AF274302.v1... at +/97.95%
+5	1464nt, >msr_D_2_AF274302.v2... at +/98.02%
+6	1464nt, >msr_D_3_AF227520.R... at +/99.93%
+>Cluster 17
+0	1920nt, >tet_W_5_AJ427422.R... *
+1	1920nt, >tet_W_3_AJ427421.v1... at +/99.95%
+2	1920nt, >tet_W_1_DQ060146.R... at +/99.95%
+3	1920nt, >tet_W_4_FN396364.R... at +/98.96%
+4	1920nt, >tet_O_W_2_1_AY485122.R... at +/95.26%
+5	1920nt, >tet_W_3_AJ427421.v2... at +/99.95%
+6	1920nt, >tet_W_3_AJ427421.R... at +/99.95%
+>Cluster 18
+0	804nt, >lnu_B_2_JQ861959.R... *
+1	804nt, >lnu_B_2_JQ861959.v1... at +/99.63%
+2	804nt, >lnu_B_2_JQ861959.v2... at +/99.88%
+3	804nt, >lnu_B_2_JQ861959.v3... at +/99.88%
+4	804nt, >lnu_B_2_JQ861959.v4... at +/99.00%
+5	804nt, >lnu_B_2_JQ861959.v5... at +/99.75%
+6	804nt, >lnu_B_2_JQ861959.v6... at +/98.51%
+>Cluster 19
+0	897nt, >blaCARB_8_1_AY178993.R... *
+1	897nt, >blaCARB_16_1_HF953351.R... at +/99.67%
+2	897nt, >blaCARB_10_1_EU850412.v1... at +/99.44%
+3	897nt, >blaCARB_5_1_AF135373.R... at +/99.67%
+4	897nt, >blaCARB_10_1_EU850412.v2... at +/99.33%
+5	897nt, >blaCARB_8_1_AY178993.v1... at +/99.89%
+6	897nt, >blaCARB_10_1_EU850412.R... at +/99.33%
+>Cluster 20
+0	789nt, >aadA4_1_Z50802.v1... *
+1	789nt, >aadA5_1_AF137361.R... at +/95.44%
+2	789nt, >aadA5_1_AF137361.v1... at +/95.06%
+3	789nt, >aadA5_1_AF137361.v2... at +/95.31%
+4	789nt, >aadA5_1_AF137361.v3... at +/95.18%
+5	789nt, >aadA4_1_Z50802.R... at +/99.62%
+>Cluster 21
+0	735nt, >erm_G_1_M15332.R... *
+1	735nt, >erm_G_1_M15332.v1... at +/99.86%
+2	735nt, >erm_G_1_M15332.v2... at +/99.46%
+3	735nt, >erm_G_1_M15332.v3... at +/99.86%
+4	735nt, >erm_G_1_M15332.v4... at +/99.59%
+5	735nt, >erm_G_1_M15332.v5... at +/99.86%
+>Cluster 22
+0	798nt, >aadA7_1_AF224733.R... *
+1	798nt, >aadA7_1_AF224733.v1... at +/99.62%
+2	798nt, >aadA7_1_AF224733.v2... at +/99.87%
+3	798nt, >aadA7_1_AF224733.v3... at +/99.75%
+4	798nt, >aadA7_1_AF224733.v4... at +/99.12%
+5	798nt, >aadA7_1_AF224733.v5... at +/99.87%
+>Cluster 23
+0	801nt, >erm_F_3_M17808.R... *
+1	801nt, >erm_F_3_M17808.v1... at +/99.63%
+2	801nt, >erm_F_3_M17808.v2... at +/99.75%
+3	801nt, >erm_F_3_M17808.v3... at +/99.88%
+4	801nt, >erm_F_3_M17808.v4... at +/99.88%
+5	801nt, >erm_F_3_M17808.v5... at +/99.63%
+>Cluster 24
+0	1176nt, >tet_C_2_AY046276.R... at +/100.00%
+1	1191nt, >tet_C_3_AF055345.v1... *
+2	1191nt, >tet_C_1_NC_003123.v1... at +/98.15%
+3	1176nt, >tet_C_2_AY046276.v1... at +/99.91%
+4	1191nt, >tet_C_1_NC_003123.R... at +/98.24%
+5	1191nt, >tet_C_3_AF055345.R... at +/99.92%
+>Cluster 25
+0	1146nt, >blaCMY_4_1_LNHZ01000079.R... *
+1	1146nt, >blaCMY_2_1_X91840.R... at +/99.91%
+2	1146nt, >blaCMY_35_1_EF394371.R... at +/98.78%
+3	1146nt, >blaCMY_13_1_AY339625.R... at +/97.47%
+4	1146nt, >blaCMY_34_1_EF394370.R... at +/99.65%
+5	1146nt, >blaCMY_42_1_HM146927.R... at +/99.74%
+>Cluster 26
+0	816nt, >aph_3_Ia_7_X62115.R... *
+1	816nt, >aph_3_Ia_1_V00359.R... at +/99.26%
+2	816nt, >aph_3_Ia_5_AP004237.R... at +/98.65%
+3	816nt, >aph_3_Ia_1_V00359.v1... at +/99.14%
+4	816nt, >aph_3_Ia_3_EF015636.v1... at +/99.14%
+5	816nt, >aph_3_Ia_3_EF015636.R... at +/99.02%
+>Cluster 27
+0	1275nt, >tet_A_6_AF534183.R... *
+1	1200nt, >tet_A_4_AJ517790.R... at +/98.58%
+2	1275nt, >tet_A_6_AF534183.v1... at +/99.92%
+3	1200nt, >tet_A_3_AY196695.R... at +/98.00%
+4	1200nt, >tet_A_3_AY196695.v1... at +/97.92%
+5	1200nt, >tet_A_4_AJ517790.v1... at +/98.25%
+>Cluster 28
+0	1920nt, >tet_O_3_Y07780.R... *
+1	1920nt, >tet_O_2_M20925.R... at +/99.38%
+2	1920nt, >tet_O_2_M20925.v1... at +/99.32%
+3	1920nt, >tet_O_3_Y07780.v1... at +/99.95%
+4	1920nt, >tet_O_3_Y07780.v2... at +/99.95%
+5	1920nt, >tet_O_3_Y07780.v3... at +/99.95%
+>Cluster 29
+0	1920nt, >tet_O_32_O_5_FP929050.R... *
+1	1920nt, >tet_O_32_O_4_AIOQ01000025.R... at +/98.96%
+2	1920nt, >tet_O_32_O_5_FP929050.v1... at +/99.95%
+3	1920nt, >tet_O_32_O_5_FP929050.v2... at +/99.90%
+4	1920nt, >tet_O_32_O_3_NZ_AUJS01000017.R... at +/97.66%
+>Cluster 30
+0	846nt, >aadA16_1_EU675686.v1... *
+1	846nt, >aadA16_1_EU675686.v2... at +/99.65%
+2	846nt, >aadA16_1_EU675686.v3... at +/99.76%
+3	846nt, >aadA16_1_EU675686.v4... at +/99.88%
+4	846nt, >aadA16_1_EU675686.R... at +/99.29%
+>Cluster 31
+0	1440nt, >aac_6_aph_2_1_M13771.R... at +/99.72%
+1	1476nt, >aph_2_Ia_2_AP009486.v1... at +/99.93%
+2	1440nt, >aac_6_aph_2_1_M13771.v1... at +/99.65%
+3	1477nt, >aph_2_Ia_2_AP009486.v2... *
+4	1476nt, >aph_2_Ia_2_AP009486.R... at +/99.86%
+>Cluster 32
+0	600nt, >aac_6_Ib_cr_1_DQ303918.R... at +/98.83%
+1	606nt, >aac_6_Ib_1_M21682.R... *
+2	519nt, >aac_6_Ib_cr_2_EF636461.R... at +/99.42%
+3	555nt, >aac_6_Ib3_1_X60321.R... at +/99.82%
+4	555nt, >aac_6_Ib3_1_X60321.v1... at +/99.64%
+>Cluster 33
+0	900nt, >blaVEB_3_1_AY536519.R... *
+1	900nt, >blaVEB_1_3_DQ393569.R... at +/99.78%
+2	900nt, >blaVEB_1_1_HM370393.R... at +/99.89%
+3	900nt, >blaVEB_1_4_AF324834.R... at +/99.78%
+4	900nt, >blaVEB_7_1_FJ825622.R... at +/99.67%
+>Cluster 34
+0	915nt, >blaAER_1_1_U14748.v1... *
+1	915nt, >blaAER_1_1_U14748.v2... at +/99.34%
+2	915nt, >blaAER_1_1_U14748.v3... at +/99.89%
+3	915nt, >blaAER_1_1_U14748.v4... at +/99.56%
+4	915nt, >blaAER_1_1_U14748.R... at +/99.89%
+>Cluster 35
+0	906nt, >mph_A_1_D16251.R... at -/99.89%
+1	921nt, >mph_A_2_U36578.v1... *
+2	906nt, >mph_A_1_D16251.v1... at -/99.78%
+3	906nt, >mph_A_1_D16251.v2... at -/99.78%
+4	921nt, >mph_A_2_U36578.R... at +/99.78%
+>Cluster 36
+0	645nt, >qnrB1_1_DQ351241.R... *
+1	645nt, >qnrB6_2_EF523819.R... at +/99.07%
+2	645nt, >qnrB2_1_DQ351242.R... at +/96.28%
+3	645nt, >qnrB7_1_EU043311.R... at +/97.05%
+4	645nt, >qnrB9_1_EF526508.R... at +/97.21%
+>Cluster 37
+0	837nt, >aph_6_Id_1_M28829.R... *
+1	831nt, >aph_6_Id_4_CP000971.R... at +/99.88%
+2	837nt, >aph_6_Id_1_M28829.v1... at +/99.88%
+3	837nt, >aph_6_Id_3_AB109805.R... at +/99.76%
+4	837nt, >aph_6_Id_5_18676889.R... at +/99.88%
+>Cluster 38
+0	1221nt, >tet_40_2_AM419751.v1... *
+1	1221nt, >tet_40_1_FJ158002.R... at +/99.67%
+2	1221nt, >tet_40_2_AM419751.v2... at +/99.92%
+3	1221nt, >tet_40_1_FJ158002.v1... at +/99.59%
+4	1221nt, >tet_40_2_AM419751.R... at +/99.92%
+>Cluster 39
+0	1221nt, >ere_A_6_DQ157752.v1... *
+1	1221nt, >ere_A_6_DQ157752.v2... at +/99.92%
+2	1221nt, >ere_A_1_AY183453.v1... at +/98.85%
+3	1221nt, >ere_A_1_AY183453.R... at +/98.77%
+4	1221nt, >ere_A_6_DQ157752.R... at +/99.92%
+>Cluster 40
+0	1233nt, >mdf_A_1_Y08743.v1... *
+1	1233nt, >mdf_A_1_Y08743.v2... at +/99.92%
+2	1233nt, >mdf_A_1_Y08743.v3... at +/99.76%
+3	1233nt, >mdf_A_1_Y08743.v4... at +/99.92%
+4	1233nt, >mdf_A_1_Y08743.R... at +/99.92%
+>Cluster 41
+0	996nt, >cfxA6_1_GQ342996.v1... *
+1	996nt, >cfxA6_1_GQ342996.R... at +/99.90%
+2	996nt, >cfxA6_1_GQ342996.v2... at +/99.70%
+3	996nt, >cfxA6_1_GQ342996.v3... at +/99.80%
+4	996nt, >cfxA6_1_GQ342996.v4... at +/99.90%
+>Cluster 42
+0	966nt, >cfxA3_1_AF472622.R... *
+1	966nt, >cfxA4_1_AY769933.R... at +/99.90%
+2	966nt, >cfxA5_1_AY769934.R... at +/99.79%
+3	966nt, >cfxA3_1_AF472622.v1... at +/99.90%
+>Cluster 43
+0	783nt, >blaNPS_1_AY027589.v1... *
+1	783nt, >blaNPS_1_AY027589.v2... at +/99.87%
+2	783nt, >blaLCR_1_1_X56809.R... at +/98.21%
+3	783nt, >blaNPS_1_AY027589.R... at +/99.87%
+>Cluster 44
+0	498nt, >dfrA22_4_AJ628423.R... *
+1	498nt, >dfrA22_2_KF525301.R... at +/95.38%
+2	498nt, >dfrA22_3_FM957884.v1... at +/96.99%
+3	498nt, >dfrA22_3_FM957884.R... at +/96.79%
+>Cluster 45
+0	804nt, >blaOXA_129_1_FJWZ01000025.R... *
+1	804nt, >blaOXA_129_1_FJWZ01000025.v1... at +/99.75%
+2	804nt, >blaOXA_129_1_FJWZ01000025.v2... at +/99.88%
+3	804nt, >blaOXA_129_1_FJWZ01000025.v3... at +/99.88%
+>Cluster 46
+0	1920nt, >tet_M_7_FN433596.R... *
+1	1920nt, >tet_M_13_AM990992.R... at +/97.60%
+2	1920nt, >tet_M_1_X92947.R... at +/97.71%
+3	1920nt, >tet_M_7_FN433596.v1... at +/99.95%
+>Cluster 47
+0	1146nt, >blaACT_4_2_AJ311172.v1... *
+1	1146nt, >blaACT_2_1_AM076977.R... at +/96.77%
+2	1146nt, >blaACT_3_1_EF125013.R... at +/96.42%
+3	1146nt, >blaACT_4_2_AJ311172.R... at +/99.91%
+>Cluster 48
+0	861nt, >blaSHV_12_1_KF976405.R... *
+1	861nt, >blaSHV_1_1_AF148850.R... at +/99.42%
+2	861nt, >blaSHV_119_1_JX192924.R... at +/99.30%
+3	861nt, >blaSHV_26_1_AF227204.R... at +/99.42%
+>Cluster 49
+0	831nt, >blaOXA_276_1_APPI01000013.R... *
+1	831nt, >blaOXA_277_1_APPQ01000011.R... at +/98.19%
+2	831nt, >blaOXA_360_1_KF421163.R... at +/95.67%
+3	831nt, >blaOXA_235_1_JQ820240.R... at +/95.07%
+>Cluster 50
+0	822nt, >lnu_F_3_AJ561197.v1... *
+1	822nt, >lnu_F_3_AJ561197.v2... at +/99.76%
+2	822nt, >lnu_F_3_AJ561197.v3... at +/99.88%
+3	822nt, >lnu_F_3_AJ561197.R... at +/99.88%
+>Cluster 51
+0	780nt, >aph_3_VIb_1_AJ627643.R... *
+1	780nt, >aph_3_VIa_1_X07753.R... at +/96.03%
+2	780nt, >aph_3_VI_1_KC170992.R... at +/96.03%
+3	780nt, >aph_3_VIa_1_X07753.v1... at +/95.90%
+>Cluster 52
+0	1218nt, >mef_A_2_U83667.v1... *
+1	1218nt, >mef_A_2_U83667.v2... at +/99.75%
+2	1218nt, >mef_A_2_U83667.v3... at +/99.75%
+3	1218nt, >mef_A_2_U83667.R... at +/99.67%
+>Cluster 53
+0	420nt, >fosA_3_ACWO01000079.R... *
+1	420nt, >fosA_3_ACWO01000079.v1... at +/99.76%
+2	420nt, >fosA5_1_EU195449.v1... at +/96.67%
+3	420nt, >fosA5_1_EU195449.R... at +/98.33%
+>Cluster 54
+0	1206nt, >tet_B_2_AF326777.R... *
+1	1206nt, >tet_B_1_AP000342.R... at +/99.92%
+2	1206nt, >tet_B_1_AP000342.v1... at +/99.75%
+3	1206nt, >tet_B_1_AP000342.v2... at +/99.83%
+>Cluster 55
+0	846nt, >aadA6_1_AF140629.R... *
+1	846nt, >aadA11_1_AY144590.R... at +/99.05%
+2	846nt, >aadA6_1_AF140629.v1... at +/99.88%
+3	834nt, >aadA10_2_AM087405.R... at +/97.84%
+>Cluster 56
+0	1218nt, >mef_A_3_AF227520.v1... *
+1	1218nt, >mef_A_3_AF227520.v2... at +/99.92%
+2	1218nt, >mef_A_3_AF227520.v3... at +/99.75%
+3	1218nt, >mef_A_3_AF227520.R... at +/99.84%
+>Cluster 57
+0	762nt, >erm_X_2_X51472.v1... at +/100.00%
+1	763nt, >erm_X_3_U21300.v1... *
+2	762nt, >erm_X_2_X51472.R... at +/99.87%
+3	762nt, >erm_X_3_U21300.R... at +/99.87%
+>Cluster 58
+0	804nt, >aph_3_Ib_5_AF321551.R... *
+1	804nt, >aph_3_Ib_4_AF313472.R... at +/99.75%
+2	804nt, >aph_3_Ib_2_AF024602.R... at +/99.75%
+3	804nt, >aph_3_Ib_5_AF321551.v1... at +/99.88%
+>Cluster 59
+0	486nt, >lnu_A_1_M14039.v1... *
+1	486nt, >lnu_A_1_M14039.v2... at +/99.79%
+2	486nt, >lnu_A_1_M14039.v3... at +/99.79%
+3	486nt, >lnu_A_1_M14039.R... at +/98.97%
+>Cluster 60
+0	474nt, >dfrA14_1_KF921535.R... at +/99.79%
+1	474nt, >dfrA14_4_AF393510.R... at +/100.00%
+2	483nt, >dfrA14_5_DQ388123.v1... *
+3	483nt, >dfrA14_5_DQ388123.R... at +/99.79%
+>Cluster 61
+0	867nt, >blaCARB_4_1_FJ785525.R... *
+1	867nt, >blaCARB_4_1_FJ785525.v1... at +/99.88%
+2	867nt, >blaCARB_4_1_FJ785525.v2... at +/99.54%
+3	867nt, >blaCARB_4_1_FJ785525.v3... at +/98.96%
+>Cluster 62
+0	1224nt, >mef_C_1_AB571865.v1... *
+1	1224nt, >mef_C_1_AB571865.R... at +/99.92%
+2	1224nt, >mef_C_1_AB571865.v2... at +/99.92%
+3	1224nt, >mef_C_1_AB571865.v3... at +/96.90%
+>Cluster 63
+0	885nt, >mph_G_1_AB571865.R... *
+1	885nt, >mph_G_1_AB571865.v1... at +/99.89%
+2	885nt, >mph_G_1_AB571865.v2... at +/99.77%
+3	885nt, >mph_G_1_AB571865.v3... at +/99.89%
+>Cluster 64
+0	867nt, >blaCARB_2_1_M69058.R... *
+1	867nt, >blaCARB_2_1_M69058.v1... at +/99.88%
+2	867nt, >blaCARB_12_1_D13210.R... at +/98.85%
+>Cluster 65
+0	876nt, >blaCTX_M_14_1_AF252622.R... *
+1	876nt, >blaCTX_M_14b_1_DQ359215.R... at +/99.66%
+2	876nt, >blaCTX_M_27_1_AY156923.R... at +/99.89%
+>Cluster 66
+0	795nt, >blaOXA_427_1_KX827604.v1... *
+1	795nt, >blaOXA_427_1_KX827604.v2... at +/99.87%
+2	795nt, >blaOXA_427_1_KX827604.R... at +/99.50%
+>Cluster 67
+0	1920nt, >tet_M_12_FR671418.R... *
+1	1920nt, >tet_M_8_X04388.v1... at +/97.97%
+2	1920nt, >tet_M_8_X04388.R... at +/98.02%
+>Cluster 68
+0	438nt, >aac_6_Ig_1_L09246.v1... *
+1	438nt, >aac_6_Ig_1_L09246.v2... at +/97.49%
+2	438nt, >aac_6_Ig_1_L09246.R... at +/97.49%
+>Cluster 69
+0	633nt, >catB8_1_AF227506.R... *
+1	633nt, >catB8_1_AF227506.v1... at +/99.84%
+2	633nt, >catB8_1_AF227506.v2... at +/99.53%
+>Cluster 70
+0	624nt, >cat_2_M35190.R... *
+1	624nt, >cat_2_M35190.v1... at +/96.96%
+2	624nt, >cat_2_M35190.v2... at +/99.84%
+>Cluster 71
+0	1152nt, >blaADC_25_1_EF016355.v1... *
+1	1152nt, >blaADC_25_1_EF016355.v2... at +/96.35%
+2	1152nt, >blaADC_25_1_EF016355.R... at +/95.49%
+>Cluster 72
+0	1176nt, >cmx_1_U85507.v1... *
+1	1176nt, >cmx_1_U85507.v2... at +/99.91%
+2	1176nt, >cmx_1_U85507.R... at +/99.91%
+>Cluster 73
+0	1215nt, >floR_2_AF118107.R... *
+1	1215nt, >floR_2_AF118107.v1... at +/99.92%
+2	1215nt, >floR_2_AF118107.v2... at +/99.84%
+>Cluster 74
+0	1227nt, >ere_A_2_AF099140.R... at +/95.11%
+1	1257nt, >ere_A_5_FN396877.R... *
+2	1227nt, >ere_A_2_AF099140.v1... at +/95.03%
+>Cluster 75
+0	519nt, >aac_6_31_1_AM283489.v1... *
+1	519nt, >aac_6_31_1_AM283489.R... at +/99.04%
+2	519nt, >aac_6_31_1_AM283489.v2... at +/98.07%
+>Cluster 76
+0	1227nt, >ere_D_1_KP265721.v1... *
+1	1227nt, >ere_D_1_KP265721.R... at +/99.92%
+2	1227nt, >ere_D_1_KP265721.v2... at +/98.61%
+>Cluster 77
+0	531nt, >nimA_1_X71444.v1... at +/100.00%
+1	532nt, >nimA_1_X71444.v2... *
+2	531nt, >nimA_1_X71444.R... at +/99.62%
+>Cluster 78
+0	804nt, >lnu_G_1_KX470419.v1... *
+1	804nt, >lnu_G_1_KX470419.R... at +/98.88%
+2	804nt, >lnu_G_1_KX470419.v2... at +/99.63%
+>Cluster 79
+0	474nt, >dfrA31_1_AB200915.R... *
+1	474nt, >dfrA6_2_FJ905898.v1... at +/96.41%
+2	474nt, >dfrA6_2_FJ905898.R... at +/96.41%
+>Cluster 80
+0	861nt, >aac_3_IId_1_EU022314.v1... *
+1	861nt, >aac_3_IIa_1_X51534.R... at +/96.98%
+2	861nt, >aac_3_IId_1_EU022314.R... at +/99.88%
+>Cluster 81
+0	741nt, >erm_47_1_KU612222.v1... *
+1	741nt, >erm_47_1_KU612222.v2... at +/99.87%
+2	741nt, >erm_47_1_KU612222.R... at +/99.73%
+>Cluster 82
+0	822nt, >lnu_F_1_EU118119.R... *
+1	822nt, >lnu_F_1_EU118119.v1... at +/99.51%
+2	822nt, >lnu_F_1_EU118119.v2... at +/99.88%
+>Cluster 83
+0	1146nt, >blaCMH_3_1_KX192165.v1... *
+1	1146nt, >blaCMH_3_1_KX192165.v2... at +/99.83%
+2	1146nt, >blaCMH_3_1_KX192165.R... at +/99.65%
+>Cluster 84
+0	1146nt, >blaMIR_3_1_AY743435.R... *
+1	1146nt, >blaMIR_5_1_FJ237367.R... at +/99.04%
+2	1146nt, >blaMIR_3_1_AY743435.v1... at +/99.83%
+>Cluster 85
+0	861nt, >blaOKP_B_4_1_AM051153.R... *
+1	861nt, >blaOKP_B_9_1_AM051159.R... at +/99.19%
+2	861nt, >blaOKP_B_3_1_AM051152.R... at +/99.30%
+>Cluster 86
+0	657nt, >qnrVC4_1_GQ891757.R... *
+1	657nt, >qnrVC5_1_JN408080.R... at +/99.85%
+2	657nt, >qnrVC4_1_GQ891757.v1... at +/99.85%
+>Cluster 87
+0	828nt, >blaOXA_182_1_HM640278.v1... *
+1	828nt, >blaOXA_182_1_HM640278.R... at +/99.64%
+>Cluster 88
+0	801nt, >blaOXA_205_1_JF800667.R... *
+1	801nt, >blaOXA_205_1_JF800667.v1... at +/99.88%
+>Cluster 89
+0	816nt, >aph_3_Ib_2_AJ744860.R... *
+1	816nt, >aph_3_Ib_2_AJ744860.v1... at +/99.88%
+>Cluster 90
+0	801nt, >blaOXA_46_1_AF317511.R... *
+1	801nt, >blaOXA_46_1_AF317511.v1... at +/99.88%
+>Cluster 91
+0	495nt, >lnu_C_1_AY928180.v1... *
+1	495nt, >lnu_C_1_AY928180.R... at +/99.19%
+>Cluster 92
+0	495nt, >lnu_D_1_EF452177.v1... *
+1	495nt, >lnu_D_1_EF452177.R... at +/99.80%
+>Cluster 93
+0	492nt, >catS_1_X74948.v1... *
+1	492nt, >catS_1_X74948.R... at +/98.98%
+>Cluster 94
+0	555nt, >aac_6_IIa_1_M29695.v1... *
+1	555nt, >aac_6_IIa_1_M29695.R... at +/99.64%
+>Cluster 95
+0	642nt, >catA2_1_X53796.v1... *
+1	642nt, >catA2_1_X53796.R... at +/99.69%
+>Cluster 96
+0	639nt, >vat_B_1_U19459.v1... *
+1	639nt, >vat_B_1_U19459.R... at +/99.84%
+>Cluster 97
+0	558nt, >aac_6_Ia_1_M18967.v1... *
+1	558nt, >aac_6_Ia_1_M18967.R... at +/99.64%
+>Cluster 98
+0	474nt, >dfrA15_2_AF221900.R... *
+1	474nt, >dfrA15_1_AF156486.R... at +/99.58%
+>Cluster 99
+0	417nt, >fosA3_1_AB522970.R... *
+1	417nt, >fosA3_1_AB522970.v1... at +/98.08%
+>Cluster 100
+0	396nt, >aac_6_29a_1_AF263519.v1... *
+1	396nt, >aac_6_29a_1_AF263519.R... at +/98.99%
+>Cluster 101
+0	237nt, >dfrB2_2_AY553333.R... *
+1	237nt, >dfrB2_1_J01773.R... at +/98.31%
+>Cluster 102
+0	453nt, >ARR_3_1_JF806499.R... *
+1	453nt, >ARR_2_1_HQ141279.R... at +/99.56%
+>Cluster 103
+0	474nt, >dfrA1_8_X00926.R... *
+1	474nt, >dfrA1_3_GU726913.R... at +/99.79%
+>Cluster 104
+0	459nt, >aac_6_Il_1_U13880.R... *
+1	459nt, >aac_6_Il_1_U13880.v1... at +/99.78%
+>Cluster 105
+0	458nt, >nimH_1_KX576455.v1... *
+1	458nt, >nimH_1_KX576455.R... at +/98.47%
+>Cluster 106
+0	789nt, >blaOXA_198_1_HQ634775.v1... *
+1	789nt, >blaOXA_198_1_HQ634775.R... at +/96.83%
+>Cluster 107
+0	786nt, >blaOXA_85_1_JANA01000064.v1... *
+1	786nt, >blaOXA_85_1_JANA01000064.R... at +/99.75%
+>Cluster 108
+0	777nt, >aac_3_IV_1_DQ241380.R... at +/100.00%
+1	786nt, >aac_3_IVa_1_X01385.R... *
+>Cluster 109
+0	792nt, >aadA11_2_AJ567827.v1... *
+1	792nt, >aadA11_2_AJ567827.R... at +/99.87%
+>Cluster 110
+0	795nt, >aph_3_III_1_M26832.R... *
+1	795nt, >aph_3_III_1_M26832.v1... at +/99.87%
+>Cluster 111
+0	795nt, >aph_3_XV_1_Y18050.R... *
+1	795nt, >aph_3_XV_1_Y18050.v1... at +/99.87%
+>Cluster 112
+0	795nt, >ampH_2_HQ586946.v1... *
+1	795nt, >ampH_2_HQ586946.R... at +/95.97%
+>Cluster 113
+0	741nt, >blaIMP_26_1_GU045307.R... *
+1	741nt, >blaIMP_4_1_AF244145.R... at +/99.87%
+>Cluster 114
+0	657nt, >qnrA1_1_AY070235.R... *
+1	657nt, >qnrA1_1_AY070235.v1... at +/99.85%
+>Cluster 115
+0	651nt, >cat_pC194_1_NC_002013.v1... *
+1	651nt, >cat_pC194_1_NC_002013.R... at +/99.69%
+>Cluster 116
+0	648nt, >cat_5_U35036.R... *
+1	648nt, >cat_5_U35036.v1... at +/99.85%
+>Cluster 117
+0	657nt, >qnrVC1_1_EU436855.R... *
+1	657nt, >qnrVC6_1_KC202804.R... at +/98.02%
+>Cluster 118
+0	735nt, >erm_C_12_Y09003.v1... *
+1	735nt, >erm_C_12_Y09003.R... at +/99.86%
+>Cluster 119
+0	660nt, >catQ_1_M55620.R... *
+1	660nt, >catQ_1_M55620.v1... at +/99.70%
+>Cluster 120
+0	660nt, >catA1_1_V00622.v1... *
+1	660nt, >catA1_1_V00622.R... at +/99.85%
+>Cluster 121
+0	900nt, >aph_2_Ib_1_AF337947.v1... *
+1	900nt, >aph_2_Ib_1_AF337947.R... at +/99.89%
+>Cluster 122
+0	1623nt, >mcr_3_18_1_MH332768.R... *
+1	1623nt, >mcr_3_16_1_MH332766.R... at +/99.88%
+>Cluster 123
+0	906nt, >aph_2_Id_1_AF016483.R... *
+1	906nt, >aph_2_Ie_1_AY743255.R... at +/96.14%
+>Cluster 124
+0	945nt, >blaBRO_2_1_Z54181.R... *
+1	945nt, >blaBRO_2_1_Z54181.v1... at +/99.89%
+>Cluster 125
+0	1266nt, >cmlB1_1_AM296481.v1... *
+1	1266nt, >cmlB1_1_AM296481.R... at +/99.84%
+>Cluster 126
+0	888nt, >blaRAHN_1_1_GU645205.R... *
+1	888nt, >blaRAHN_1_1_GU645205.v1... at +/99.89%
+>Cluster 127
+0	1659nt, >vga_B_1_U82085.v1... *
+1	1659nt, >vga_B_1_U82085.R... at +/99.88%
+>Cluster 128
+0	867nt, >ant_6_Ia_3_KF864551.R... *
+1	867nt, >ant_6_Ia_3_KF864551.v1... at +/99.42%
+>Cluster 129
+0	873nt, >blaOXY_4_1_1_AY077481.v1... *
+1	873nt, >blaOXY_4_1_1_AY077481.R... at +/99.77%
+>Cluster 130
+0	876nt, >blaCTX_M_15_1_AY044436.R... *
+1	876nt, >blaCTX_M_3_1_Y10278.R... at +/99.89%
+>Cluster 131
+0	1626nt, >mcr_4_3_1_MG026621.v1... *
+1	1626nt, >mcr_4_3_1_MG026621.R... at +/99.94%
+>Cluster 132
+0	1218nt, >tet_E_2_L06940.v1... *
+1	1218nt, >tet_E_2_L06940.R... at +/99.92%
+>Cluster 133
+0	1218nt, >tet_E_3_CP000645.R... *
+1	1218nt, >tet_E_3_CP000645.v1... at +/99.26%
+>Cluster 134
+0	1167nt, >tet_X_2_M37699.R... *
+1	1158nt, >tet_X4_1_MK134376.R... at +/95.16%
+>Cluster 135
+0	1176nt, >tet_G_2_AF133140.R... *
+1	1176nt, >tet_G_2_AF133140.v1... at +/99.91%
+>Cluster 136
+0	1173nt, >blaACC_1a_1_AF180953.v1... *
+1	1173nt, >blaACC_1a_1_AF180953.R... at +/99.91%
+>Cluster 137
+0	1146nt, >blaCMY_83_1_JX440351.R... *
+1	1146nt, >blaCMY_70_1_JX440350.R... at +/98.78%
+>Cluster 138
+0	1054nt, >blaCMG_1_AY265892.v1... *
+1	1054nt, >blaCMG_1_AY265892.R... at +/99.24%
+>Cluster 139
+0	975nt, >blaDES_1_1_AF426161.v1... *
+1	975nt, >blaDES_1_1_AF426161.R... at +/99.49%
+>Cluster 140
+0	1137nt, >tet_X_3_AB097942.v1... *
+1	1137nt, >tet_X_3_AB097942.R... at +/99.21%
+>Cluster 141
+0	1146nt, >blaCMY_152_1_KY978224.R... *
+1	1146nt, >blaCMY_48_1_HM569226.R... at +/99.30%
+>Cluster 142
+0	1140nt, >blaACT_16_1_AB737978.R... *
+1	1140nt, >blaACT_16_1_AB737978.v1... at +/99.91%
+>Cluster 143
+0	863nt, >sul4_1_MG649393.R... *
+1	863nt, >sul4_1_MG649393.v1... at +/99.88%
+>Cluster 144
+0	1923nt, >tet_44_1_NZ_ABDU01000081.R... *
+1	1923nt, >tet_44_2_FN594949.R... at +/98.49%
+>Cluster 145
+0	849nt, >str_1_X92946.R... *
+1	849nt, >str_2_FN435330.R... at +/99.65%
+>Cluster 146
+0	1811nt, >VanG2XY_1_FJ872410.v1... *
+1	1811nt, >VanG2XY_1_FJ872410.R... at +/99.94%
+>Cluster 147
+0	1920nt, >tet_32_2_EF626943.R... *
+1	1920nt, >tet_32_1_EU722333.R... at +/98.23%
+>Cluster 148
+0	831nt, >blaOXA_282_1_APQS01000019.R... *
+1	831nt, >blaOXA_283_1_AYHO01000005.R... at +/98.80%
+>Cluster 149
+0	1959nt, >tetB_P_1_NC_010937.v1... *
+1	1959nt, >tetB_P_1_NC_010937.R... at +/98.52%
+>Cluster 150
+0	1926nt, >tet_S_2_L09756.R... at +/97.92%
+1	1935nt, >tet_S_M_2_AY534326.R... *
+>Cluster 151
+0	846nt, >erm_36_1_AF462611.v1... *
+1	846nt, >erm_36_1_AF462611.R... at +/99.65%
+>Cluster 152
+0	843nt, >blaOXA_58_1_AY665723.R... *
+1	843nt, >blaOXA_420_1_AB983359.R... at +/99.64%
+>Cluster 153
+0	3153nt, >oqxB_1_EU370913.v1... *
+1	3153nt, >oqxB_1_EU370913.R... at +/99.68%
+>Cluster 154
+0	855nt, >blaACI_1_1_AJ007350.R... *
+1	855nt, >blaACI_1_1_AJ007350.v1... at +/99.88%
+>Cluster 155
+0	405nt, >fosE_1_AB901041.R... *
+>Cluster 156
+0	1251nt, >cfr_C_2_CANB01000378.R... *
+>Cluster 157
+0	537nt, >aac_6_Im_1_AF337947.R... *
+>Cluster 158
+0	1233nt, >tet_31_1_GQ283908.R... *
+>Cluster 159
+0	522nt, >lnu_E_1_KF287643.R... *
+>Cluster 160
+0	237nt, >dfrB7_1_DQ993182.R... *
+>Cluster 161
+0	531nt, >aac_3_Ib_1_L06157.R... *
+>Cluster 162
+0	624nt, >catP_1_U15027.R... *
+>Cluster 163
+0	1185nt, >tet_D_1_AF467077.R... *
+>Cluster 164
+0	2607nt, >VanHAX_2_M97297.R... *
+>Cluster 165
+0	347nt, >fosA4_1_AB908992.R... *
+>Cluster 166
+0	564nt, >dfrA10_1_L06418.R... *
+>Cluster 167
+0	237nt, >dfrB5_1_AY943084.R... *
+>Cluster 168
+0	561nt, >dfrA23_1_AJ746361.R... *
+>Cluster 169
+0	237nt, >dfrB1_1_U36276.R... *
+>Cluster 170
+0	1203nt, >tet_H_3_Y15510.R... *
+>Cluster 171
+0	552nt, >dfrA26_1_AM403715.R... *
+>Cluster 172
+0	582nt, >aac_6_IIc_1_NC_012555.R... *
+>Cluster 173
+0	570nt, >dfrA19_1_EU855687.R... *
+>Cluster 174
+0	552nt, >aac_6_Iq_1_AF047556.R... *
+>Cluster 175
+0	1260nt, >ere_B_2_X03988.R... *
+>Cluster 176
+0	474nt, >dfrA5_1_X12868.R... *
+>Cluster 177
+0	474nt, >dfrA17_1_FJ460238.R... *
+>Cluster 178
+0	1644nt, >mcr_5_1_1_KY807921.R... *
+>Cluster 179
+0	477nt, >aac_3_Id_1_AB114632.R... *
+>Cluster 180
+0	459nt, >dfrA25_1_DQ267940.R... *
+>Cluster 181
+0	474nt, >dfrA27_1_FJ459817.R... *
+>Cluster 182
+0	474nt, >dfrA7_1_AB161450.R... *
+>Cluster 183
+0	474nt, >dfrA32_1_GU067642.R... *
+>Cluster 184
+0	474nt, >dfrA16_2_AF174129.R... *
+>Cluster 185
+0	465nt, >aac_3_If_1_AY884051.R... *
+>Cluster 186
+0	471nt, >aac_3_Ic_1_AJ511268.R... *
+>Cluster 187
+0	1626nt, >mcr_1_1_1_KP347127.R... *
+>Cluster 188
+0	498nt, >dfrG_1_AB205645.R... *
+>Cluster 189
+0	498nt, >dfrA21_1_AY552589.R... *
+>Cluster 190
+0	435nt, >nimE_1_AM042593.R... *
+>Cluster 191
+0	510nt, >dfrA20_1_AJ605332.R... *
+>Cluster 192
+0	510nt, >dfrA8_1_U10186.R... *
+>Cluster 193
+0	498nt, >dfrA12_8_AM040708.R... *
+>Cluster 194
+0	1620nt, >mcr_9_1_NZ_NAAN01000063_1.R... *
+>Cluster 195
+0	492nt, >dfrK_2_FN677369.R... *
+>Cluster 196
+0	1476nt, >msr_E_1_FR751518.R... *
+>Cluster 197
+0	1377nt, >tet_L_2_M29725.R... *
+>Cluster 198
+0	1923nt, >tet_36_1_AJ514254.R... *
+>Cluster 199
+0	801nt, >blaOXA_20_2_AF024602.R... *
+>Cluster 200
+0	867nt, >blaSCO_1_1_EF063111.R... *
+>Cluster 201
+0	801nt, >aph_6_Ic_1_X01702.R... *
+>Cluster 202
+0	864nt, >ant_6_Ia_2_KF421157.R... *
+>Cluster 203
+0	855nt, >blaOXA_296_1_APOH01000009.R... *
+>Cluster 204
+0	858nt, >ant_6_Ib_1_FN594949.R... *
+>Cluster 205
+0	804nt, >blaOXA_5_1_AF347074.R... *
+>Cluster 206
+0	798nt, >blaOXA_48_1_AY236073.R... *
+>Cluster 207
+0	882nt, >blaKPC_2_1_AY034847.R... *
+>Cluster 208
+0	885nt, >mph_E_1_DQ839391.R... *
+>Cluster 209
+0	798nt, >blaOXA_181_1_CM004561.R... *
+>Cluster 210
+0	801nt, >blaVIM_2_1_AF302086.R... *
+>Cluster 211
+0	801nt, >blaVIM_4_1_EU581706.R... *
+>Cluster 212
+0	798nt, >aadA13_1_AY713504.R... *
+>Cluster 213
+0	828nt, >blaOXA_21_1_AB626885.R... *
+>Cluster 214
+0	834nt, >aadA10_1_U37105.R... *
+>Cluster 215
+0	828nt, >blaOXA_72_1_AY739646.R... *
+>Cluster 216
+0	828nt, >blaOXA_2_1_DQ112222.R... *
+>Cluster 217
+0	831nt, >blaOXA_278_1_KC771279.R... *
+>Cluster 218
+0	831nt, >blaOXA_362_1_KF460532.R... *
+>Cluster 219
+0	831nt, >blaOXA_235_1_JQ820240.v1... *
+>Cluster 220
+0	852nt, >blaBEL_1_1_DQ089809.R... *
+>Cluster 221
+0	813nt, >blaNDM_1_1_FN396876.R... *
+>Cluster 222
+0	855nt, >blaTER_2_1_FJ263090.R... *
+>Cluster 223
+0	846nt, >blaOXA_275_1_APPJ01000001.R... *
+>Cluster 224
+0	825nt, >blaOXA_347_1_ACWG01000053.R... *
+>Cluster 225
+0	825nt, >blaOXA_9_1_KQ089875.R... *
+>Cluster 226
+0	825nt, >blaOXA_120_1_EU255289.R... *
+>Cluster 227
+0	795nt, >aph_3_IIa_2_V00618.R... *
+>Cluster 228
+0	1149nt, >blaMOX_2_1_AJ276453.R... *
+>Cluster 229
+0	651nt, >cat_3_S48276.R... *
+>Cluster 230
+0	645nt, >qnrD1_1_FJ228229.R... *
+>Cluster 231
+0	1149nt, >blaFOX_3_1_Y11068.R... *
+>Cluster 232
+0	1140nt, >blaDHA_1_1_Y16410.R... *
+>Cluster 233
+0	657nt, >qnrS2_1_DQ485530.R... *
+>Cluster 234
+0	657nt, >qnrS1_1_AB187515.R... *
+>Cluster 235
+0	1176nt, >tet_Y_1_EF495198.R... *
+>Cluster 236
+0	633nt, >catB3_2_U13880.R... *
+>Cluster 237
+0	633nt, >catB2_1_AF047479.R... *
+>Cluster 238
+0	645nt, >qnrB38_1_JN173060.R... *
+>Cluster 239
+0	645nt, >qnrB19_1_EU432277.R... *
+>Cluster 240
+0	645nt, >qnrB4_1_DQ303921.R... *
+>Cluster 241
+0	1167nt, >tet_X3_1_MK134375.R... *
+>Cluster 242
+0	909nt, >ant_6_Ia_1_AF330699.R... *
+>Cluster 243
+0	783nt, >aac_2_IIa_1_AB669090.R... *
+>Cluster 244
+0	780nt, >aadA24_1_AM711129.R... *
+>Cluster 245
+0	909nt, >mph_B_1_D85892.R... *
+>Cluster 246
+0	792nt, >sul3_2_AJ459418.R... *
+>Cluster 247
+0	900nt, >mph_F_1_AM260957.R... *
+>Cluster 248
+0	903nt, >aac_3_VIa_2_NC_009838.R... *
+>Cluster 249
+0	1122nt, >tet_39_1_KT346360.R... *
+>Cluster 250
+0	735nt, >erm_T_2_AY894138.R... *
+>Cluster 251
+0	708nt, >blaEBR_1_1_AF416700.R... *
+>Cluster 252
+0	741nt, >blaIMP_13_1_AJ550807.R... *
+>Cluster 253
+0	918nt, >blaROB_1_2_AF022114.R... *
+>Cluster 254
+0	756nt, >rmtB_1_AB103506.R... *
+>Cluster 255
+0	1026nt, >aph_4_Ia_1_V01499.R... *
