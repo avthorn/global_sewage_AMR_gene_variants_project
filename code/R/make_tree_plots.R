@@ -7,8 +7,11 @@ library(patchwork)
 
 
 
-clus = "1"
+clus = "4"
 
+
+
+## Load and wrangle data #################################
 
 tree <- read.newick(paste0("data/vh_results/cluster_trees/", clus, ".tree"), node.label = "label")
 
@@ -31,9 +34,7 @@ sample_count <- read_tsv(file = paste0("data/vh_results/cluster_meta/", clus, ".
     id = X1,
     s_count = X2)
 
-
-f = fortify(tree)
-s = subset(f, isTip)
+s = subset(fortify(tree), isTip)
 tip_list = with(s, label[order(y, decreasing=T)])
 
 
@@ -43,53 +44,48 @@ snp_dist <- read_tsv(file = paste0("data/vh_results/cluster_snp_dist/", clus, ".
   column_to_rownames(., var = "id") %>% 
   relocate(all_of(tip_list))
 
-
-
-
 country_meta <- country_info_meta %>%
   column_to_rownames(., var = "id") %>%
   select(-new_gene_name, -original_gene_name, -type, -version) #%>% 
 
-
-
-
 info <- country_info_meta %>%
-  select(id, original_gene_name, type, version) #%>% 
-#  mutate(version = case_when(str_length(version) == 1 ~ paste0("00", version),
-#                             str_length(version) == 2 ~ paste0("0", version),
-#                             str_length(version) == 3 ~ version) )
+  select(id, original_gene_name, type, version) 
 
-
-
+## Make subplots #################################
 
 tree_plot <- ggtree(tree) %<+% info + geom_tippoint(size=5, aes(color=original_gene_name)) +
-#  theme(legend.position="bottom") + 
   geom_point2(aes(subset=(type=="R")), size=2) +
-  theme_tree2() +
   theme(legend.position="right") 
 
 
-tree_plot_tip <- tree_plot +  geom_tiplab(align=TRUE, linesize=.5, hjust = 0, size =2)
+tree_plot_tip <- tree_plot +  geom_tiplab(align=TRUE, linesize=.5, hjust = 0, size =2) +
+  scale_x_continuous(expand = c(.17, 0))
 
 unrooted_tree_plot <- ggtree(tree, layout ="daylight") %<+% info + geom_tippoint(size=5, aes(color=original_gene_name)) +
-  #  theme(legend.position="bottom") + 
   geom_point2(aes(subset=(type=="R")), size=2) +
-  theme_tree2() +
-  theme(legend.position="none") #+
-#  geom_tiplab(aes(label= paste0(version)), geom = "label", align=FALSE, linesize=.5, hjust = 0, size =2)
-print(tree_plot2)
+  ggtitle("Unrooted View") +
+  theme(legend.position="none")
 
 
 
 
+
+find_plot_x_limits <- function(plot) {
+  b = ggplot_build(plot)
+  xmin = b$layout$panel_params[[1]]$x.range[1]
+  xmax = b$layout$panel_params[[1]]$x.range[2]
+  list(xmin = xmin, xmax = xmax)
+}
+
+off = (find_plot_x_limits(tree_plot_tip)$xmax - max(tree_plot_tip[["data"]][["x"]])) * 1.5
+wd = 2
 
 cols = rainbow(ncol(country_meta), s=.6, v=.9)[sample(1:ncol(country_meta),ncol(country_meta))]
 
-#cols[1] <- "#ffffff"
 tree_country_plot <- gheatmap(tree_plot_tip, 
          country_meta, 
-         offset = 0.005, 
-         width = 1,
+         offset = off, 
+         width = wd,
          color = "black",
          colnames = TRUE, 
          colnames_position = "bottom",
@@ -101,37 +97,14 @@ tree_country_plot <- gheatmap(tree_plot_tip,
   ggtitle(paste0("Cluster ", clus))
 
 
-print(tree_country_plot)
-
-
-
-
-
-tree_country_plot/sample_count_plot
-
-
 
 dist_plot <- gheatmap(tree_plot, snp_dist, offset=0, width=1, colnames = FALSE, low = "white", high = "midnight blue", color = "black") +
 #  guides(fill=FALSE) +
-  guides(color = FALSE)
-  theme(legend.position="right") + 
-print(dist_plot)
+  guides(color = FALSE) +
+  ggtitle("SNV distance")
+  theme(legend.position="right") 
 
 
-sample_count_plot <- tree_plot +  
-  geom_facet(panel = "Samples", data = sample_count, geom = ggstance::geom_barh, 
-             aes(x = s_count, color = "black", fill = "black"), 
-             stat = "identity", width = .6) +
-  theme_tree2(legend.position="none")
-
-#print(sample_count_plot)
-
-#tree_country_plot/(sample_count_plot + dist_plot)
-
-#ggsave(file = paste0("debug/", "tree_", clus, ".png"  ), 
-#       plot = tree_country_plot, 
-#       width = 6.77, 
-#       height = 2.83)
 
 
 
@@ -139,7 +112,6 @@ cols <- c("black", "blue")
 
 snp_sample_plot <- dist_plot +  
   new_scale_fill() +
-#  new_scale_color() +
   geom_facet(panel = "Samples", data = sample_count, geom = ggstance::geom_barh, 
              aes(x = s_count, fill=type), 
              stat = "identity", width = .8) +
@@ -148,7 +120,7 @@ snp_sample_plot <- dist_plot +
   theme(strip.background = element_blank(), strip.text = element_blank())
 
 
-
+## Save full plot #############################
 
 multi_plot <- tree_country_plot/(unrooted_tree_plot + snp_sample_plot)
 
@@ -156,8 +128,7 @@ multi_plot <- tree_country_plot/(unrooted_tree_plot + snp_sample_plot)
 print(multi_plot)
 
 
-
 ggsave(file = paste0("debug/", "tree_", clus, ".png"  ), 
        plot = multi_plot, 
-       width = 27, 
-       height = 18)
+       width = 21, 
+       height = 14)
