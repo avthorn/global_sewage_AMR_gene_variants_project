@@ -10,7 +10,7 @@ meta <- read_tsv(file = "data/vh_results/sequence_sample_metadata.tsv", col_name
   mutate(type = case_when(str_ends(id, "R") ~ "Reference",
                           str_ends(id, "R", negate = TRUE) ~ "Variant") )
 
-
+meta_v <- meta %>%  filter(type == "Variant")
 
 
 ggplot(meta) +
