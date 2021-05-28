@@ -18,6 +18,9 @@ meta_v <- meta %>%  filter(type == "Variant")
 country <- read_csv(file = "data/post_processing/all_seq_country_meta.csv", col_names = TRUE) %>% 
   mutate(across(where(is.character), ~na_if(., "*")))
 
+
+
+
 country  %>% count(ALB)
 
 country_long <- country %>% 
