@@ -13,9 +13,8 @@ for file in os.listdir(directory):
     for line in cluster_meta:
         line = line.strip()
         variant_id = line.split("\t")[0]
-        if not variant_id.endswith(".R"):
-            out_str = variant_id + "\t" + cluster_name
-            print(out_str, file = seq_id_clus)
+        out_str = variant_id + "\t" + cluster_name
+        print(out_str, file = seq_id_clus)
     cluster_meta.close()
 
 
