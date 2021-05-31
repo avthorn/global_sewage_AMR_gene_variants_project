@@ -32,7 +32,7 @@ make_plot<-function(long_data, title)
     scale_fill_manual(values=cols_regions)  +
     xlab("Country") + ylab("Sequence ID") +
     ggtitle(title) + 
-    theme(legend.position = "bottom", text = element_text(size=2),
+    theme(legend.position = "bottom", text = element_text(size=3),
           axis.text.x = element_text(angle=90, size = 3), axis.title=element_text(size=12,face="bold"), 
           plot.title = element_text(size = 15, face = "bold"), legend.text=element_text(size=4), legend.title =element_text(size=10))
 }
@@ -70,16 +70,16 @@ R_plot <- make_plot(c_s_long_w_R, "Reference sequences vs sample country")
 
 ggsave(file = paste0("results/seq_country_plots/all_seqs_country_plot.png"), 
        plot = all_plot, 
-       width = 6, 
-       height = 18)
+       width = 12, 
+       height = 36)
 
 ggsave(file = paste0("results/seq_country_plots/variant_seqs_country_plot.png"), 
        plot = v_plot, 
-       width = 6, 
-       height = 14)
+       width = 12, 
+       height = 28)
 
 ggsave(file = paste0("results/seq_country_plots/ref_seqs_country_plot.png"), 
        plot = R_plot, 
-       width = 6, 
-       height = 14)
+       width = 12, 
+       height = 28)
 
