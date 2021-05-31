@@ -46,5 +46,5 @@ write_tsv(x = combined_meta,
 
 essential <- combined_meta %>% select(id, original_gene_name, cluster_name, gene, type, sample_count, new_variants_found)
 
-write_tsv(x = combined_meta,
+write_tsv(x = essential,
           file = "results/essential_metadata.tsv")
