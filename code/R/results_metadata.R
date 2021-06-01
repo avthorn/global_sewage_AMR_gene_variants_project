@@ -38,7 +38,8 @@ combined_meta <- seq_sample_meta %>%
   select(-version) %>% 
   relocate(id, original_gene_name, cluster_name, gene, type, sample_count, new_variants_found, sample_list) %>% 
   mutate(type = case_when(str_detect(type, "R") ~ "Reference",
-                          str_detect(type, "v") ~ "Variant"))
+                          str_detect(type, "v") ~ "Variant")) %>% 
+  arrange(cluster_name)
 
 
 write_tsv(x = combined_meta,

@@ -21,9 +21,14 @@ Command:
 grep -v 'DTU_2016_62_'  gs2_sample_names.txt > gs2_sample_names_exclude_62.txt
 
 ## world_bank.csv
-Country metadatafile in csv format. Key is country 3 letter code.
+Country income metadatafile in csv format. Key is country 3 letter code.
 https://bitbucket.org/genomicepidemiology/globalsewage/raw/ecaca6615ba326c27ff3e6d329668c7a4b69a614/metadata/world_bank.csv
 
 ## ResFinder.class
 Antibiotics class and AMR gene name metadata file.
 https://bitbucket.org/genomicepidemiology/globalsewage/src/master/metadata/gene_metadata/ResFinder.class 
+
+
+## countries_regions.csv
+Country region lookup file. Downloaded from  Luke Duncalfes git hub.
+https://raw.githubusercontent.com/lukes/ISO-3166-Countries-with-Regional-Codes/master/all/all.csv

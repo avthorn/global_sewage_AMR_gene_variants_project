@@ -1,0 +1,251 @@
+region,name,country3
+Africa,Algeria,DZA
+Africa,Angola,AGO
+Africa,Benin,BEN
+Africa,Botswana,BWA
+Africa,British Indian Ocean Territory,IOT
+Africa,Burkina Faso,BFA
+Africa,Burundi,BDI
+Africa,Cabo Verde,CPV
+Africa,Cameroon,CMR
+Africa,Central African Republic,CAF
+Africa,Chad,TCD
+Africa,Comoros,COM
+Africa,Congo,COG
+Africa,"Congo, Democratic Republic of the",COD
+Africa,Côte d'Ivoire,CIV
+Africa,Djibouti,DJI
+Africa,Egypt,EGY
+Africa,Equatorial Guinea,GNQ
+Africa,Eritrea,ERI
+Africa,Eswatini,SWZ
+Africa,Ethiopia,ETH
+Africa,French Southern Territories,ATF
+Africa,Gabon,GAB
+Africa,Gambia,GMB
+Africa,Ghana,GHA
+Africa,Guinea,GIN
+Africa,Guinea-Bissau,GNB
+Africa,Kenya,KEN
+Africa,Lesotho,LSO
+Africa,Liberia,LBR
+Africa,Libya,LBY
+Africa,Madagascar,MDG
+Africa,Malawi,MWI
+Africa,Mali,MLI
+Africa,Mauritania,MRT
+Africa,Mauritius,MUS
+Africa,Mayotte,MYT
+Africa,Morocco,MAR
+Africa,Mozambique,MOZ
+Africa,Namibia,NAM
+Africa,Niger,NER
+Africa,Nigeria,NGA
+Africa,Réunion,REU
+Africa,Rwanda,RWA
+Africa,"Saint Helena, Ascension and Tristan da Cunha",SHN
+Africa,Sao Tome and Principe,STP
+Africa,Senegal,SEN
+Africa,Seychelles,SYC
+Africa,Sierra Leone,SLE
+Africa,Somalia,SOM
+Africa,South Africa,ZAF
+Africa,South Sudan,SSD
+Africa,Sudan,SDN
+Africa,"Tanzania, United Republic of",TZA
+Africa,Togo,TGO
+Africa,Tunisia,TUN
+Africa,Uganda,UGA
+Africa,Western Sahara,ESH
+Africa,Zambia,ZMB
+Africa,Zimbabwe,ZWE
+Americas,Anguilla,AIA
+Americas,Antigua and Barbuda,ATG
+Americas,Argentina,ARG
+Americas,Aruba,ABW
+Americas,Bahamas,BHS
+Americas,Barbados,BRB
+Americas,Belize,BLZ
+Americas,Bermuda,BMU
+Americas,Bolivia (Plurinational State of),BOL
+Americas,"Bonaire, Sint Eustatius and Saba",BES
+Americas,Bouvet Island,BVT
+Americas,Brazil,BRA
+Americas,Canada,CAN
+Americas,Cayman Islands,CYM
+Americas,Chile,CHL
+Americas,Colombia,COL
+Americas,Costa Rica,CRI
+Americas,Cuba,CUB
+Americas,Curaçao,CUW
+Americas,Dominica,DMA
+Americas,Dominican Republic,DOM
+Americas,Ecuador,ECU
+Americas,El Salvador,SLV
+Americas,Falkland Islands (Malvinas),FLK
+Americas,French Guiana,GUF
+Americas,Greenland,GRL
+Americas,Grenada,GRD
+Americas,Guadeloupe,GLP
+Americas,Guatemala,GTM
+Americas,Guyana,GUY
+Americas,Haiti,HTI
+Americas,Honduras,HND
+Americas,Jamaica,JAM
+Americas,Martinique,MTQ
+Americas,Mexico,MEX
+Americas,Montserrat,MSR
+Americas,Nicaragua,NIC
+Americas,Panama,PAN
+Americas,Paraguay,PRY
+Americas,Peru,PER
+Americas,Puerto Rico,PRI
+Americas,Saint Barthélemy,BLM
+Americas,Saint Kitts and Nevis,KNA
+Americas,Saint Lucia,LCA
+Americas,Saint Martin (French part),MAF
+Americas,Saint Pierre and Miquelon,SPM
+Americas,Saint Vincent and the Grenadines,VCT
+Americas,Sint Maarten (Dutch part),SXM
+Americas,South Georgia and the South Sandwich Islands,SGS
+Americas,Suriname,SUR
+Americas,Trinidad and Tobago,TTO
+Americas,Turks and Caicos Islands,TCA
+Americas,United States of America,USA
+Americas,Uruguay,URY
+Americas,Venezuela (Bolivarian Republic of),VEN
+Americas,Virgin Islands (British),VGB
+Americas,Virgin Islands (U.S.),VIR
+Asia,Afghanistan,AFG
+Asia,Armenia,ARM
+Asia,Azerbaijan,AZE
+Asia,Bahrain,BHR
+Asia,Bangladesh,BGD
+Asia,Bhutan,BTN
+Asia,Brunei Darussalam,BRN
+Asia,Cambodia,KHM
+Asia,China,CHN
+Asia,Cyprus,CYP
+Asia,Georgia,GEO
+Asia,Hong Kong,HKG
+Asia,India,IND
+Asia,Indonesia,IDN
+Asia,Iran (Islamic Republic of),IRN
+Asia,Iraq,IRQ
+Asia,Israel,ISR
+Asia,Japan,JPN
+Asia,Jordan,JOR
+Asia,Kazakhstan,KAZ
+Asia,Korea (Democratic People's Republic of),PRK
+Asia,"Korea, Republic of",KOR
+Asia,Kuwait,KWT
+Asia,Kyrgyzstan,KGZ
+Asia,Lao People's Democratic Republic,LAO
+Asia,Lebanon,LBN
+Asia,Macao,MAC
+Asia,Malaysia,MYS
+Asia,Maldives,MDV
+Asia,Mongolia,MNG
+Asia,Myanmar,MMR
+Asia,Nepal,NPL
+Asia,Oman,OMN
+Asia,Pakistan,PAK
+Asia,"Palestine, State of",PSE
+Asia,Philippines,PHL
+Asia,Qatar,QAT
+Asia,Saudi Arabia,SAU
+Asia,Singapore,SGP
+Asia,Sri Lanka,LKA
+Asia,Syrian Arab Republic,SYR
+Asia,"Taiwan, Province of China",TWN
+Asia,Tajikistan,TJK
+Asia,Thailand,THA
+Asia,Timor-Leste,TLS
+Asia,Turkey,TUR
+Asia,Turkmenistan,TKM
+Asia,United Arab Emirates,ARE
+Asia,Uzbekistan,UZB
+Asia,Viet Nam,VNM
+Asia,Yemen,YEM
+Europe,Åland Islands,ALA
+Europe,Albania,ALB
+Europe,Andorra,AND
+Europe,Austria,AUT
+Europe,Belarus,BLR
+Europe,Belgium,BEL
+Europe,Bosnia and Herzegovina,BIH
+Europe,Bulgaria,BGR
+Europe,Croatia,HRV
+Europe,Czechia,CZE
+Europe,Denmark,DNK
+Europe,Estonia,EST
+Europe,Faroe Islands,FRO
+Europe,Finland,FIN
+Europe,France,FRA
+Europe,Germany,DEU
+Europe,Gibraltar,GIB
+Europe,Greece,GRC
+Europe,Guernsey,GGY
+Europe,Holy See,VAT
+Europe,Hungary,HUN
+Europe,Iceland,ISL
+Europe,Ireland,IRL
+Europe,Isle of Man,IMN
+Europe,Italy,ITA
+Europe,Jersey,JEY
+Europe,Kosovo,RKS
+Europe,Latvia,LVA
+Europe,Liechtenstein,LIE
+Europe,Lithuania,LTU
+Europe,Luxembourg,LUX
+Europe,Malta,MLT
+Europe,"Moldova, Republic of",MDA
+Europe,Monaco,MCO
+Europe,Montenegro,MNE
+Europe,Netherlands,NLD
+Europe,North Macedonia,MKD
+Europe,Norway,NOR
+Europe,Poland,POL
+Europe,Portugal,PRT
+Europe,Romania,ROU
+Europe,Russian Federation,RUS
+Europe,San Marino,SMR
+Europe,Serbia,SRB
+Europe,Slovakia,SVK
+Europe,Slovenia,SVN
+Europe,Spain,ESP
+Europe,Svalbard and Jan Mayen,SJM
+Europe,Sweden,SWE
+Europe,Switzerland,CHE
+Europe,Ukraine,UKR
+Europe,United Kingdom of Great Britain and Northern Ireland,GBR
+Oceania,American Samoa,ASM
+Oceania,Australia,AUS
+Oceania,Christmas Island,CXR
+Oceania,Cocos (Keeling) Islands,CCK
+Oceania,Cook Islands,COK
+Oceania,Fiji,FJI
+Oceania,French Polynesia,PYF
+Oceania,Guam,GUM
+Oceania,Heard Island and McDonald Islands,HMD
+Oceania,Kiribati,KIR
+Oceania,Marshall Islands,MHL
+Oceania,Micronesia (Federated States of),FSM
+Oceania,Nauru,NRU
+Oceania,New Caledonia,NCL
+Oceania,New Zealand,NZL
+Oceania,Niue,NIU
+Oceania,Norfolk Island,NFK
+Oceania,Northern Mariana Islands,MNP
+Oceania,Palau,PLW
+Oceania,Papua New Guinea,PNG
+Oceania,Pitcairn,PCN
+Oceania,Samoa,WSM
+Oceania,Solomon Islands,SLB
+Oceania,Tokelau,TKL
+Oceania,Tonga,TON
+Oceania,Tuvalu,TUV
+Oceania,United States Minor Outlying Islands,UMI
+Oceania,Vanuatu,VUT
+Oceania,Wallis and Futuna,WLF
+NA,Antarctica,ATA
