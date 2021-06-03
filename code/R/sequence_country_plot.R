@@ -14,19 +14,30 @@ samples <- read_tsv(file = "data/vh_results/sequence_sample_metadata.tsv", col_n
   select(id, s_count) %>% 
   filter(s_count > 0)  # Filter out those ref sequences found in 0 sampels 
 
-world_bank <- read_csv(file = "data/raw/world_bank.csv", col_names = TRUE) %>% 
+
+world_bank <- read_csv(file = "results/world_region_table.csv", col_names = TRUE) %>% 
   rename(
-    country = "Country Code",
-    region_name = Region) %>% 
+    country = "country3",
+    region_name = region) %>% 
   select(country, region_name) %>% 
-  arrange(region_name, country)
+  arrange(region_name, country) 
+
+
 
 c_s <- samples %>% left_join(country) 
 
 
 make_plot<-function(long_data, title)
 {
-  cols_regions <- c("white", "deeppink", "cyan3", "darkorange", "dark green",  "brown4", "chartreuse2", "mediumpurple1")
+  #cols_regions <- c("white", "deeppink", "cyan3", "darkorange", "dark green",  "brown4", "chartreuse2", "mediumpurple1")
+    cols_regions <- c(
+      "*" = "white", 
+      "Africa" = "dark green", 
+      "Americas" = "turquoise3", 
+      "Asia" = "dark orange", 
+      "Europe" = "royalblue1", 
+      "Oceania" = "magenta", 
+      "Negative Control" = "dimgray")
   ggplot(long_data, aes(x = factor(country, levels = world_bank$country), y = fct_reorder(id, gene, .desc = FALSE), fill = Region)) +
     geom_tile(color="gray") +
     scale_fill_manual(values=cols_regions)  +

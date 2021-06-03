@@ -1,0 +1,103 @@
+country3,region,name
+ALB,Europe,Albania
+ARE,Asia,United Arab Emirates
+ARG,Americas,Argentina
+AUS,Oceania,Australia
+AUT,Europe,Austria
+BEL,Europe,Belgium
+BEN,Africa,Benin
+BFA,Africa,Burkina Faso
+BGD,Asia,Bangladesh
+BGR,Europe,Bulgaria
+BIH,Europe,Bosnia and Herzegovina
+BOL,Americas,Bolivia (Plurinational State of)
+BRA,Americas,Brazil
+BRB,Americas,Barbados
+BWA,Africa,Botswana
+CAN,Americas,Canada
+CHE,Europe,Switzerland
+CHL,Americas,Chile
+CHN,Asia,China
+CIV,Africa,Côte d'Ivoire
+CMR,Africa,Cameroon
+COD,Africa,"Congo, Democratic Republic of the"
+COL,Americas,Colombia
+CZE,Europe,Czechia
+DEU,Europe,Germany
+DNK,Europe,Denmark
+ECU,Americas,Ecuador
+ESP,Europe,Spain
+EST,Europe,Estonia
+ETH,Africa,Ethiopia
+FIN,Europe,Finland
+FRA,Europe,France
+GBR,Europe,United Kingdom of Great Britain and Northern Ireland
+GEO,Asia,Georgia
+GHA,Africa,Ghana
+GMB,Africa,Gambia
+GRC,Europe,Greece
+GRL,Americas,Greenland
+GTM,Americas,Guatemala
+HKG,Asia,Hong Kong
+HRV,Europe,Croatia
+HUN,Europe,Hungary
+IND,Asia,India
+IRL,Europe,Ireland
+IRN,Asia,Iran (Islamic Republic of)
+ISL,Europe,Iceland
+ISR,Asia,Israel
+ITA,Europe,Italy
+JPN,Asia,Japan
+KAZ,Asia,Kazakhstan
+KEN,Africa,Kenya
+KHM,Asia,Cambodia
+KOR,Asia,"Korea, Republic of"
+KWT,Asia,Kuwait
+LCA,Americas,Saint Lucia
+LKA,Asia,Sri Lanka
+LTU,Europe,Lithuania
+LUX,Europe,Luxembourg
+LVA,Europe,Latvia
+MAR,Africa,Morocco
+MDA,Europe,"Moldova, Republic of"
+MDG,Africa,Madagascar
+MKD,Europe,North Macedonia
+MLT,Europe,Malta
+MNE,Europe,Montenegro
+MOZ,Africa,Mozambique
+MUS,Africa,Mauritius
+MWI,Africa,Malawi
+MYS,Asia,Malaysia
+NEG,Negative Control,Negative Control
+NGA,Africa,Nigeria
+NIC,Americas,Nicaragua
+NLD,Europe,Netherlands
+NOR,Europe,Norway
+NPL,Asia,Nepal
+NZL,Oceania,New Zealand
+PAK,Asia,Pakistan
+PER,Americas,Peru
+PHL,Asia,Philippines
+POL,Europe,Poland
+PRT,Europe,Portugal
+PRY,Americas,Paraguay
+RKS,Europe,Kosovo
+SAU,Asia,Saudi Arabia
+SEN,Africa,Senegal
+SGP,Asia,Singapore
+SRB,Europe,Serbia
+SVK,Europe,Slovakia
+SVN,Europe,Slovenia
+SWE,Europe,Sweden
+TCD,Africa,Chad
+TGO,Africa,Togo
+THA,Asia,Thailand
+TUR,Asia,Turkey
+TWN,Asia,"Taiwan, Province of China"
+TZA,Africa,"Tanzania, United Republic of"
+UGA,Africa,Uganda
+URY,Americas,Uruguay
+USA,Americas,United States of America
+VNM,Asia,Viet Nam
+ZAF,Africa,South Africa
+ZMB,Africa,Zambia

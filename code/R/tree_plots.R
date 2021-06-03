@@ -23,11 +23,22 @@ make_final_plot <- function(clus = "clus") {
     mutate(type = case_when(str_detect(type, "R") ~ "Reference",
                             str_detect(type, "v") ~ "Variant"))
   
+  info <- country_info_meta %>%
+    select(id, original_gene_name, type, version) 
+  
   sample_count <- read_tsv(file = paste0("data/vh_results/cluster_meta/", clus, ".tsv"), col_names = FALSE) %>% 
     select(X1, X2) %>% 
     rename(
       id = X1,
       s_count = X2)
+  
+  world_bank <- read_csv(file = "results/world_region_table.csv", col_names = TRUE) %>% 
+    rename(
+      country = "country3",
+      region_name = region) %>% 
+    select(country, region_name) %>% 
+    arrange(region_name, country)
+  
   
   s = subset(fortify(tree), isTip)
   tip_list = with(s, label[order(y, decreasing=T)])
@@ -39,12 +50,41 @@ make_final_plot <- function(clus = "clus") {
     column_to_rownames(., var = "id") %>% 
     relocate(all_of(tip_list))
   
-  country_meta <- country_info_meta %>%
-    column_to_rownames(., var = "id") %>%
-    select(-new_gene_name, -original_gene_name, -type, -version) #%>% 
+
   
-  info <- country_info_meta %>%
-    select(id, original_gene_name, type, version) 
+  
+  country_info_long <- read_csv(file = paste0("data/post_processing/cluster_country_meta/", clus, "_country_meta.csv")) %>% 
+    rename(
+      new_gene_name = gene) %>% 
+    left_join(.,  gene_name_conversion) %>% 
+    relocate(id, original_gene_name) %>% 
+    mutate(type = case_when(str_detect(type, "R") ~ "Reference",
+                            str_detect(type, "v") ~ "Variant")) %>% 
+    pivot_longer(
+      .,
+      cols=c(-id, -new_gene_name, -original_gene_name, -type, -version),
+      names_to = "country",
+      values_to = "binary",
+      values_drop_na = FALSE
+    )
+  
+  country_region_data_long <- country_info_long  %>%  left_join(world_bank) %>% 
+    arrange(region_name) %>% 
+    mutate(binary = case_when(binary != "*" ~ region_name,
+                              binary == "*" ~ "*"))
+  
+  
+  
+  country_region_data_wide <- country_region_data_long %>%  
+    select(-region_name) %>% 
+    pivot_wider(
+      .,
+      names_from = country,
+      values_from = binary,
+    ) %>% 
+    column_to_rownames(., var = "id") %>%
+    select(-new_gene_name, -original_gene_name, -type, -version)
+  
   
   ## Make trees #################################
   
@@ -60,7 +100,8 @@ make_final_plot <- function(clus = "clus") {
     geom_point2(aes(subset=(type=="Reference")), size=2) +
     ggtitle("Unrooted View") +
     theme(legend.position="none")
-
+  
+  
   ## Make subplots #################################
   
   
@@ -74,12 +115,19 @@ make_final_plot <- function(clus = "clus") {
   
   off = (find_plot_x_limits(tree_plot_tip)$xmax - max(tree_plot_tip[["data"]][["x"]])) * 1.5
   
-  # Find colors
-  cols_country = rainbow(ncol(country_meta), s=.6, v=.9)[sample(1:ncol(country_meta),ncol(country_meta))]
+  # Define colors
+  cols_regions <- c(
+    "*" = "white", 
+  "Africa" = "dark green", 
+  "Americas" = "turquoise3", 
+  "Asia" = "dark orange", 
+  "Europe" = "royalblue1", 
+  "Oceania" = "magenta", 
+  "Negative Control" = "dimgray")
   
   # Make country subplot
   tree_country_plot <- gheatmap(tree_plot_tip, 
-                                country_meta, 
+                                country_region_data_wide, 
                                 offset = off, 
                                 width = 2,
                                 color = "black",
@@ -87,8 +135,9 @@ make_final_plot <- function(clus = "clus") {
                                 colnames_position = "bottom",
                                 colnames_angle = 90,
                                 colnames_level = NULL, font.size = 2) +
-    scale_fill_manual(values=cols_country) +
-    guides(fill=FALSE) +
+    scale_fill_manual(values=cols_regions) +
+    #  guides(fill=FALSE) +
+    #  theme(legend.position="top") +
     ggtitle("Fastree tree and heatmap of sampling countries") +
     theme(legend.position="top",
           plot.title = element_text(hjust = 0.5))
@@ -103,7 +152,7 @@ make_final_plot <- function(clus = "clus") {
                         high = "midnight blue", 
                         color = "black") +
     guides(color = FALSE) +
-    ggtitle("SNV distance") +
+    ggtitle("SNP distance") +
     theme(legend.position="right", plot.title = element_text(hjust = 0.35)) 
   
   
@@ -114,7 +163,9 @@ make_final_plot <- function(clus = "clus") {
                stat = "identity", width = .8) +
     scale_fill_manual(values=c("black", "blue")) +
     theme_tree2() +
-    theme(legend.position="bottom") 
+    theme(legend.position="bottom") #, 
+  #        strip.background = element_blank(), 
+  #        strip.text = element_blank())
   
   
   ## Save full plot #############################
