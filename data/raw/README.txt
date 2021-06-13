@@ -26,7 +26,12 @@ https://bitbucket.org/genomicepidemiology/globalsewage/raw/ecaca6615ba326c27ff3e
 
 ## ResFinder.class
 Antibiotics class and AMR gene name metadata file.
-https://bitbucket.org/genomicepidemiology/globalsewage/src/master/metadata/gene_metadata/ResFinder.class 
+Path on computerome
+/home/databases/metagenomics/db/ResFinder_20200125/ResFinder.class
+
+## ResFinder.info
+Path on computerome
+/home/databases/metagenomics/db/ResFinder_20200125/ResFinder.info
 
 
 ## countries_regions.csv
